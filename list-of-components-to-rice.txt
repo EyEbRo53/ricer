@@ -1,0 +1,65 @@
+User Customization Features
+
+- Theme & Appearance
+  - Light or dark mode
+  - Accent colors
+  - Transparency and visual style
+
+- Icons & Cursor
+  - Icon pack style
+  - Cursor theme and size
+
+- Fonts & Text
+  - System font
+  - Font size
+  - Terminal font
+
+- Panel / Dock
+  - Enable or disable dock
+  - Position and size
+  - Auto-hide and transparency
+
+- Window Behavior
+  - Animations on/off
+  - Window snapping
+  - Performance-friendly settings
+
+- Wallpaper
+  - Static or slideshow background
+  - Minimal or themed wallpapers
+
+- System Sounds
+  - Enable or disable sounds
+  - Sound theme selection
+
+- Performance Mode
+  - Performance-focused
+  - Balanced
+  - Visual-focused
+
+- Terminal Look
+  - Theme and font
+  - Clean or detailed prompt
+
+- Accessibility
+  - Large text
+  - High contrast
+  - Reduced motion
+
+- Preset Layouts
+  - Minimal setup
+  - Developer setup
+  - macOS-like or Windows-like interface
+
+=Taskbar / panel (u can add as many panels u want & place them anywhere & customize) (opacity, size, radius, shadow, position)
+=Icons (custom icons)
+=widgets
+=control center
+= clock
+= window title
+= font style, size
+= window transparency & blur effects
+= wallpaper pack
+= console
+= screen zoom
+= window effects (minimize animation, wobbly window)
