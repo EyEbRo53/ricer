@@ -1,9 +1,11 @@
-# Byte-compiled / caches
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyc
 
 # Virtual environments
+.venv/
 venv/
 .env
 .env.*
@@ -13,18 +15,17 @@ build/
 dist/
 *.egg-info/
 pip-wheel-metadata/
-
-# Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Unit test / coverage
+# Testing
 .pytest_cache/
 .coverage
 .coverage.*
 htmlcov/
 .tox/
 .nox/
+tests/
 
 # Type checkers
 .mypy_cache/
@@ -43,12 +44,10 @@ htmlcov/
 .DS_Store
 
 # Logs and temporary files
+logs/
 *.log
 *.tmp
 *.bak
 
-# Project-specific
+# Project specific
 wallpapers/
-
-# Compiled Python files
-*.pyc

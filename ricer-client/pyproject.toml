@@ -1,0 +1,14 @@
+[project]
+name = "ricer-client"
+version = "0.1.0"
+description = "MCP client for ricer-mcp with LLM integration"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.26.0",
+    "openai>=1.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+ricer = "main:main"
