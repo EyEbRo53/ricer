@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Configure window borders and snap zones for easier window manipulation."""
-from utilities.kde_config_orchestrator import write_kde_configs
+from utilities.write.kwriteconfig import write_kde_configs
 
 
 def set_window_borders(border_size, snap_zone):
@@ -17,5 +17,3 @@ def set_window_borders(border_size, snap_zone):
     return write_kde_configs(configs)
 
 
-if __name__ == "__main__":
-    set_window_borders("VeryLarge", 16)

@@ -21,7 +21,9 @@ _CLIENT_DIR = os.path.join(os.path.dirname(__file__), "..", "ricer-client")
 _MCP_SERVER = os.path.abspath(
     os.path.join(os.path.dirname(__file__), "..", "ricer-mcp", "server.py")
 )
+_SYSTEM_UTILS_DIR = os.path.join(os.path.dirname(__file__), "..", "system-utils")
 sys.path.insert(0, _CLIENT_DIR)
+sys.path.insert(0, _SYSTEM_UTILS_DIR)
 
 from dotenv import load_dotenv
 load_dotenv(os.path.join(_CLIENT_DIR, ".env"))
@@ -29,6 +31,7 @@ load_dotenv(os.path.join(_CLIENT_DIR, ".env"))
 from mcp_client import MCPClient
 from llm_provider import LLMConfig, create_llm_client
 from orchestrator import Orchestrator
+from session_handler import SessionHandler
 from logger import (
     log_user_message, log_assistant_reply, log_tool_call,
     log_tool_result, log_changeset_staged, log_error,
@@ -46,11 +49,18 @@ class BackendWorker(QObject):
     tool_called = Signal(str, str)  # (tool_name, args_json)
     changeset_staged = Signal(str)  # changeset receipt JSON
 
+    # Change-execution result signals
+    change_applied = Signal(int)            # order number
+    change_skipped = Signal(int)            # order number
+    change_failed = Signal(int, str)        # (order, error description)
+
     def __init__(self, parent: QObject | None = None) -> None:
         super().__init__(parent)
         self._loop: asyncio.AbstractEventLoop | None = None
         self._orchestrator: Orchestrator | None = None
         self._mcp: MCPClient | None = None
+        self._session: SessionHandler | None = None
+        self._staged_changes: dict[int, dict] = {}  # order → receipt
 
     # ── Thread entry point ───────────────────────────────────────────
 
@@ -63,9 +73,12 @@ class BackendWorker(QObject):
         self._loop.run_forever()
 
     async def _connect(self) -> None:
-        """Initialise LLM client, MCP connection, and orchestrator."""
+        """Initialise LLM client, MCP connection, session, and orchestrator."""
         try:
             self.status_changed.emit("Connecting to MCP server…")
+
+            # Session handler (owns all system utilities)
+            self._session = SessionHandler()
 
             config = LLMConfig.from_env()
             llm = create_llm_client(config)
@@ -99,6 +112,59 @@ class BackendWorker(QObject):
         if self._orchestrator:
             self._orchestrator.clear_history()
 
+    # ── Change confirmation (called from UI thread) ──────────────────
+
+    def confirm_change(self, order: int) -> None:
+        """Confirm and execute a single staged change."""
+        if self._loop is None or self._session is None:
+            self.error_occurred.emit("Session not initialized.")
+            return
+        asyncio.run_coroutine_threadsafe(
+            self._handle_confirm(order), self._loop
+        )
+
+    def skip_change(self, order: int) -> None:
+        """Mark a staged change as skipped (no execution)."""
+        receipt = self._staged_changes.get(order)
+        if receipt:
+            receipt["status"] = "skipped"
+            self.change_skipped.emit(order)
+
+    def confirm_batch(self, orders: list[int]) -> None:
+        """Confirm a batch of staged changes sequentially."""
+        if self._loop is None or self._session is None:
+            self.error_occurred.emit("Session not initialized.")
+            return
+        asyncio.run_coroutine_threadsafe(
+            self._handle_confirm_batch(orders), self._loop
+        )
+
+    async def _handle_confirm(self, order: int) -> None:
+        """Execute one confirmed change via the session handler."""
+        receipt = self._staged_changes.get(order)
+        if not receipt:
+            self.change_failed.emit(order, "Change not found")
+            return
+
+        # Run the (synchronous) script in a thread-pool executor
+        result = await self._loop.run_in_executor(
+            None, self._session.confirm_change, receipt
+        )
+
+        if result["status"] == "applied":
+            receipt["status"] = "applied"
+            self.change_applied.emit(order)
+        else:
+            receipt["status"] = "failed"
+            self.change_failed.emit(order, result.get("error", "unknown"))
+
+    async def _handle_confirm_batch(self, orders: list[int]) -> None:
+        """Confirm every order in the list, one at a time."""
+        for order in orders:
+            receipt = self._staged_changes.get(order)
+            if receipt and receipt.get("status") == "staged":
+                await self._handle_confirm(order)
+
     async def _handle_chat(self, text: str) -> None:
         self.busy_changed.emit(True)
         try:
@@ -125,6 +191,7 @@ class BackendWorker(QObject):
             receipt = json.loads(result)
             if isinstance(receipt, dict) and "order" in receipt and "description" in receipt:
                 log_changeset_staged(receipt)
+                self._staged_changes[receipt["order"]] = receipt
                 self.changeset_staged.emit(result)
         except (json.JSONDecodeError, TypeError):
             pass
@@ -132,14 +199,36 @@ class BackendWorker(QObject):
     # ── Cleanup ──────────────────────────────────────────────────────
 
     def shutdown(self) -> None:
-        """Gracefully tear down the MCP connection and event loop."""
+        """Gracefully tear down session, MCP connection, and event loop."""
+        # Step 1: Close session handler
+        if self._session:
+            try:
+                self._session.close()
+            except Exception:
+                pass
+        
+        # Step 2: Disconnect MCP client before stopping the loop
         if self._loop and self._mcp:
-            future = asyncio.run_coroutine_threadsafe(
-                self._mcp.disconnect(), self._loop
-            )
-            future.result(timeout=5)
+            try:
+                future = asyncio.run_coroutine_threadsafe(
+                    self._mcp.disconnect(), self._loop
+                )
+                # Wait with a reasonable timeout, but don't fail if it times out
+                try:
+                    future.result(timeout=2)
+                except TimeoutError:
+                    # If disconnect times out, just proceed to stop the loop
+                    pass
+            except Exception:
+                # If sending the coroutine fails, proceed to stop the loop
+                pass
+        
+        # Step 3: Stop the event loop
         if self._loop:
-            self._loop.call_soon_threadsafe(self._loop.stop)
+            try:
+                self._loop.call_soon_threadsafe(self._loop.stop)
+            except Exception:
+                pass
 
 
 def _friendly_error(exc: Exception) -> str:

@@ -17,27 +17,33 @@ def get_wallpapers():
     return [os.path.join(WALLPAPER_DIR, f) for f in files]
 
 
-def set_wallpaper(image_path):
-    """Change KDE Plasma wallpaper using DBus"""
+def set_wallpaper(path):
+    """Change KDE Plasma wallpaper using DBus."""
     script = f"""
     var allDesktops = desktops();
     for (i=0; i<allDesktops.length; i++) {{
         d = allDesktops[i];
         d.wallpaperPlugin = "org.kde.image";
         d.currentConfigGroup = ["Wallpaper", "org.kde.image", "General"];
-        d.writeConfig("Image", "file://{image_path}");
+        d.writeConfig("Image", "file://{path}");
     }}
     """
 
-    subprocess.run(
-        [
-            "qdbus",
-            "org.kde.plasmashell",
-            "/PlasmaShell",
-            "org.kde.PlasmaShell.evaluateScript",
-            script,
-        ]
-    )
+    try:
+        subprocess.run(
+            [
+                "qdbus",
+                "org.kde.plasmashell",
+                "/PlasmaShell",
+                "org.kde.PlasmaShell.evaluateScript",
+                script,
+            ],
+            check=True,
+            capture_output=True,
+        )
+        return True
+    except (FileNotFoundError, subprocess.CalledProcessError):
+        return False
 
 
 def main():
@@ -57,7 +63,7 @@ def main():
         image = wallpapers[index]
         print(f"🎨 Setting wallpaper: {os.path.basename(image)}")
 
-        set_wallpaper(image)
+        change_wallpaper(image)
 
         index = (index + 1) % len(wallpapers)
 

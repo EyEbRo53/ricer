@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import os
 import json
+import sys
 from contextlib import AsyncExitStack
 
 from mcp import ClientSession, StdioServerParameters
@@ -32,7 +33,7 @@ class MCPClient:
     async def connect(self) -> None:
         """Start the MCP server as a subprocess and connect over stdio."""
         server_params = StdioServerParameters(
-            command="python",
+            command=sys.executable,
             args=[self._server_script],
         )
 
@@ -56,8 +57,27 @@ class MCPClient:
 
     async def disconnect(self) -> None:
         """Tear down the server subprocess."""
-        await self._exit_stack.aclose()
-        self._session = None
+        try:
+            if self._session:
+                try:
+                    # Try to close the session gracefully
+                    await self._session.close()
+                except Exception:
+                    pass
+                self._session = None
+            
+            # Close the exit stack which manages all context managers
+            await self._exit_stack.aclose()
+        except RuntimeError as e:
+            # Handle "Attempted to exit cancel scope in a different task" error
+            # This can happen if the event loop is stopping while contexts are closing
+            if "cancel scope" in str(e).lower():
+                pass
+            else:
+                raise
+        except Exception:
+            # Ignore other errors during disconnect - we're shutting down anyway
+            pass
 
     # ── Discovery ────────────────────────────────────────────────────
 

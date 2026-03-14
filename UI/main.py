@@ -36,9 +36,20 @@ def main() -> None:
 
     # Ensure clean shutdown
     def on_quit() -> None:
-        worker.shutdown()
-        thread.quit()
-        thread.wait(3000)
+        try:
+            worker.shutdown()
+        except Exception as e:
+            print(f"Error during worker shutdown: {e}", file=sys.stderr)
+        
+        try:
+            thread.quit()
+            # Wait for thread to finish with a reasonable timeout
+            if not thread.wait(5000):  # 5 seconds
+                print("Warning: Thread did not finish within timeout, forcing termination", file=sys.stderr)
+                thread.terminate()
+                thread.wait(1000)  # Give it 1 more second
+        except Exception as e:
+            print(f"Error during thread shutdown: {e}", file=sys.stderr)
 
     app.aboutToQuit.connect(on_quit)
 

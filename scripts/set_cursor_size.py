@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # scripts/set_cursor_size.py
 """Set cursor size for improved visibility and apply immediately."""
-from utilities.kde_config_orchestrator import write_kde_config, reconfigure_kwin
+from utilities.write.kwriteconfig import write_kde_config
+from utilities.reload.reconfigure_kwin import reconfigure_kwin
 
 
 def set_cursor_size(size):
@@ -12,5 +13,3 @@ def set_cursor_size(size):
     return success
 
 
-if __name__ == "__main__":
-    set_cursor_size(48)

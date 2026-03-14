@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Configure touchpad sensitivity and acceleration."""
-from utilities.kde_config_orchestrator import write_kde_configs
+from utilities.write.kwriteconfig import write_kde_configs
 
 
 def set_touchpad_settings(acceleration, speed, deceleration):
@@ -19,5 +19,3 @@ def set_touchpad_settings(acceleration, speed, deceleration):
     return write_kde_configs(configs)
 
 
-if __name__ == "__main__":
-    set_touchpad_settings(0.5, 3, 1.5)

@@ -3,14 +3,14 @@
 
 def register(mcp, changeset):
     @mcp.tool()
-    def change_wallpaper(path: str) -> str:
+    def set_wallpaper(path: str) -> str:
         """Stage a wallpaper change.
 
         This does NOT apply the change immediately. It adds the change to the
         staging area. The change will only be executed when the user confirms
         it via confirm_change().
 
-        Corresponds to script: change_wallpaper
+        Corresponds to script: set_wallpaper
         Change type: display (applies live via DBus/qdbus)
 
         Args:
@@ -27,7 +27,7 @@ def register(mcp, changeset):
         receipt = changeset.add(
             description=f"Change wallpaper to {filename}",
             change_type="display",
-            script="change_wallpaper",
+            script="set_wallpaper",
             parameters={"path": path},
         )
         return json.dumps(receipt, indent=2)

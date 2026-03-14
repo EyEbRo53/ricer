@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Enable single-click to open for reduced motor precision needs."""
-from utilities.kde_config_orchestrator import write_kde_config
+from utilities.write.kwriteconfig import write_kde_config
 
 
 def set_single_click(enabled):
@@ -9,5 +9,3 @@ def set_single_click(enabled):
     return write_kde_config("kdeglobals", "KDE", "SingleClick", value)
 
 
-if __name__ == "__main__":
-    set_single_click(True)

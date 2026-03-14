@@ -2,7 +2,7 @@
 
 from .set_global_scaling import register as register_scaling
 from .set_window_borders import register as register_borders
-from .change_wallpaper import register as register_wallpaper
+from .set_wallpaper import register as register_wallpaper
 from .move_panel import register as register_panel
 
 

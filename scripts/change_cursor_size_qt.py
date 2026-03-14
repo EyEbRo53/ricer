@@ -37,18 +37,3 @@ def set_cursor_size(size: int):
     print(f"Cursor size set to {size}px")
 
 
-if __name__ == "__main__":
-    import argparse
-
-    parser = argparse.ArgumentParser(
-        description="Live cursor size changer for Plasma Wayland"
-    )
-    parser.add_argument("size", type=int, help="Cursor size in pixels")
-    args = parser.parse_args()
-
-    set_cursor_size(args.size)
-
-    # Keep the app alive briefly to propagate the cursor
-    from time import sleep
-
-    sleep(1)

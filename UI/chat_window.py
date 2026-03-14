@@ -112,6 +112,57 @@ TOOL_CALL_STYLE = """
     font-size: 12px;
 """
 
+CONFIRM_BTN_STYLE = """
+    QPushButton {
+        background: #a6e3a1; color: #1e1e2e;
+        border: none; border-radius: 6px;
+        padding: 4px 14px; font-size: 12px; font-weight: bold;
+    }
+    QPushButton:hover { background: #94e2d5; }
+    QPushButton:disabled { background: #45475a; color: #6c7086; }
+"""
+
+SKIP_BTN_STYLE = """
+    QPushButton {
+        background: #f38ba8; color: #1e1e2e;
+        border: none; border-radius: 6px;
+        padding: 4px 14px; font-size: 12px; font-weight: bold;
+    }
+    QPushButton:hover { background: #eba0ac; }
+    QPushButton:disabled { background: #45475a; color: #6c7086; }
+"""
+
+ACCEPT_ALL_BTN_STYLE = """
+    QPushButton {
+        background: #f9e2af; color: #1e1e2e;
+        border: none; border-radius: 8px;
+        padding: 6px 18px; font-size: 13px; font-weight: bold;
+    }
+    QPushButton:hover { background: #f5c2e7; }
+    QPushButton:disabled { background: #45475a; color: #6c7086; }
+"""
+
+CHANGESET_APPLIED_STYLE = """
+    background: #1e1e2e;
+    border: 1px solid #a6e3a1;
+    border-radius: 10px;
+    padding: 10px 14px;
+"""
+
+CHANGESET_SKIPPED_STYLE = """
+    background: #1e1e2e;
+    border: 1px solid #6c7086;
+    border-radius: 10px;
+    padding: 10px 14px;
+"""
+
+CHANGESET_FAILED_STYLE = """
+    background: #1e1e2e;
+    border: 1px solid #f38ba8;
+    border-radius: 10px;
+    padding: 10px 14px;
+"""
+
 
 # ── Helper: message bubble ──────────────────────────────────────────
 
@@ -138,8 +189,12 @@ def _make_bubble(text: str, is_user: bool) -> QWidget:
     return container
 
 
-def _make_changeset_card(receipt: dict) -> QWidget:
-    """Create a changeset card showing order, description, and params."""
+def _make_changeset_card_static(receipt: dict) -> QWidget:
+    """Create a changeset card showing order, description, and params.
+
+    This is the non-interactive version kept for reference.
+    The ChatWindow class builds interactive cards with buttons instead.
+    """
     card_layout = QVBoxLayout()
     card_layout.setSpacing(4)
     card_layout.setContentsMargins(0, 0, 0, 0)
@@ -210,6 +265,14 @@ class ChatWindow(QMainWindow):
     def __init__(self, worker: BackendWorker) -> None:
         super().__init__()
         self._worker = worker
+
+        # Per-card tracking:  order → {card, title, confirm, skip}
+        self._change_cards: dict[int, dict] = {}
+        # Current batch of staged order numbers (reset each LLM turn)
+        self._current_batch_orders: list[int] = []
+        self._accept_all_shown = False
+        self._accept_all_btn: QPushButton | None = None
+
         self._setup_ui()
         self._connect_signals()
 
@@ -278,6 +341,11 @@ class ChatWindow(QMainWindow):
         self._worker.tool_called.connect(self._on_tool_called)
         self._worker.changeset_staged.connect(self._on_changeset_staged)
 
+        # Change-execution results
+        self._worker.change_applied.connect(self._on_change_applied)
+        self._worker.change_skipped.connect(self._on_change_skipped)
+        self._worker.change_failed.connect(self._on_change_failed)
+
     # ── Slots ────────────────────────────────────────────────────────
 
     @Slot()
@@ -307,6 +375,10 @@ class ChatWindow(QMainWindow):
         self._input.setEnabled(not busy)
         if busy:
             self._status_label.setText("Thinking…")
+            # Reset batch tracking for the new LLM turn
+            self._current_batch_orders = []
+            self._accept_all_shown = False
+            self._accept_all_btn = None
         else:
             self._status_label.setText("Ready")
 
@@ -322,9 +394,174 @@ class ChatWindow(QMainWindow):
             receipt = json.loads(receipt_json)
         except json.JSONDecodeError:
             return
-        card = _make_changeset_card(receipt)
-        self._messages_layout.addWidget(card)
+
+        order = receipt.get("order", 0)
+
+        # Insert an "Accept All" button before the first card in the batch
+        if not self._accept_all_shown:
+            self._add_accept_all_button()
+            self._accept_all_shown = True
+
+        self._current_batch_orders.append(order)
+
+        # Build the interactive card and add it
+        card_widget = self._make_changeset_card(receipt)
+        self._messages_layout.addWidget(card_widget)
         QTimer.singleShot(50, self._scroll_to_bottom)
+
+    # ── Change-result slots ──────────────────────────────────────────
+
+    @Slot(int)
+    def _on_change_applied(self, order: int) -> None:
+        refs = self._change_cards.get(order)
+        if not refs:
+            return
+        refs["title"].setText(f"✅  Change #{order}  —  applied")
+        refs["card"].setStyleSheet(CHANGESET_APPLIED_STYLE)
+        refs["confirm"].setEnabled(False)
+        refs["skip"].setEnabled(False)
+
+    @Slot(int)
+    def _on_change_skipped(self, order: int) -> None:
+        refs = self._change_cards.get(order)
+        if not refs:
+            return
+        refs["title"].setText(f"⏭  Change #{order}  —  skipped")
+        refs["card"].setStyleSheet(CHANGESET_SKIPPED_STYLE)
+        refs["confirm"].setEnabled(False)
+        refs["skip"].setEnabled(False)
+
+    @Slot(int, str)
+    def _on_change_failed(self, order: int, error: str) -> None:
+        refs = self._change_cards.get(order)
+        if not refs:
+            return
+        refs["title"].setText(f"❌  Change #{order}  —  failed ({error})")
+        refs["card"].setStyleSheet(CHANGESET_FAILED_STYLE)
+        refs["confirm"].setEnabled(False)
+        refs["skip"].setEnabled(False)
+
+    # ── Interactive card builder ─────────────────────────────────────
+
+    def _make_changeset_card(self, receipt: dict) -> QWidget:
+        """Build a changeset card with Confirm / Skip buttons."""
+        order = receipt.get("order", "?")
+        status = receipt.get("status", "staged")
+        desc = receipt.get("description", "Unknown change")
+        script = receipt.get("script", "")
+        params = receipt.get("parameters", {})
+
+        card_layout = QVBoxLayout()
+        card_layout.setSpacing(4)
+        card_layout.setContentsMargins(0, 0, 0, 0)
+
+        # Title
+        title = QLabel(f"📋  Change #{order}  —  {status}")
+        title.setStyleSheet(CHANGESET_TITLE_STYLE)
+        card_layout.addWidget(title)
+
+        # Description
+        desc_label = QLabel(desc)
+        desc_label.setWordWrap(True)
+        desc_label.setStyleSheet(CHANGESET_DESC_STYLE)
+        card_layout.addWidget(desc_label)
+
+        # Params summary
+        if params:
+            parts = [f"{k}={v}" for k, v in params.items()]
+            meta = QLabel(f"script: {script}  •  {', '.join(parts)}")
+            meta.setWordWrap(True)
+            meta.setStyleSheet(CHANGESET_META_STYLE)
+            card_layout.addWidget(meta)
+
+        # ── Confirm / Skip buttons ───────────────────────────────────
+        btn_row = QHBoxLayout()
+        btn_row.setContentsMargins(0, 4, 0, 0)
+        btn_row.setSpacing(6)
+
+        confirm_btn = QPushButton("✓ Confirm")
+        confirm_btn.setStyleSheet(CONFIRM_BTN_STYLE)
+        confirm_btn.setCursor(Qt.PointingHandCursor)
+        confirm_btn.clicked.connect(lambda _, o=order: self._on_confirm_clicked(o))
+
+        skip_btn = QPushButton("✗ Skip")
+        skip_btn.setStyleSheet(SKIP_BTN_STYLE)
+        skip_btn.setCursor(Qt.PointingHandCursor)
+        skip_btn.clicked.connect(lambda _, o=order: self._on_skip_clicked(o))
+
+        btn_row.addWidget(confirm_btn)
+        btn_row.addWidget(skip_btn)
+        btn_row.addStretch()
+        card_layout.addLayout(btn_row)
+
+        # Assemble card widget
+        card = QWidget()
+        card.setLayout(card_layout)
+        card.setStyleSheet(CHANGESET_CARD_STYLE)
+        card.setMaximumWidth(540)
+
+        # Store references for later updates
+        self._change_cards[order] = {
+            "card": card,
+            "title": title,
+            "confirm": confirm_btn,
+            "skip": skip_btn,
+        }
+
+        # Wrap in a left-aligned row
+        row = QHBoxLayout()
+        row.setContentsMargins(8, 4, 8, 4)
+        row.addWidget(card)
+        row.addStretch()
+
+        container = QWidget()
+        container.setLayout(row)
+        return container
+
+    def _add_accept_all_button(self) -> None:
+        """Insert an 'Accept All' button above the first card in the batch."""
+        btn = QPushButton("✓  Accept All Changes")
+        btn.setStyleSheet(ACCEPT_ALL_BTN_STYLE)
+        btn.setCursor(Qt.PointingHandCursor)
+        btn.clicked.connect(self._on_accept_all_clicked)
+        self._accept_all_btn = btn
+
+        row = QHBoxLayout()
+        row.setContentsMargins(8, 6, 8, 2)
+        row.addWidget(btn)
+        row.addStretch()
+
+        container = QWidget()
+        container.setLayout(row)
+        self._messages_layout.addWidget(container)
+
+    # ── Button handlers ──────────────────────────────────────────────
+
+    def _on_confirm_clicked(self, order: int) -> None:
+        refs = self._change_cards.get(order)
+        if refs:
+            refs["confirm"].setEnabled(False)
+            refs["skip"].setEnabled(False)
+            refs["title"].setText(f"⏳  Change #{order}  —  applying…")
+        self._worker.confirm_change(order)
+
+    def _on_skip_clicked(self, order: int) -> None:
+        self._worker.skip_change(order)
+
+    def _on_accept_all_clicked(self) -> None:
+        if self._accept_all_btn:
+            self._accept_all_btn.setEnabled(False)
+            self._accept_all_btn.setText("Applying all…")
+        # Disable every card's buttons
+        for order in self._current_batch_orders:
+            refs = self._change_cards.get(order)
+            if refs:
+                refs["confirm"].setEnabled(False)
+                refs["skip"].setEnabled(False)
+                refs["title"].setText(
+                    f"⏳  Change #{order}  —  applying…"
+                )
+        self._worker.confirm_batch(list(self._current_batch_orders))
 
     # ── Helpers ──────────────────────────────────────────────────────
 

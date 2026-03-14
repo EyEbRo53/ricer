@@ -28,7 +28,7 @@ Every tool is tagged with a **change type** that determines post-apply behaviour
 
 | Type      | What it means                                                                                                             | Examples                                                                                                                  | Post-apply action                                                    |
 | --------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| `display` | Change is visible immediately or after KWin reconfigure. No session restart needed.                                       | `set_global_scaling`, `set_window_borders`, `change_wallpaper`, `move_panel`                                              | Call `reconfigure_kwin()` or nothing (DBus changes are already live) |
+| `display` | Change is visible immediately or after KWin reconfigure. No session restart needed.                                       | `set_global_scaling`, `set_window_borders`, `set_wallpaper`, `move_panel`                                                 | Call `reconfigure_kwin()` or nothing (DBus changes are already live) |
 | `input`   | Change is written to a config file that applications only read at startup. Requires session restart to fully take effect. | `set_cursor_size`, `set_double_click_interval`, `set_single_click`, `set_touchpad_settings`, `set_keyboard_accessibility` | Inform user; offer restart options                                   |
 
 A single changeset can contain both types. The post-apply logic must handle the **worst case** — if even one confirmed `input` change was applied, the user must be told about the restart requirement.
@@ -247,7 +247,7 @@ These tools **only add entries to the in-memory changeset**. They never execute 
 | `set_keyboard_accessibility(...)`            | `set_keyboard_accessibility` | Stage sticky/slow/bounce keys | `input`     |
 | `set_global_scaling(factor)`                 | `set_global_scaling`         | Stage display scaling         | `display`   |
 | `set_window_borders(size, snap_zone)`        | `set_window_borders`         | Stage window border size      | `display`   |
-| `change_wallpaper(path)`                     | `change_wallpaper`           | Stage wallpaper change        | `display`   |
+| `set_wallpaper(path)`                        | `set_wallpaper`              | Stage wallpaper change        | `display`   |
 | `move_panel(position)`                       | `move_panel`                 | Stage panel position          | `display`   |
 
 ### Control Tools (Phase 2 — per-change execution)

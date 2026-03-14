@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # scripts/set_keyboard_accessibility.py
 """Configure keyboard accessibility features and apply immediately in KDE Plasma."""
-from utilities.kde_config_orchestrator import write_kde_configs, reconfigure_kwin
+from utilities.write.kwriteconfig import write_kde_configs
+from utilities.reload.reconfigure_kwin import reconfigure_kwin
 
 
 def set_keyboard_accessibility(
@@ -50,15 +51,3 @@ def set_keyboard_accessibility(
     return success
 
 
-if __name__ == "__main__":
-    # Example: motor & visual decline profile
-    set_keyboard_accessibility(
-        sticky_keys=True,
-        sticky_keys_latch=True,
-        slow_keys=True,
-        slow_keys_delay=300,
-        bounce_keys=True,
-        bounce_keys_delay=500,
-        repeat_rate=50,
-        repeat_delay=500,
-    )

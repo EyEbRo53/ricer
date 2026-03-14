@@ -13,7 +13,7 @@ def register(mcp):
 
         Queries the Plasma shell via DBus to get the active wallpaper image.
 
-        Corresponds to tool: change_wallpaper
+        Corresponds to tool: set_wallpaper
         """
         import json
         from utilities.kde_config_reader import read_current_wallpaper
