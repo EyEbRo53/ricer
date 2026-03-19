@@ -3,7 +3,7 @@ LLM Provider Configuration
 ---------------------------
 Loads env vars and exposes a configured OpenAI-compatible client.
 
-Every supported provider (OpenAI, Gemini, Grok, Ollama) exposes an
+Every supported provider (OpenAI, OpenRouter, Gemini, Grok, Ollama) exposes an
 OpenAI-compatible chat completions endpoint, so we only need one
 client class — just swap base_url and api_key.
 """
@@ -25,6 +25,11 @@ _PROVIDER_DEFAULTS: dict[str, dict[str, str]] = {
         "base_url": "https://api.openai.com/v1",
         "api_key_env": "OPENAI_API_KEY",
         "default_model": "gpt-4o",
+    },
+    "openrouter": {
+        "base_url": "https://openrouter.ai/api/v1",
+        "api_key_env": "OPENROUTER_API_KEY",
+        "default_model": "openai/gpt-4o-mini",
     },
     "gemini": {
         "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/",
@@ -55,6 +60,7 @@ class LLMConfig:
     model: str
     base_url: str
     api_key: str
+    extra_headers: dict[str, str] | None = None
 
     @classmethod
     def from_env(cls) -> LLMConfig:
@@ -67,16 +73,42 @@ class LLMConfig:
             )
 
         preset = _PROVIDER_DEFAULTS[provider]
-        api_key = (
-            os.getenv(preset["api_key_env"], "") if preset["api_key_env"] else "ollama"
-        )
+        if preset["api_key_env"]:
+            # Supports provider-specific names and a generic API_KEY fallback.
+            api_key = (
+                os.getenv(preset["api_key_env"], "")
+                or os.getenv("API_KEY", "")
+            )
+        else:
+            api_key = "ollama"
+
+        if provider != "ollama" and not api_key:
+            raise ValueError(
+                "Missing API key. Set one of: "
+                f"{preset['api_key_env']} or API_KEY in your .env file."
+            )
+
         model = os.getenv("LLM_MODEL") or preset["default_model"]
+
+        extra_headers: dict[str, str] | None = None
+        if provider == "openrouter":
+            # Optional but recommended by OpenRouter for app attribution.
+            extra_headers = {}
+            referer = os.getenv("OPENROUTER_HTTP_REFERER", "")
+            title = os.getenv("OPENROUTER_APP_TITLE", "")
+            if referer:
+                extra_headers["HTTP-Referer"] = referer
+            if title:
+                extra_headers["X-Title"] = title
+            if not extra_headers:
+                extra_headers = None
 
         return cls(
             provider=provider,
             model=model,
             base_url=preset["base_url"],
             api_key=api_key,
+            extra_headers=extra_headers,
         )
 
 
@@ -88,4 +120,5 @@ def create_llm_client(config: LLMConfig | None = None) -> AsyncOpenAI:
     return AsyncOpenAI(
         api_key=config.api_key,
         base_url=config.base_url,
+        default_headers=config.extra_headers,
     )

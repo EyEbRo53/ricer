@@ -32,6 +32,8 @@ go into a changeset that the user must confirm.
 Guidelines:
 - Before making changes, read the relevant resource to show the user
   their current value.
+- Never invent or assume current setting values. If a read fails,
+    clearly state the failure and ask the user to retry.
 - Explain what each change will do in plain language.
 - After staging changes, remind the user to confirm or review the
   changeset.
@@ -39,6 +41,25 @@ Guidelines:
   before staging anything.
 - Be concise and helpful.
 """
+
+
+def _build_system_prompt(resources: list[dict]) -> str:
+    """Build system prompt with currently available resource URIs."""
+    if not resources:
+        return SYSTEM_PROMPT
+
+    resource_lines = "\n".join(
+        f"- {r['uri']}: {r.get('description') or r.get('name', '')}"
+        for r in resources
+    )
+
+    return (
+        f"{SYSTEM_PROMPT}\n"
+        "Available resource URIs (read-only):\n"
+        f"{resource_lines}\n\n"
+        "When the user asks to view/read/check a current setting, call the "
+        "`read_resource` tool with the best matching URI before replying."
+    )
 
 
 class Orchestrator:
@@ -58,7 +79,7 @@ class Orchestrator:
         self._on_tool_call = on_tool_call
         self._on_tool_result = on_tool_result
         self._history: list[ChatCompletionMessageParam] = [
-            {"role": "system", "content": SYSTEM_PROMPT}
+            {"role": "system", "content": _build_system_prompt(self._mcp.resources)}
         ]
 
     # ── Public API ───────────────────────────────────────────────────
@@ -128,7 +149,11 @@ class Orchestrator:
                     self._on_tool_call(fn_name, fn_args)
 
                 try:
-                    result = await self._mcp.call_tool(fn_name, fn_args)
+                    if fn_name == "read_resource":
+                        uri = fn_args.get("uri", "")
+                        result = await self._mcp.read_resource(uri)
+                    else:
+                        result = await self._mcp.call_tool(fn_name, fn_args)
                 except Exception as exc:
                     result = f"Error: {exc}"
 
@@ -149,7 +174,9 @@ class Orchestrator:
 
     def clear_history(self) -> None:
         """Reset conversation but keep the system prompt."""
-        self._history = [{"role": "system", "content": SYSTEM_PROMPT}]
+        self._history = [
+            {"role": "system", "content": _build_system_prompt(self._mcp.resources)}
+        ]
 
     @property
     def history(self) -> list[ChatCompletionMessageParam]:

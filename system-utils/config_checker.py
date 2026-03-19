@@ -14,12 +14,12 @@ from __future__ import annotations
 import sys
 import os
 
-# Allow importing the kde_config_reader utility from /scripts/
-_SCRIPTS_DIR = os.path.join(os.path.dirname(__file__), "..", "scripts")
-if _SCRIPTS_DIR not in sys.path:
-    sys.path.insert(0, _SCRIPTS_DIR)
+# Allow importing the kde_config_reader utility from /ricer-mcp/utils/
+_RICER_MCP_DIR = os.path.join(os.path.dirname(__file__), "..", "ricer-mcp")
+if _RICER_MCP_DIR not in sys.path:
+    sys.path.insert(0, _RICER_MCP_DIR)
 
-from utilities.kde_config_reader import read_kde_config
+from utils.kde_config_reader import read_kde_config
 
 
 # ── Verification map ────────────────────────────────────────────────

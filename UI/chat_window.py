@@ -22,6 +22,10 @@ from PySide6.QtWidgets import (
 )
 
 from worker import BackendWorker
+from logger import (
+    log_changeset_applied, log_changeset_failed, log_changeset_skipped
+)
+from stack_panel import StackPanel
 
 
 # ── Styles ───────────────────────────────────────────────────────────
@@ -268,10 +272,15 @@ class ChatWindow(QMainWindow):
 
         # Per-card tracking:  order → {card, title, confirm, skip}
         self._change_cards: dict[int, dict] = {}
+        # Track change descriptions: order → description
+        self._change_descriptions: dict[int, str] = {}
         # Current batch of staged order numbers (reset each LLM turn)
         self._current_batch_orders: list[int] = []
         self._accept_all_shown = False
         self._accept_all_btn: QPushButton | None = None
+
+        # Stack panel for undo/redo visualization
+        self._stack_panel = StackPanel()
 
         self._setup_ui()
         self._connect_signals()
@@ -280,13 +289,22 @@ class ChatWindow(QMainWindow):
 
     def _setup_ui(self) -> None:
         self.setWindowTitle("Ricer — KDE Plasma Customisation")
-        self.setMinimumSize(600, 500)
-        self.resize(700, 600)
+        self.setMinimumSize(800, 500)
+        self.resize(1000, 600)
         self.setStyleSheet(WINDOW_STYLE)
 
         central = QWidget()
         self.setCentralWidget(central)
-        layout = QVBoxLayout(central)
+        main_layout = QHBoxLayout(central)
+        main_layout.setContentsMargins(0, 0, 0, 0)
+        main_layout.setSpacing(0)
+
+        # ── Stack panel on the left ──────────────────────────────────
+        main_layout.addWidget(self._stack_panel)
+
+        # ── Main content on the right ────────────────────────────────
+        content_widget = QWidget()
+        layout = QVBoxLayout(content_widget)
         layout.setContentsMargins(0, 0, 0, 0)
         layout.setSpacing(0)
 
@@ -326,12 +344,18 @@ class ChatWindow(QMainWindow):
         input_row.addWidget(self._send_btn)
         layout.addLayout(input_row)
 
+        main_layout.addWidget(content_widget, stretch=1)
+
     # ── Signal wiring ────────────────────────────────────────────────
 
     def _connect_signals(self) -> None:
         # UI → Worker
         self._send_btn.clicked.connect(self._on_send)
         self._input.returnPressed.connect(self._on_send)
+
+        # Stack panel signals
+        self._stack_panel.undo_requested.connect(self._on_undo_requested)
+        self._stack_panel.redo_requested.connect(self._on_redo_requested)
 
         # Worker → UI
         self._worker.reply_ready.connect(self._on_reply)
@@ -345,6 +369,12 @@ class ChatWindow(QMainWindow):
         self._worker.change_applied.connect(self._on_change_applied)
         self._worker.change_skipped.connect(self._on_change_skipped)
         self._worker.change_failed.connect(self._on_change_failed)
+
+        # Undo/redo results
+        self._worker.undo_completed.connect(self._on_undo_completed)
+        self._worker.undo_failed.connect(self._on_undo_failed)
+        self._worker.redo_completed.connect(self._on_redo_completed)
+        self._worker.redo_failed.connect(self._on_redo_failed)
 
     # ── Slots ────────────────────────────────────────────────────────
 
@@ -396,6 +426,10 @@ class ChatWindow(QMainWindow):
             return
 
         order = receipt.get("order", 0)
+        desc = receipt.get("description", "Unknown change")
+
+        # Store description for later use when change is applied
+        self._change_descriptions[order] = desc
 
         # Insert an "Accept All" button before the first card in the batch
         if not self._accept_all_shown:
@@ -409,10 +443,47 @@ class ChatWindow(QMainWindow):
         self._messages_layout.addWidget(card_widget)
         QTimer.singleShot(50, self._scroll_to_bottom)
 
+    # ── Stack panel slots ────────────────────────────────────────────
+
+    @Slot()
+    def _on_undo_requested(self) -> None:
+        """Handle undo button click - delegate to backend StateManager."""
+        self._worker.request_undo()
+
+    @Slot()
+    def _on_redo_requested(self) -> None:
+        """Handle redo button click - delegate to backend StateManager."""
+        self._worker.request_redo()
+
+    @Slot(str)
+    def _on_undo_completed(self, change_desc: str) -> None:
+        """Handle successful undo from backend."""
+        self._add_message(f"↶ Undo completed: {change_desc}", is_user=False)
+        QTimer.singleShot(50, self._scroll_to_bottom)
+
+    @Slot(str)
+    def _on_undo_failed(self, error: str) -> None:
+        """Handle undo failure from backend."""
+        self._add_message(f"⚠ Undo failed: {error}", is_user=False)
+        QTimer.singleShot(50, self._scroll_to_bottom)
+
+    @Slot(str)
+    def _on_redo_completed(self, change_desc: str) -> None:
+        """Handle successful redo from backend."""
+        self._add_message(f"↷ Redo completed: {change_desc}", is_user=False)
+        QTimer.singleShot(50, self._scroll_to_bottom)
+
+    @Slot(str)
+    def _on_redo_failed(self, error: str) -> None:
+        """Handle redo failure from backend."""
+        self._add_message(f"⚠ Redo failed: {error}", is_user=False)
+        QTimer.singleShot(50, self._scroll_to_bottom)
+
     # ── Change-result slots ──────────────────────────────────────────
 
     @Slot(int)
     def _on_change_applied(self, order: int) -> None:
+        log_changeset_applied(order)
         refs = self._change_cards.get(order)
         if not refs:
             return
@@ -421,8 +492,24 @@ class ChatWindow(QMainWindow):
         refs["confirm"].setEnabled(False)
         refs["skip"].setEnabled(False)
 
+        # Add to stack display (stack index is 0-based, order is 1-based for display)
+        desc = self._change_descriptions.get(order, "Unknown change")
+        stack_index = order - 1  # Convert to 0-based index
+        self._stack_panel.add_item_to_display(
+            stack_index, 
+            f"Change #{order}: {desc}",
+            is_active=True
+        )
+        
+        # Update button states (backend StateManager manages this, but UI needs to show it)
+        self._stack_panel.set_button_states(
+            can_undo=True,   # Can always undo after a change is applied
+            can_redo=False   # Redo only available after undo
+        )
+
     @Slot(int)
     def _on_change_skipped(self, order: int) -> None:
+        log_changeset_skipped(order)
         refs = self._change_cards.get(order)
         if not refs:
             return
@@ -433,6 +520,7 @@ class ChatWindow(QMainWindow):
 
     @Slot(int, str)
     def _on_change_failed(self, order: int, error: str) -> None:
+        log_changeset_failed(order, error)
         refs = self._change_cards.get(order)
         if not refs:
             return
@@ -482,12 +570,18 @@ class ChatWindow(QMainWindow):
         confirm_btn = QPushButton("✓ Confirm")
         confirm_btn.setStyleSheet(CONFIRM_BTN_STYLE)
         confirm_btn.setCursor(Qt.PointingHandCursor)
-        confirm_btn.clicked.connect(lambda _, o=order: self._on_confirm_clicked(o))
+        # Use a closure to capture order value at definition time
+        def make_confirm_handler(order_num):
+            return lambda: self._on_confirm_clicked(order_num)
+        confirm_btn.clicked.connect(make_confirm_handler(order))
 
         skip_btn = QPushButton("✗ Skip")
         skip_btn.setStyleSheet(SKIP_BTN_STYLE)
         skip_btn.setCursor(Qt.PointingHandCursor)
-        skip_btn.clicked.connect(lambda _, o=order: self._on_skip_clicked(o))
+        # Use a closure to capture order value at definition time
+        def make_skip_handler(order_num):
+            return lambda: self._on_skip_clicked(order_num)
+        skip_btn.clicked.connect(make_skip_handler(order))
 
         btn_row.addWidget(confirm_btn)
         btn_row.addWidget(skip_btn)

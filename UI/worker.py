@@ -53,6 +53,12 @@ class BackendWorker(QObject):
     change_applied = Signal(int)            # order number
     change_skipped = Signal(int)            # order number
     change_failed = Signal(int, str)        # (order, error description)
+    
+    # Undo/redo signals
+    undo_completed = Signal(str)            # change description on success
+    undo_failed = Signal(str)               # error message
+    redo_completed = Signal(str)            # change description on success
+    redo_failed = Signal(str)               # error message
 
     def __init__(self, parent: QObject | None = None) -> None:
         super().__init__(parent)
@@ -139,6 +145,24 @@ class BackendWorker(QObject):
             self._handle_confirm_batch(orders), self._loop
         )
 
+    def request_undo(self) -> None:
+        """Request an undo operation via StateManager."""
+        if self._loop is None or self._session is None:
+            self.undo_failed.emit("Session not initialized.")
+            return
+        asyncio.run_coroutine_threadsafe(
+            self._handle_undo(), self._loop
+        )
+
+    def request_redo(self) -> None:
+        """Request a redo operation via StateManager."""
+        if self._loop is None or self._session is None:
+            self.redo_failed.emit("Session not initialized.")
+            return
+        asyncio.run_coroutine_threadsafe(
+            self._handle_redo(), self._loop
+        )
+
     async def _handle_confirm(self, order: int) -> None:
         """Execute one confirmed change via the session handler."""
         receipt = self._staged_changes.get(order)
@@ -146,17 +170,21 @@ class BackendWorker(QObject):
             self.change_failed.emit(order, "Change not found")
             return
 
-        # Run the (synchronous) script in a thread-pool executor
-        result = await self._loop.run_in_executor(
-            None, self._session.confirm_change, receipt
-        )
+        try:
+            # Run the (synchronous) script in a thread-pool executor
+            result = await self._loop.run_in_executor(
+                None, self._session.confirm_change, receipt
+            )
 
-        if result["status"] == "applied":
-            receipt["status"] = "applied"
-            self.change_applied.emit(order)
-        else:
+            if result["status"] == "applied":
+                receipt["status"] = "applied"
+                self.change_applied.emit(order)
+            else:
+                receipt["status"] = "failed"
+                self.change_failed.emit(order, result.get("error", "unknown"))
+        except Exception as exc:
             receipt["status"] = "failed"
-            self.change_failed.emit(order, result.get("error", "unknown"))
+            self.change_failed.emit(order, str(exc))
 
     async def _handle_confirm_batch(self, orders: list[int]) -> None:
         """Confirm every order in the list, one at a time."""
@@ -164,6 +192,40 @@ class BackendWorker(QObject):
             receipt = self._staged_changes.get(order)
             if receipt and receipt.get("status") == "staged":
                 await self._handle_confirm(order)
+
+    async def _handle_undo(self) -> None:
+        """Execute undo via StateManager."""
+        try:
+            result = await self._loop.run_in_executor(
+                None, self._session.undo
+            )
+            
+            if result["status"] == "undone":
+                change = result.get("change", {})
+                desc = change.get("description", "Unknown change")
+                self.undo_completed.emit(desc)
+            else:
+                error = result.get("error", result.get("status", "Unknown error"))
+                self.undo_failed.emit(error)
+        except Exception as exc:
+            self.undo_failed.emit(str(exc))
+
+    async def _handle_redo(self) -> None:
+        """Execute redo via StateManager."""
+        try:
+            result = await self._loop.run_in_executor(
+                None, self._session.redo
+            )
+            
+            if result["status"] == "reapplied":
+                change = result.get("change", {})
+                desc = change.get("description", "Unknown change")
+                self.redo_completed.emit(desc)
+            else:
+                error = result.get("error", result.get("status", "Unknown error"))
+                self.redo_failed.emit(error)
+        except Exception as exc:
+            self.redo_failed.emit(str(exc))
 
     async def _handle_chat(self, text: str) -> None:
         self.busy_changed.emit(True)

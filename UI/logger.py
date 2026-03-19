@@ -73,5 +73,17 @@ def log_changeset_staged(receipt: dict) -> None:
     )
 
 
+def log_changeset_applied(order: int) -> None:
+    get_logger().info("CHANGESET APPLIED  ▸ #%s", order)
+
+
+def log_changeset_failed(order: int, error: str) -> None:
+    get_logger().error("CHANGESET FAILED  ▸ #%s — %s", order, error)
+
+
+def log_changeset_skipped(order: int) -> None:
+    get_logger().info("CHANGESET SKIPPED  ▸ #%s", order)
+
+
 def log_error(msg: str) -> None:
     get_logger().error("ERROR  ▸ %s", msg)

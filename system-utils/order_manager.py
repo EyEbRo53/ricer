@@ -22,7 +22,8 @@ import sys
 import os
 from typing import Any, Callable
 
-_SCRIPTS_DIR = os.path.join(os.path.dirname(__file__), "..", "scripts")
+_RICER_MCP_DIR = os.path.join(os.path.dirname(__file__), "..", "ricer-mcp")
+_FEATURES_DIR = os.path.join(_RICER_MCP_DIR, "features")
 
 
 class OrderManager:
@@ -110,20 +111,59 @@ class OrderManager:
 
     @staticmethod
     def _run_script(script_name: str, parameters: dict) -> bool:
-        """Dynamically import a script from /scripts/ and call its function."""
+        """Dynamically resolve and call a feature function by script name."""
         func_name = script_name
 
-        if _SCRIPTS_DIR not in sys.path:
-            sys.path.insert(0, _SCRIPTS_DIR)
+        # Add package roots to support imports from feature modules plus
+        # their utility dependencies.
+        if _FEATURES_DIR not in sys.path:
+            sys.path.insert(0, _FEATURES_DIR)
+        if _RICER_MCP_DIR not in sys.path:
+            sys.path.insert(0, _RICER_MCP_DIR)
 
-        try:
-            module = importlib.import_module(script_name)
-        except ModuleNotFoundError:
-            print(f"  ❌ Script module '{script_name}' not found in /scripts/")
+        # First try direct module lookup (legacy behavior).
+        module = None
+        module_name = None
+
+        direct_module_path = os.path.join(_FEATURES_DIR, f"{script_name}.py")
+        if os.path.exists(direct_module_path):
+            for candidate in (f"features.{script_name}", script_name):
+                try:
+                    module = importlib.import_module(candidate)
+                    module_name = candidate
+                    break
+                except (ModuleNotFoundError, ImportError):
+                    continue
+
+        # Fallback: locate the callable in any feature module.
+        if module is None:
+            for file_name in os.listdir(_FEATURES_DIR):
+                if not file_name.endswith(".py") or file_name.startswith("__"):
+                    continue
+
+                candidate_mod = file_name[:-3]
+                for candidate in (f"features.{candidate_mod}", candidate_mod):
+                    try:
+                        scanned_module = importlib.import_module(candidate)
+                    except (ModuleNotFoundError, ImportError):
+                        continue
+
+                    if hasattr(scanned_module, func_name):
+                        module = scanned_module
+                        module_name = candidate
+                        break
+
+                if module is not None:
+                    break
+
+        if module is None:
+            print(
+                f"  ❌ Could not resolve script '{script_name}' in /ricer-mcp/features/"
+            )
             return False
 
         if not hasattr(module, func_name):
-            print(f"  ⚠️  No callable '{func_name}' in {script_name}.py — "
+            print(f"  ⚠️  No callable '{func_name}' in {module_name}.py — "
                   f"cannot execute")
             return False
 

@@ -32,9 +32,14 @@ class MCPClient:
 
     async def connect(self) -> None:
         """Start the MCP server as a subprocess and connect over stdio."""
+        server_script_abs = os.path.abspath(self._server_script)
+        server_cwd = os.path.dirname(server_script_abs)
+
         server_params = StdioServerParameters(
             command=sys.executable,
-            args=[self._server_script],
+            args=[server_script_abs],
+            env=os.environ.copy(),
+            cwd=server_cwd,
         )
 
         stdio_transport = await self._exit_stack.enter_async_context(
@@ -110,7 +115,7 @@ class MCPClient:
         Return tools formatted for the OpenAI function-calling API.
         This is what we send to the LLM so it knows which tools exist.
         """
-        return [
+        openai_tools = [
             {
                 "type": "function",
                 "function": {
@@ -121,6 +126,41 @@ class MCPClient:
             }
             for tool in self.tools
         ]
+
+        # Expose MCP resources through a single function-like tool so
+        # the LLM can read current settings before proposing changes.
+        if self.resources:
+            resource_items = [
+                f"- {r['uri']}: {r['description'] or r['name']}"
+                for r in self.resources
+            ]
+            openai_tools.append(
+                {
+                    "type": "function",
+                    "function": {
+                        "name": "read_resource",
+                        "description": (
+                            "Read a current KDE/Plasma setting from a resource URI.\n"
+                            "Available resources:\n"
+                            + "\n".join(resource_items)
+                        ),
+                        "parameters": {
+                            "type": "object",
+                            "properties": {
+                                "uri": {
+                                    "type": "string",
+                                    "description": "Resource URI to read.",
+                                    "enum": [r["uri"] for r in self.resources],
+                                }
+                            },
+                            "required": ["uri"],
+                            "additionalProperties": False,
+                        },
+                    },
+                }
+            )
+
+        return openai_tools
 
     # ── Execution ────────────────────────────────────────────────────
 

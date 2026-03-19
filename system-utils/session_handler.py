@@ -194,7 +194,7 @@ class SessionHandler:
     @staticmethod
     def _init_db() -> sqlite3.Connection:
         os.makedirs(_DB_DIR, exist_ok=True)
-        db = sqlite3.connect(_DB_PATH)
+        db = sqlite3.connect(_DB_PATH, check_same_thread=False)
         db.executescript(_SCHEMA)
         return db
 

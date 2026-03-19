@@ -1,0 +1,26 @@
+"""Base abstraction for all configurable KDE features."""
+
+from __future__ import annotations
+
+from abc import ABC, abstractmethod
+
+
+class Feature(ABC):
+    """Common contract for MCP feature modules."""
+
+    @abstractmethod
+    def execute(self, *args, **kwargs) -> bool:
+        """Apply a confirmed change in the local desktop environment."""
+
+    @abstractmethod
+    def register_tool(self, mcp, changeset) -> None:
+        """Register MCP tool(s) that stage this feature's changes."""
+
+    @abstractmethod
+    def register_resource(self, mcp) -> None:
+        """Register MCP resource(s) that read this feature's current state."""
+
+    def register(self, mcp, changeset) -> None:
+        """Register both tool and resource for this feature."""
+        self.register_tool(mcp, changeset)
+        self.register_resource(mcp)
