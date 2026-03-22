@@ -23,7 +23,15 @@ from PySide6.QtWidgets import (
 
 from worker import BackendWorker
 from logger import (
-    log_changeset_applied, log_changeset_failed, log_changeset_skipped
+    log_changeset_applied,
+    log_changeset_failed,
+    log_changeset_skipped,
+    log_undo_requested,
+    log_undo_completed,
+    log_undo_failed,
+    log_redo_requested,
+    log_redo_completed,
+    log_redo_failed,
 )
 from stack_panel import StackPanel
 
@@ -448,34 +456,42 @@ class ChatWindow(QMainWindow):
     @Slot()
     def _on_undo_requested(self) -> None:
         """Handle undo button click - delegate to backend StateManager."""
+        log_undo_requested()
         self._worker.request_undo()
 
     @Slot()
     def _on_redo_requested(self) -> None:
         """Handle redo button click - delegate to backend StateManager."""
+        log_redo_requested()
         self._worker.request_redo()
 
     @Slot(str)
     def _on_undo_completed(self, change_desc: str) -> None:
         """Handle successful undo from backend."""
+        log_undo_completed(change_desc)
         self._add_message(f"↶ Undo completed: {change_desc}", is_user=False)
+        self._stack_panel.on_undo_completed()
         QTimer.singleShot(50, self._scroll_to_bottom)
 
     @Slot(str)
     def _on_undo_failed(self, error: str) -> None:
         """Handle undo failure from backend."""
+        log_undo_failed(error)
         self._add_message(f"⚠ Undo failed: {error}", is_user=False)
         QTimer.singleShot(50, self._scroll_to_bottom)
 
     @Slot(str)
     def _on_redo_completed(self, change_desc: str) -> None:
         """Handle successful redo from backend."""
+        log_redo_completed(change_desc)
         self._add_message(f"↷ Redo completed: {change_desc}", is_user=False)
+        self._stack_panel.on_redo_completed()
         QTimer.singleShot(50, self._scroll_to_bottom)
 
     @Slot(str)
     def _on_redo_failed(self, error: str) -> None:
         """Handle redo failure from backend."""
+        log_redo_failed(error)
         self._add_message(f"⚠ Redo failed: {error}", is_user=False)
         QTimer.singleShot(50, self._scroll_to_bottom)
 

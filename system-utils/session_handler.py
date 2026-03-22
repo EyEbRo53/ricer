@@ -113,14 +113,14 @@ class SessionHandler:
 
     def _snapshot(self, change: dict) -> dict:
         """Read current config values for the keys this change touches."""
-        return self.config_checker.read_current(
+        return OrderManager.read_state(
             change["script"], change["parameters"]
         )
 
-    def _verify(self, change: dict) -> bool:
+    def _verify(self, change: dict, before: dict, after: dict) -> bool:
         """Check whether the config now matches the expected values."""
         return self.config_checker.verify(
-            change["script"], change["parameters"]
+            before, after, change["parameters"]
         )
 
     def _on_success(self, change: dict, before: dict, after: dict) -> None:
@@ -138,7 +138,8 @@ class SessionHandler:
 
     def _reverse_params(self, script: str, snapshot: dict) -> dict:
         """Convert config snapshot → script parameters — used by State Manager."""
-        return self.config_checker.reverse_parameters(script, snapshot)
+        _ = script
+        return self.config_checker.reverse_parameters(snapshot)
 
     # ── Public interface ─────────────────────────────────────────────
 

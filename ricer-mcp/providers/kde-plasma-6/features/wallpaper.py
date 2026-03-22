@@ -8,7 +8,7 @@ from utils.write.plasma_script import run_plasma_script
 class WallpaperFeature(Feature):
     """Wallpaper feature implementation."""
 
-    def execute(self, path: str) -> bool:
+    def set(self, path: str) -> bool:
         """Set KDE Plasma wallpaper via orchestrator."""
         script = f"""
     var allDesktops = desktops();
@@ -20,6 +20,22 @@ class WallpaperFeature(Feature):
     }}
     """
         return run_plasma_script(script, f"Wallpaper set: {os.path.basename(path)}")
+
+    def get(self) -> dict:
+        """Return current wallpaper as a structured payload."""
+        from utils.kde_config_reader import read_current_wallpaper
+
+        path = read_current_wallpaper()
+        return {
+            "setting": "wallpaper",
+            "source": "dbus (org.kde.plasmashell)",
+            "value": path,
+            "error": (
+                "Failed to read wallpaper from DBus (org.kde.plasmashell)."
+                if path is None
+                else None
+            ),
+        }
 
     def register_tool(self, mcp, changeset) -> None:
         @mcp.tool()
@@ -39,33 +55,13 @@ class WallpaperFeature(Feature):
 
     def register_resource(self, mcp) -> None:
         @mcp.resource("plasma://display/wallpaper")
-        def get_wallpaper() -> str:
+        def get_wallpaper_resource() -> str:
             """Return the current desktop wallpaper path."""
             import json
-            from utils.kde_config_reader import read_current_wallpaper
-
-            path = read_current_wallpaper()
-            return json.dumps(
-                {
-                    "setting": "wallpaper",
-                    "source": "dbus (org.kde.plasmashell)",
-                    "value": path,
-                    "error": (
-                        "Failed to read wallpaper from DBus (org.kde.plasmashell)."
-                        if path is None
-                        else None
-                    ),
-                },
-                indent=2,
-            )
+            return json.dumps(feature.get(), indent=2)
 
 
 feature = WallpaperFeature()
-
-
-def set_wallpaper(path: str) -> bool:
-    """Script entrypoint for confirmed wallpaper changes."""
-    return feature.execute(path=path)
 
 
 def register(mcp, changeset):

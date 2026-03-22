@@ -269,6 +269,39 @@ class StackPanel(QWidget):
         self._undo_btn.setEnabled(can_undo)
         self._redo_btn.setEnabled(can_redo)
 
+    def on_undo_completed(self) -> None:
+        """Move visual cursor one step back after successful undo."""
+        if not self._stack_items:
+            self.set_button_states(False, False)
+            return
+
+        new_index = self._current_index - 1
+        self.update_active_item(new_index)
+        self.set_button_states(
+            can_undo=new_index >= 0,
+            can_redo=new_index < len(self._stack_items) - 1,
+        )
+
+    def on_redo_completed(self) -> None:
+        """Move visual cursor one step forward after successful redo."""
+        if not self._stack_items:
+            self.set_button_states(False, False)
+            return
+
+        if self._current_index >= len(self._stack_items) - 1:
+            self.set_button_states(
+                can_undo=self._current_index >= 0,
+                can_redo=False,
+            )
+            return
+
+        new_index = self._current_index + 1
+        self.update_active_item(new_index)
+        self.set_button_states(
+            can_undo=new_index >= 0,
+            can_redo=new_index < len(self._stack_items) - 1,
+        )
+
     # ── Internal helpers ─────────────────────────────────────────────
 
     def _update_info(self) -> None:

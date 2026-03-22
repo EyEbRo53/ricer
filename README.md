@@ -7,6 +7,7 @@ Install uv:
 ```bash
 sudo pacman -S uv
 ```
+
 Or with curl:
 
 ```bash
@@ -27,6 +28,7 @@ source .venv/bin/activate
 ```bash
 uv pip install -e ricer-client
 uv pip install -e ricer-mcp
+uv pip install PySide6
 ```
 
 ## Run

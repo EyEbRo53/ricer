@@ -9,7 +9,7 @@ _VALID_POSITIONS = {"top", "bottom", "left", "right"}
 class PanelPositionFeature(Feature):
     """Panel position feature implementation."""
 
-    def execute(self, position: str) -> bool:
+    def set(self, position: str) -> bool:
         """Move the first Plasma panel via orchestrator."""
         position = position.lower().strip()
         if position not in _VALID_POSITIONS:
@@ -24,6 +24,22 @@ class PanelPositionFeature(Feature):
     }}
     """
         return run_plasma_script(script, f"Panel moved to: {position}")
+
+    def get(self) -> dict:
+        """Return current panel position as a structured payload."""
+        from utils.kde_config_reader import read_panel_position
+
+        position = read_panel_position()
+        return {
+            "setting": "panel_position",
+            "source": "dbus (org.kde.plasmashell)",
+            "value": position,
+            "error": (
+                "Failed to read panel position from DBus (org.kde.plasmashell)."
+                if position is None
+                else None
+            ),
+        }
 
     def register_tool(self, mcp, changeset) -> None:
         @mcp.tool()
@@ -41,33 +57,13 @@ class PanelPositionFeature(Feature):
 
     def register_resource(self, mcp) -> None:
         @mcp.resource("plasma://display/panel-position")
-        def get_panel_position() -> str:
+        def get_panel_position_resource() -> str:
             """Return the current panel (taskbar) position."""
             import json
-            from utils.kde_config_reader import read_panel_position
-
-            position = read_panel_position()
-            return json.dumps(
-                {
-                    "setting": "panel_position",
-                    "source": "dbus (org.kde.plasmashell)",
-                    "value": position,
-                    "error": (
-                        "Failed to read panel position from DBus (org.kde.plasmashell)."
-                        if position is None
-                        else None
-                    ),
-                },
-                indent=2,
-            )
+            return json.dumps(feature.get(), indent=2)
 
 
 feature = PanelPositionFeature()
-
-
-def move_panel(position: str) -> bool:
-    """Script entrypoint for confirmed panel position changes."""
-    return feature.execute(position=position)
 
 
 def register(mcp, changeset):

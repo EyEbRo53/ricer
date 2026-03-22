@@ -9,8 +9,16 @@ class Feature(ABC):
     """Common contract for MCP feature modules."""
 
     @abstractmethod
-    def execute(self, *args, **kwargs) -> bool:
+    def set(self, *args, **kwargs) -> bool:
         """Apply a confirmed change in the local desktop environment."""
+
+    @abstractmethod
+    def get(self) -> dict:
+        """Read the current feature state from the local desktop environment."""
+
+    def execute(self, *args, **kwargs) -> bool:
+        """Backward-compatible alias for legacy call sites."""
+        return self.set(*args, **kwargs)
 
     @abstractmethod
     def register_tool(self, mcp, changeset) -> None:

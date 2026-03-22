@@ -1,5 +1,9 @@
 from mcp.server.fastmcp import FastMCP
 from changeset import changeset
+from provider_runtime import ensure_provider_paths
+
+ensure_provider_paths()
+
 from features import register_all
 
 mcp = FastMCP("ricer-mcp")

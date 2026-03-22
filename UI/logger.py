@@ -85,5 +85,29 @@ def log_changeset_skipped(order: int) -> None:
     get_logger().info("CHANGESET SKIPPED  ▸ #%s", order)
 
 
+def log_undo_requested() -> None:
+    get_logger().info("UNDO REQUESTED")
+
+
+def log_undo_completed(change_desc: str) -> None:
+    get_logger().info("UNDO COMPLETED  ▸ %s", change_desc)
+
+
+def log_undo_failed(error: str) -> None:
+    get_logger().error("UNDO FAILED  ▸ %s", error)
+
+
+def log_redo_requested() -> None:
+    get_logger().info("REDO REQUESTED")
+
+
+def log_redo_completed(change_desc: str) -> None:
+    get_logger().info("REDO COMPLETED  ▸ %s", change_desc)
+
+
+def log_redo_failed(error: str) -> None:
+    get_logger().error("REDO FAILED  ▸ %s", error)
+
+
 def log_error(msg: str) -> None:
     get_logger().error("ERROR  ▸ %s", msg)
