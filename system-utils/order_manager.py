@@ -42,6 +42,7 @@ class OrderManager:
         on_verify: Callable[[dict, dict, dict], bool],
         on_success: Callable[[dict, dict, dict], None],
         on_failure: Callable[[dict, str, str], None],
+        post_apply: Callable[[dict], None] = None,
     ) -> None:
         """Create an OrderManager with injected callbacks.
 
@@ -64,11 +65,15 @@ class OrderManager:
                 after retry.
                 Signature:
                 ``on_failure(change, error_type, detail) -> None``.
+
+            post_apply: Optional callback called after successful apply for certain change types.
+                Signature: ``post_apply(change) -> None``.
         """
         self._on_snapshot = on_snapshot
         self._on_verify = on_verify
         self._on_success = on_success
         self._on_failure = on_failure
+        self._post_apply = post_apply
 
     # ── Public interface ─────────────────────────────────────────────
 
@@ -100,6 +105,9 @@ class OrderManager:
         after = self._on_snapshot(change)
         if self._on_verify(change, before, after):
             self._on_success(change, before, after)
+            # Post-apply hook for input-type changes
+            if self._post_apply and change.get("change_type") == "input":
+                self._post_apply(change)
             return {"status": "applied"}
 
         # 4. Retry once
@@ -108,6 +116,9 @@ class OrderManager:
             after = self._on_snapshot(change)
             if self._on_verify(change, before, after):
                 self._on_success(change, before, after)
+                # Post-apply hook for input-type changes
+                if self._post_apply and change.get("change_type") == "input":
+                    self._post_apply(change)
                 return {"status": "applied"}
 
         # 5. Failed after retry

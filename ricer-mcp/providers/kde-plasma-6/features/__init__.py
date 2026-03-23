@@ -11,6 +11,7 @@ from . import global_scaling
 from . import window_borders
 from . import wallpaper
 from . import panel_position
+from . import color_scheme
 
 
 _FEATURE_MODULES = (
@@ -23,6 +24,7 @@ _FEATURE_MODULES = (
     window_borders,
     wallpaper,
     panel_position,
+    color_scheme,
 )
 
 

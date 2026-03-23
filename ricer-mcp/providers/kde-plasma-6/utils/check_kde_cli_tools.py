@@ -11,10 +11,13 @@ import shutil
 def is_kde_cli_tools_available():
     """
     Check if kde-cli-tools is available on the system.
-    Returns True if kstart is available, False otherwise.
-    (kquitapp6 is not available in Arch's kde-cli-tools package)
+    Returns True if at least one supported startup command is available.
     """
-    return shutil.which("kstart") is not None
+    return (
+        shutil.which("kstart6") is not None
+        or shutil.which("kstart") is not None
+        or shutil.which("plasmashell") is not None
+    )
 
 
 def install_kde_cli_tools():

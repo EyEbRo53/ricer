@@ -2,11 +2,20 @@
 
 from __future__ import annotations
 
+
+from enum import Enum, auto
 from abc import ABC, abstractmethod
 
 
+class FeatureType(Enum):
+    INPUT = "input"
+    DISPLAY = "display"
+
 class Feature(ABC):
     """Common contract for MCP feature modules."""
+
+    type: FeatureType
+
 
     @abstractmethod
     def set(self, *args, **kwargs) -> bool:

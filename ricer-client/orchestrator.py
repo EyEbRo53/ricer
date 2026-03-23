@@ -39,6 +39,9 @@ Guidelines:
   changeset.
 - If the user's request is ambiguous, ask a clarifying question
   before staging anything.
+- If a user reply is a confirmation like "yes", "sure", "go with it",
+    it refers only to the single most recent option you proposed.
+- Never stage multiple alternatives for the same setting in one turn.
 - Be concise and helpful.
 """
 
@@ -81,6 +84,11 @@ class Orchestrator:
         self._history: list[ChatCompletionMessageParam] = [
             {"role": "system", "content": _build_system_prompt(self._mcp.resources)}
         ]
+
+    @staticmethod
+    def _is_read_only_tool(fn_name: str) -> bool:
+        """Return True when a tool call is known to be side-effect free."""
+        return fn_name == "read_resource" or fn_name.startswith("get_")
 
     # ── Public API ───────────────────────────────────────────────────
 
@@ -140,6 +148,8 @@ class Orchestrator:
             # Append the assistant message that contains the tool calls
             self._history.append(message)  # type: ignore[arg-type]
 
+            seen_mutating_tools: set[str] = set()
+
             for tool_call in message.tool_calls:
                 fn_name = tool_call.function.name
                 fn_args = json.loads(tool_call.function.arguments)
@@ -149,11 +159,22 @@ class Orchestrator:
                     self._on_tool_call(fn_name, fn_args)
 
                 try:
+                    is_read_only = self._is_read_only_tool(fn_name)
+                    if not is_read_only and fn_name in seen_mutating_tools:
+                        raise RuntimeError(
+                            "Duplicate mutating tool call blocked in a single turn: "
+                            f"{fn_name}. Ask for clarification instead of staging "
+                            "multiple alternatives."
+                        )
+
                     if fn_name == "read_resource":
                         uri = fn_args.get("uri", "")
                         result = await self._mcp.read_resource(uri)
                     else:
                         result = await self._mcp.call_tool(fn_name, fn_args)
+
+                    if not is_read_only:
+                        seen_mutating_tools.add(fn_name)
                 except Exception as exc:
                     result = f"Error: {exc}"
 

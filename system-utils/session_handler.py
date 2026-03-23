@@ -107,7 +107,17 @@ class SessionHandler:
             on_verify=self._verify,
             on_success=self._on_success,
             on_failure=self._on_failure,
+            post_apply=self._post_apply_input_change,
         )
+
+    def _post_apply_input_change(self, change: dict) -> None:
+        """Handle post-apply actions for input-type changes (e.g., reload/restart)."""
+        import subprocess
+        try:
+            print("[OrderManager] Restarting plasmashell after input-type change...")
+            subprocess.Popen(["plasmashell", "--replace"])
+        except Exception as e:
+            print(f"[OrderManager] Failed to restart plasmashell: {e}")
 
     # ── Callback wiring (private) ────────────────────────────────────
 
