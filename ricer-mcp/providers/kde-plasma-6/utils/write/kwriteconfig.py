@@ -3,12 +3,12 @@
 import subprocess
 
 
-def write_kde_config(file: str, group: str, key: str, value: str) -> bool:
+def write_kde_config(file: str, group: str | list[str], key: str, value: str) -> bool:
     """Write a single KDE config entry via kwriteconfig6.
 
     Args:
         file:  Config filename (e.g. "kwinrc", "kdeglobals", "kcminputrc").
-        group: INI group inside that file (e.g. "KDE", "Mouse").
+        group: INI group inside that file. Can be a list for nested groups.
         key:   Key name.
         value: Value to write (always a string).
 
@@ -16,17 +16,19 @@ def write_kde_config(file: str, group: str, key: str, value: str) -> bool:
         True on success, False on failure.
     """
     try:
+        cmd = [
+            "kwriteconfig6",
+            "--file",
+            file,
+        ]
+        if isinstance(group, list):
+            for g in group:
+                cmd += ["--group", g]
+        else:
+            cmd += ["--group", group]
+        cmd += ["--key", key, value]
         subprocess.run(
-            [
-                "kwriteconfig6",
-                "--file",
-                file,
-                "--group",
-                group,
-                "--key",
-                key,
-                value,
-            ],
+            cmd,
             check=True,
             capture_output=True,
         )
@@ -40,11 +42,11 @@ def write_kde_config(file: str, group: str, key: str, value: str) -> bool:
         return False
 
 
-def write_kde_configs(configs: list[tuple[str, str, str, str]]) -> bool:
+def write_kde_configs(configs: list[tuple[str, str | list[str], str, str]]) -> bool:
     """Write multiple KDE config entries.
 
     Args:
-        configs: List of (file, group, key, value) tuples.
+        configs: List of (file, group(s), key, value) tuples.
 
     Returns:
         True if **all** writes succeeded.

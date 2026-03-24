@@ -33,4 +33,5 @@ class AnimationSpeedFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_animation_speed() -> dict:
+            """Return current animation speed setting."""
             return self.get()

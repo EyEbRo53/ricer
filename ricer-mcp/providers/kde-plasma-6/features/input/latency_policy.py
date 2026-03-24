@@ -27,6 +27,7 @@ class LatencyPolicyFeature(Feature):
     def register_tool(self, mcp, changeset) -> None:
         @mcp.tool()
         def set_latency_policy(policy: str) -> str:
+            """Stage current latency policy setting."""
             import json
             receipt = changeset.add("latency_policy", {"policy": policy})
             return json.dumps(receipt)
@@ -34,4 +35,5 @@ class LatencyPolicyFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_latency_policy() -> dict:
+            """Return current latency policy setting."""
             return self.get()

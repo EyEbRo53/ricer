@@ -27,6 +27,7 @@ class KonsoleFontFeature(Feature):
     def register_tool(self, mcp, changeset) -> None:
         @mcp.tool()
         def set_konsole_font(profile_name: str, font: str) -> str:
+            """Stage current konsole font setting."""
             import json
             receipt = changeset.add("konsole_font", {"profile_name": profile_name, "font": font})
             return json.dumps(receipt)
@@ -34,4 +35,5 @@ class KonsoleFontFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_konsole_font(profile_name: str) -> dict:
+            """Return current konsole font setting."""
             return self.get(profile_name)

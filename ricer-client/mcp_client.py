@@ -55,8 +55,14 @@ class MCPClient:
         # Cache tool + resource metadata
         await self._refresh_metadata()
 
+        self.provider_name = "unknown"
+        try:
+            self.provider_name = await self.call_tool("get_provider_info", {})
+        except Exception:
+            pass
+
         print(
-            f"[mcp] Connected — "
+            f"[mcp] Connected — provider: {self.provider_name}, "
             f"{len(self.tools)} tools, {len(self.resources)} resources"
         )
 
@@ -140,7 +146,7 @@ class MCPClient:
                     "function": {
                         "name": "read_resource",
                         "description": (
-                            "Read a current KDE/Plasma setting from a resource URI.\n"
+                            "Read a current desktop setting from a resource URI.\n"
                             "Available resources:\n"
                             + "\n".join(resource_items)
                         ),

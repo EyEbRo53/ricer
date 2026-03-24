@@ -33,4 +33,5 @@ class FontDPIFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_font_dpi() -> dict:
+            """Return current font dpi setting."""
             return self.get()

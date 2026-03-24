@@ -42,6 +42,7 @@ class WindowRuleFeature(Feature):
     def register_tool(self, mcp, changeset) -> None:
         @mcp.tool()
         def set_window_rule(rule_number: int, description: str = None, windowtypes: str = None, wmclass: str = None, desktop: int = None, desktoprule: int = None) -> str:
+            """Stage current window rule setting."""
             import json
             receipt = changeset.add(
                 "window_rule", {
@@ -58,4 +59,5 @@ class WindowRuleFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_window_rule(rule_number: int) -> dict:
+            """Return current window rule setting."""
             return self.get(rule_number)

@@ -23,7 +23,7 @@ from mcp_client import MCPClient
 from llm_provider import LLMConfig
 
 SYSTEM_PROMPT = """\
-You are **Ricer**, a friendly KDE Plasma desktop customisation assistant.
+You are **Ricer**, a friendly {desktop_env} desktop customisation assistant.
 
 You can READ the user's current desktop settings via resources and
 STAGE changes via tools. Changes are NOT applied immediately — they
@@ -46,21 +46,35 @@ Guidelines:
 """
 
 
-def _build_system_prompt(resources: list[dict]) -> str:
+def _build_system_prompt(mcp: MCPClient) -> str:
     """Build system prompt with currently available resource URIs."""
-    if not resources:
-        return SYSTEM_PROMPT
+    # Map internal provider names to user-friendly titles
+    de_titles = {
+        "kde-plasma-6": "KDE Plasma",
+        "cinnamon": "Cinnamon",
+        "gnome": "GNOME",
+        "xfce": "XFCE",
+        "mate": "MATE",
+        "lxqt": "LXQt",
+    }
+    # Assume KDE if we can't detect it, but prefer the detected one
+    de_name = de_titles.get(getattr(mcp, "provider_name", ""), "KDE Plasma")
+
+    full_prompt = SYSTEM_PROMPT.format(desktop_env=de_name)
+
+    if not mcp.resources:
+        return full_prompt
 
     resource_lines = "\n".join(
         f"- {r['uri']}: {r.get('description') or r.get('name', '')}"
-        for r in resources
+        for r in mcp.resources
     )
 
     return (
-        f"{SYSTEM_PROMPT}\n"
+        f"{full_prompt}\n"
         "Available resource URIs (read-only):\n"
         f"{resource_lines}\n\n"
-        "When the user asks to view/read/check a current setting, call the "
+        f"When the user asks to view/read/check a current {de_name} setting, call the "
         "`read_resource` tool with the best matching URI before replying."
     )
 
@@ -82,7 +96,7 @@ class Orchestrator:
         self._on_tool_call = on_tool_call
         self._on_tool_result = on_tool_result
         self._history: list[ChatCompletionMessageParam] = [
-            {"role": "system", "content": _build_system_prompt(self._mcp.resources)}
+            {"role": "system", "content": _build_system_prompt(self._mcp)}
         ]
 
     @staticmethod
@@ -196,7 +210,7 @@ class Orchestrator:
     def clear_history(self) -> None:
         """Reset conversation but keep the system prompt."""
         self._history = [
-            {"role": "system", "content": _build_system_prompt(self._mcp.resources)}
+            {"role": "system", "content": _build_system_prompt(self._mcp)}
         ]
 
     @property

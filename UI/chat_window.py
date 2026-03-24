@@ -277,6 +277,7 @@ class ChatWindow(QMainWindow):
     def __init__(self, worker: BackendWorker) -> None:
         super().__init__()
         self._worker = worker
+        self._provider_name = "KDE Plasma"  # Default title
 
         # Per-card tracking:  order → {card, title, confirm, skip}
         self._change_cards: dict[int, dict] = {}
@@ -296,7 +297,7 @@ class ChatWindow(QMainWindow):
     # ── UI construction ──────────────────────────────────────────────
 
     def _setup_ui(self) -> None:
-        self.setWindowTitle("Ricer — KDE Plasma Customisation")
+        self.setWindowTitle(f"Ricer — {self._provider_name} Customisation")
         self.setMinimumSize(800, 500)
         self.resize(1000, 600)
         self.setStyleSheet(WINDOW_STYLE)
@@ -405,6 +406,24 @@ class ChatWindow(QMainWindow):
 
     @Slot(str)
     def _on_status(self, text: str) -> None:
+        # Check if the status contains provider info
+        if "provider:" in text:
+            # Example: "[mcp] Connected — provider: cinnamon, 5 tools, 6 resources"
+            try:
+                p_name = text.split("provider:")[1].split(",")[0].strip()
+                de_titles = {
+                    "kde-plasma-6": "KDE Plasma",
+                    "cinnamon": "Cinnamon",
+                    "gnome": "GNOME",
+                    "xfce": "XFCE",
+                    "mate": "MATE",
+                    "lxqt": "LXQt",
+                }
+                self._provider_name = de_titles.get(p_name, p_name.capitalize())
+                self.setWindowTitle(f"Ricer — {self._provider_name} Customisation")
+                self._input.setPlaceholderText(f"Ask Ricer to customise your {self._provider_name} desktop…")
+            except Exception:
+                pass
         self._status_label.setText(text)
 
     @Slot(bool)

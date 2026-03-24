@@ -30,6 +30,7 @@ class SplashScreenFeature(Feature):
     def register_tool(self, mcp, changeset) -> None:
         @mcp.tool()
         def set_splash_screen(theme: str = None, enabled: bool = None) -> str:
+            """Stage current splash screen setting."""
             import json
             receipt = changeset.add(
                 "splash_screen", {"theme": theme, "enabled": enabled}
@@ -39,4 +40,5 @@ class SplashScreenFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_splash_screen() -> dict:
+            """Return current splash screen setting."""
             return self.get()

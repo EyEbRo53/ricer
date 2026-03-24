@@ -33,4 +33,5 @@ class CursorThemeFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_cursor_theme() -> dict:
+            """Return current cursor theme setting."""
             return self.get()

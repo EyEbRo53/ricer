@@ -3,12 +3,12 @@
 import subprocess
 
 
-def read_kde_config(file: str, group: str, key: str, default: str = "") -> str | None:
+def read_kde_config(file: str, group: str | list[str], key: str, default: str = "") -> str | None:
     """Read a single KDE config entry via kreadconfig6.
 
     Args:
         file:    Config filename (e.g. "kwinrc", "kdeglobals", "kcminputrc").
-        group:   INI group inside that file (e.g. "KDE", "Mouse").
+        group:   INI group inside that file (e.g. "KDE", "Mouse"). Can be a list of strings for nested groups.
         key:     Key name.
         default: Value returned by kreadconfig6 when the key is absent.
 
@@ -19,9 +19,13 @@ def read_kde_config(file: str, group: str, key: str, default: str = "") -> str |
     cmd = [
         "kreadconfig6",
         "--file", file,
-        "--group", group,
-        "--key", key,
     ]
+    if isinstance(group, list):
+        for g in group:
+            cmd += ["--group", g]
+    else:
+        cmd += ["--group", group]
+    cmd += ["--key", key]
     if default:
         cmd += ["--default", default]
 
@@ -38,12 +42,12 @@ def read_kde_config(file: str, group: str, key: str, default: str = "") -> str |
 
 
 def read_kde_configs(
-    configs: list[tuple[str, str, str, str]],
+    configs: list[tuple[str, str | list[str], str, str]],
 ) -> dict[str, str | None]:
     """Read multiple KDE config entries.
 
     Args:
-        configs: List of (file, group, key, default) tuples.
+        configs: List of (file, group(s), key, default) tuples.
 
     Returns:
         Dict mapping each key to its current value (or None on failure).

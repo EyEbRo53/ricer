@@ -28,6 +28,7 @@ class ReducedMotionFeature(Feature):
     def register_tool(self, mcp, changeset) -> None:
         @mcp.tool()
         def set_reduced_motion(minimal: bool = False) -> str:
+            """Stage current reduced motion setting."""
             import json
             receipt = changeset.add("reduced_motion", {"minimal": minimal})
             return json.dumps(receipt)
@@ -35,4 +36,5 @@ class ReducedMotionFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_reduced_motion() -> dict:
+            """Return current reduced motion setting."""
             return self.get()

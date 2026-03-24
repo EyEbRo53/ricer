@@ -27,6 +27,7 @@ class KonsoleColorSchemeFeature(Feature):
     def register_tool(self, mcp, changeset) -> None:
         @mcp.tool()
         def set_konsole_color_scheme(profile_name: str, color_scheme: str) -> str:
+            """Stage current konsole color scheme setting."""
             import json
             receipt = changeset.add("konsole_color_scheme", {"profile_name": profile_name, "color_scheme": color_scheme})
             return json.dumps(receipt)
@@ -34,4 +35,5 @@ class KonsoleColorSchemeFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_konsole_color_scheme(profile_name: str) -> dict:
+            """Return current konsole color scheme setting."""
             return self.get(profile_name)

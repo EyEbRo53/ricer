@@ -24,6 +24,7 @@ class LargeTextFeature(Feature):
     def register_tool(self, mcp, changeset) -> None:
         @mcp.tool()
         def set_large_text(font: str) -> str:
+            """Stage current large text setting."""
             import json
             receipt = changeset.add("large_text", {"font": font})
             return json.dumps(receipt)
@@ -31,4 +32,5 @@ class LargeTextFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_large_text() -> dict:
+            """Return current large text setting."""
             return self.get()

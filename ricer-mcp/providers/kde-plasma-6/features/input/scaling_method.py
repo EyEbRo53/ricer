@@ -27,6 +27,7 @@ class ScalingMethodFeature(Feature):
     def register_tool(self, mcp, changeset) -> None:
         @mcp.tool()
         def set_scaling_method(method: str) -> str:
+            """Stage current scaling method setting."""
             import json
             receipt = changeset.add("scaling_method", {"method": method})
             return json.dumps(receipt)
@@ -34,4 +35,5 @@ class ScalingMethodFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_scaling_method() -> dict:
+            """Return current scaling method setting."""
             return self.get()

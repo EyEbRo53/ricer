@@ -29,6 +29,7 @@ class HighContrastFeature(Feature):
     def register_tool(self, mcp, changeset) -> None:
         @mcp.tool()
         def set_high_contrast(enable: bool) -> str:
+            """Stage current high contrast setting."""
             import json
             receipt = changeset.add("high_contrast", {"enable": enable})
             return json.dumps(receipt)
@@ -36,4 +37,5 @@ class HighContrastFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_high_contrast() -> dict:
+            """Return current high contrast setting."""
             return self.get()

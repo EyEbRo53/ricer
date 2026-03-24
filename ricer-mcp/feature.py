@@ -10,6 +10,10 @@ from abc import ABC, abstractmethod
 class FeatureType(Enum):
     INPUT = "input"
     DISPLAY = "display"
+    AUDIO = "audio"
+    POWER = "power"
+    WORKSPACE = "workspace"
+    APPS = "apps"
 
 class Feature(ABC):
     """Common contract for MCP feature modules."""

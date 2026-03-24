@@ -44,4 +44,5 @@ class AccentColorFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_accent_color() -> dict:
+            """Return current accent color setting."""
             return self.get()

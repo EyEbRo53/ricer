@@ -16,13 +16,15 @@ import os
 
 from PySide6.QtCore import QThread, Signal, QObject
 
-# Allow imports from ricer-client and load its .env
+# Allow imports from ricer-client, ricer-mcp and load its .env
 _CLIENT_DIR = os.path.join(os.path.dirname(__file__), "..", "ricer-client")
-_MCP_SERVER = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "..", "ricer-mcp", "server.py")
+_MCP_DIR = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..", "ricer-mcp")
 )
+_MCP_SERVER = os.path.join(_MCP_DIR, "server.py")
 _SYSTEM_UTILS_DIR = os.path.join(os.path.dirname(__file__), "..", "system-utils")
 sys.path.insert(0, _CLIENT_DIR)
+sys.path.insert(0, _MCP_DIR)
 sys.path.insert(0, _SYSTEM_UTILS_DIR)
 
 from dotenv import load_dotenv
@@ -32,6 +34,7 @@ from mcp_client import MCPClient
 from llm_provider import LLMConfig, create_llm_client
 from orchestrator import Orchestrator
 from session_handler import SessionHandler
+from mcp_provider import McpSystemProvider
 from logger import (
     log_user_message, log_assistant_reply, log_tool_call,
     log_tool_result, log_changeset_staged, log_error,
@@ -84,7 +87,7 @@ class BackendWorker(QObject):
             self.status_changed.emit("Connecting to MCP server…")
 
             # Session handler (owns all system utilities)
-            self._session = SessionHandler()
+            self._session = SessionHandler(provider=McpSystemProvider())
 
             config = LLMConfig.from_env()
             llm = create_llm_client(config)

@@ -8,7 +8,8 @@ callbacks, and owns the SQLite database connection.
 
 Usage::
 
-    session = SessionHandler()
+    provider = McpSystemProvider()
+    session = SessionHandler(provider)
     result  = session.confirm_change(receipt_dict)
     session.close()
 """
@@ -25,6 +26,7 @@ from state_manager import StateManager
 from template_manager import TemplateManager
 from failure_handler import FailureHandler
 from order_manager import OrderManager
+from provider_interface import SystemProvider
 
 _DB_DIR = os.path.expanduser("~/.config/ricer")
 _DB_PATH = os.path.join(_DB_DIR, "ricer.db")
@@ -85,7 +87,8 @@ CREATE TABLE IF NOT EXISTS failures (
 class SessionHandler:
     """One-per-session container that owns and wires all utilities."""
 
-    def __init__(self) -> None:
+    def __init__(self, provider: SystemProvider) -> None:
+        self._provider = provider
         self._session_id = uuid.uuid4().hex[:8]
         self._db = self._init_db()
         self._record_session()
@@ -95,7 +98,7 @@ class SessionHandler:
         self.state_manager = StateManager(
             self._db,
             self._session_id,
-            on_execute=self._execute_script,
+            on_execute=self._provider.execute_script,
             on_reverse_params=self._reverse_params,
         )
         self.template_manager = TemplateManager(self._db, self._session_id)
@@ -107,23 +110,15 @@ class SessionHandler:
             on_verify=self._verify,
             on_success=self._on_success,
             on_failure=self._on_failure,
-            post_apply=self._post_apply_input_change,
+            on_execute=self._provider.execute_script,
+            post_apply=self._provider.post_apply_input_change,
         )
-
-    def _post_apply_input_change(self, change: dict) -> None:
-        """Handle post-apply actions for input-type changes (e.g., reload/restart)."""
-        import subprocess
-        try:
-            print("[OrderManager] Restarting plasmashell after input-type change...")
-            subprocess.Popen(["plasmashell", "--replace"])
-        except Exception as e:
-            print(f"[OrderManager] Failed to restart plasmashell: {e}")
 
     # ── Callback wiring (private) ────────────────────────────────────
 
     def _snapshot(self, change: dict) -> dict:
         """Read current config values for the keys this change touches."""
-        return OrderManager.read_state(
+        return self._provider.read_state(
             change["script"], change["parameters"]
         )
 
@@ -141,10 +136,6 @@ class SessionHandler:
     def _on_failure(self, change: dict, error_type: str, detail: str) -> None:
         """Log the failure."""
         self.failure_handler.log(change, error_type, detail)
-
-    def _execute_script(self, script: str, parameters: dict) -> bool:
-        """Run a script by name — used as on_execute callback by State Manager."""
-        return OrderManager._run_script(script, parameters)
 
     def _reverse_params(self, script: str, snapshot: dict) -> dict:
         """Convert config snapshot → script parameters — used by State Manager."""

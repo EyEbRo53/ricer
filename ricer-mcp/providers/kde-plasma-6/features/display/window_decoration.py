@@ -33,4 +33,5 @@ class WindowDecorationFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_window_decoration() -> dict:
+            """Return current window decoration setting."""
             return self.get()

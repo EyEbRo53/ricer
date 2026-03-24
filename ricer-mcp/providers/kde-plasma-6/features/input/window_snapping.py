@@ -29,6 +29,7 @@ class WindowSnappingFeature(Feature):
     def register_tool(self, mcp, changeset) -> None:
         @mcp.tool()
         def set_window_snapping(enabled: bool) -> str:
+            """Stage current window snapping setting."""
             import json
             receipt = changeset.add("window_snapping", {"enabled": enabled})
             return json.dumps(receipt)
@@ -36,4 +37,5 @@ class WindowSnappingFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_window_snapping() -> dict:
+            """Return current window snapping setting."""
             return self.get()

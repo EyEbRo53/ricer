@@ -29,6 +29,7 @@ class KWinEffectFeature(Feature):
     def register_tool(self, mcp, changeset) -> None:
         @mcp.tool()
         def set_kwin_effect(effect_name: str, enabled: bool) -> str:
+            """Stage current kwin effect setting."""
             import json
             receipt = changeset.add(
                 "kwin_effect", {"effect_name": effect_name, "enabled": enabled}
@@ -38,4 +39,5 @@ class KWinEffectFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_kwin_effect(effect_name: str) -> dict:
+            """Return current kwin effect setting."""
             return self.get(effect_name)

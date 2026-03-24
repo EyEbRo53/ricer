@@ -27,6 +27,7 @@ class CompositingBackendFeature(Feature):
     def register_tool(self, mcp, changeset) -> None:
         @mcp.tool()
         def set_compositing_backend(backend: str) -> str:
+            """Stage current compositing backend setting."""
             import json
             receipt = changeset.add("compositing_backend", {"backend": backend})
             return json.dumps(receipt)
@@ -34,4 +35,5 @@ class CompositingBackendFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_compositing_backend() -> dict:
+            """Return current compositing backend setting."""
             return self.get()

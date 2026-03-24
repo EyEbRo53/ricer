@@ -2,17 +2,37 @@
 
 from feature import Feature
 
-from . import cursor_size
-from . import double_click_interval
-from . import single_click
-from . import touchpad_settings
-from . import keyboard_accessibility
-from . import global_scaling
-from . import window_borders
-from . import wallpaper
-from . import panel_position
-from . import color_scheme
+from .input import cursor_size
+from .input import double_click_interval
+from .input import single_click
+from .input import touchpad_settings
+from .input import keyboard_accessibility
+from .display import global_scaling
+from .display import window_borders
+from .display import wallpaper
+from .display import panel_position
+from .display import color_scheme
 
+from .audio import system_sounds
+from .audio import notifications
+from .power import power_management
+from .power import screen_locking
+from .power import session_management
+from .workspace import virtual_desktops
+from .workspace import activities
+from .workspace import task_switcher
+from .workspace import workspace_behavior
+from .workspace import screen_edges
+from .workspace import blur_strength
+from .workspace import launch_feedback
+from .input import mouse_settings
+from .input import global_shortcuts
+from .input import bluetooth
+from .apps import baloo_indexer
+from .apps import dolphin_settings
+from .apps import spectacle_settings
+from .apps import konsole_misc
+from .apps import autostart
 
 _FEATURE_MODULES = (
     cursor_size,
@@ -25,6 +45,26 @@ _FEATURE_MODULES = (
     wallpaper,
     panel_position,
     color_scheme,
+    system_sounds,
+    notifications,
+    power_management,
+    screen_locking,
+    session_management,
+    virtual_desktops,
+    activities,
+    task_switcher,
+    workspace_behavior,
+    screen_edges,
+    blur_strength,
+    launch_feedback,
+    mouse_settings,
+    global_shortcuts,
+    bluetooth,
+    baloo_indexer,
+    dolphin_settings,
+    spectacle_settings,
+    konsole_misc,
+    autostart,
 )
 
 

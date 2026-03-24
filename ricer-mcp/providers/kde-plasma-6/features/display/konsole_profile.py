@@ -24,6 +24,7 @@ class KonsoleProfileFeature(Feature):
     def register_tool(self, mcp, changeset) -> None:
         @mcp.tool()
         def set_konsole_profile(profile_name: str) -> str:
+            """Stage current konsole profile setting."""
             import json
             receipt = changeset.add("konsole_default_profile", {"profile_name": profile_name})
             return json.dumps(receipt)
@@ -31,4 +32,5 @@ class KonsoleProfileFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_konsole_profile() -> dict:
+            """Return current konsole profile setting."""
             return self.get()

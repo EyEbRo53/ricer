@@ -47,4 +47,5 @@ class PanelFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_panel(panel_id: int) -> dict:
+            """Return current panel setting."""
             return self.get(panel_id)

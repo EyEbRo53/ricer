@@ -43,4 +43,5 @@ class DockFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_dock(dock_name: str, dock_id: int) -> dict:
+            """Return current dock setting."""
             return self.get(dock_name, dock_id)

@@ -33,4 +33,5 @@ class PlasmaStyleFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_plasma_style() -> dict:
+            """Return current plasma style setting."""
             return self.get()

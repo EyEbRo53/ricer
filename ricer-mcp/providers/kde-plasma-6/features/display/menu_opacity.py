@@ -37,4 +37,5 @@ class MenuOpacityFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_menu_opacity() -> dict:
+            """Return current menu opacity setting."""
             return self.get()

@@ -39,6 +39,25 @@ def _load_os_details_module(mcp_root: str) -> object | None:
 
 def _detect_provider_from_os(mcp_root: str) -> str | None:
     """Detect provider id from current desktop environment."""
+    # 1. Primary check: Use environment variables directly (lightweight & robust)
+    xdg_current = os.environ.get("XDG_CURRENT_DESKTOP", "").upper()
+    desktop_session = os.environ.get("DESKTOP_SESSION", "").upper()
+    de_marker = f"{xdg_current}:{desktop_session}"
+
+    if "CINNAMON" in de_marker:
+        return "cinnamon"
+    if "KDE" in de_marker or "PLASMA" in de_marker:
+        return "kde-plasma-6"
+    if "GNOME" in de_marker:
+        return "gnome"
+    if "XFCE" in de_marker:
+        return "xfce"
+    if "MATE" in de_marker:
+        return "mate"
+    if "LXQT" in de_marker:
+        return "lxqt"
+
+    # 2. Secondary check: Fallback to external comprehensive detection script
     module = _load_os_details_module(mcp_root)
     if module is None or not hasattr(module, "get_ui_environment"):
         return None
@@ -50,7 +69,7 @@ def _detect_provider_from_os(mcp_root: str) -> str | None:
         if provider:
             return provider
     except Exception:
-        return None
+        pass
 
     return None
 

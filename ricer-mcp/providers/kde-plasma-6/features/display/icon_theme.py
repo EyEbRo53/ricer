@@ -33,4 +33,5 @@ class IconThemeFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_icon_theme() -> dict:
+            """Return current icon theme setting."""
             return self.get()

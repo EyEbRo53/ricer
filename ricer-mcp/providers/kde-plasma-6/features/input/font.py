@@ -33,4 +33,5 @@ class FontFeature(Feature):
     def register_resource(self, mcp) -> None:
         @mcp.resource()
         def get_font() -> dict:
+            """Return current font setting."""
             return self.get()
