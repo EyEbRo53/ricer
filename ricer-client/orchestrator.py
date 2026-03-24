@@ -190,7 +190,22 @@ class Orchestrator:
                     if not is_read_only:
                         seen_mutating_tools.add(fn_name)
                 except Exception as exc:
-                    result = f"Error: {exc}"
+                    error_msg = str(exc)
+                    if fn_name == "read_resource":
+                        result = (
+                            f"Unable to read the requested desktop setting. "
+                            f"This could be because the setting isn't available in your current desktop environment "
+                            f"(e.g., not KDE Plasma) or there's a configuration issue. "
+                            f"Please try asking about a different setting or check that your desktop environment is supported. "
+                            f"(Technical details: {error_msg})"
+                        )
+                    else:
+                        result = (
+                            f"Unable to stage the requested change. "
+                            f"This might be due to an invalid value, unsupported setting, or system issue. "
+                            f"Please double-check your request and try again. "
+                            f"(Technical details: {error_msg})"
+                        )
 
                 if self._on_tool_result:
                     self._on_tool_result(fn_name, result)

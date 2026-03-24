@@ -73,7 +73,14 @@ class ColorSchemeFeature(Feature):
             Corresponds to tool: set_color_scheme
             """
             import json
-            return json.dumps(feature.get(), indent=2)
+            data = feature.get()
+            if data["value"] is None:
+                return (
+                    "Unable to read color scheme: Required KDE tools (kde-cli-tools) may not be installed "
+                    "or KDE Plasma is not running. Please install kde-cli-tools with 'sudo pacman -S kde-cli-tools' "
+                    "and ensure you're using KDE Plasma."
+                )
+            return json.dumps(data, indent=2)
 
 
 feature = ColorSchemeFeature()

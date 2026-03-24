@@ -116,6 +116,8 @@ class MCPClient:
             for r in resources_response.resources
         ]
 
+        print(f"[mcp] Available resources: {[r['uri'] for r in self.resources]}")
+
     def get_openai_tools(self) -> list[dict]:
         """
         Return tools formatted for the OpenAI function-calling API.
