@@ -25,7 +25,7 @@ pip-delete-this-directory.txt
 htmlcov/
 .tox/
 .nox/
-tests/
+
 
 # Type checkers
 .mypy_cache/
