@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "ricer-client")
 from PySide6.QtWidgets import QApplication
 from PySide6.QtCore import QTimer
 
-from worker import create_worker_thread
+from .worker import create_worker_thread
 from chat_window import ChatWindow
 
 

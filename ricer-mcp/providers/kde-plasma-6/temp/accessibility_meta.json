@@ -1,0 +1,93 @@
+{
+  "input_modifiers": {
+    "double_click_interval": {
+      "file": "kdeglobals",
+      "group": "KDE",
+      "key": "DoubleClickInterval",
+      "type": "integer",
+      "default": 400,
+      "unit": "milliseconds",
+      "description": "The maximum time delay between two click events to be registered as a single double-click operation."
+    },
+    "click_mode": {
+      "file": "kdeglobals",
+      "group": "KDE",
+      "key": "SingleClick",
+      "type": "boolean",
+      "description": "Toggle between single-click (True) and double-click (False) activation for files and folder items."
+    },
+    "dwell_click": {
+      "file": "kaccessrc",
+      "group": "Mouse",
+      "key": "DwellClicking",
+      "type": "boolean",
+      "description": "Software-level trigger that generates a click event automatically when the pointer remains stationary for a defined duration."
+    }
+  },
+  "visual_filters": {
+    "night_light_state": {
+      "file": "kwinrc",
+      "group": "NightColor",
+      "key": "Active",
+      "type": "boolean",
+      "description": "State of the KWin blue-light filter shader."
+    },
+    "cvd_correction_state": {
+      "file": "kwinrc",
+      "group": "Plugins",
+      "key": "colorblindnesscorrectionEnabled",
+      "type": "boolean",
+      "description": "Activation state for the KWin Color Vision Deficiency (CVD) compensation shader."
+    },
+    "cvd_correction_type": {
+      "file": "kwinrc",
+      "group": "Effect-colorblindnesscorrection",
+      "key": "Type",
+      "type": "integer",
+      "options": { "0": "Protanopia", "1": "Deuteranopia", "2": "Tritanopia" },
+      "description": "Integer index for the specific CVD shader algorithm used by the correction plugin."
+    }
+  },
+  "motion_and_feedback": {
+    "animation_scale": {
+      "file": "kdeglobals",
+      "group": "KDE",
+      "key": "AnimationDurationFactor",
+      "type": "float",
+      "description": "Global multiplier for all UI transition timings. 0 eliminates all motion; 1 is the standard system timing."
+    },
+    "system_sounds": {
+      "file": "kdeglobals",
+      "group": "Sounds",
+      "key": "Enable",
+      "type": "boolean",
+      "description": "Global toggle for the oxygen-sound-theme event notifications and workspace audio feedback."
+    },
+    "focus_stealing": {
+      "file": "kwinrc",
+      "group": "Windows",
+      "key": "FocusStealingPreventionLevel",
+      "type": "integer",
+      "min": 0,
+      "max": 4,
+      "description": "The level of restriction applied to new window processes attempting to take active window focus. 0 is none, 4 is maximum."
+    }
+  },
+  "keyboard_mechanics": {
+    "sticky_keys": {
+      "file": "kaccessrc",
+      "group": "Keyboard",
+      "key": "StickyKeys",
+      "type": "boolean",
+      "description": "Modifier key persistence logic. When true, modifier keys (Shift, Ctrl, Alt) remain active after press until a non-modifier key is pressed."
+    },
+    "slow_keys_delay": {
+      "file": "kaccessrc",
+      "group": "Keyboard",
+      "key": "SlowKeysDelay",
+      "type": "integer",
+      "unit": "milliseconds",
+      "description": "The duration a key must be held before the system registers a character input event."
+    }
+  }
+}

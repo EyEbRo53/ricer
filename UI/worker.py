@@ -30,11 +30,13 @@ sys.path.insert(0, _SYSTEM_UTILS_DIR)
 from dotenv import load_dotenv
 load_dotenv(os.path.join(_CLIENT_DIR, ".env"))
 
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from mcp_client import MCPClient
 from llm_provider import LLMConfig, create_llm_client
 from orchestrator import Orchestrator
 from session_handler import SessionHandler
-from mcp_provider import McpSystemProvider
+from system_utils import NullSystemProvider
 from logger import (
     log_user_message, log_assistant_reply, log_tool_call,
     log_tool_result, log_changeset_staged, log_error,
@@ -87,7 +89,7 @@ class BackendWorker(QObject):
             self.status_changed.emit("Connecting to MCP server…")
 
             # Session handler (owns all system utilities)
-            self._session = SessionHandler(provider=McpSystemProvider())
+            self._session = SessionHandler(provider=NullSystemProvider())
 
             config = LLMConfig.from_env()
             llm = create_llm_client(config)

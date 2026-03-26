@@ -1,0 +1,4046 @@
+{
+    "okular": {
+        "Dlg Performance": {
+            "null": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        },
+        "Debugging Options": {
+            "null": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        },
+        "Contents": {
+            "null": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        },
+        "Layers": {
+            "null": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        },
+        "Reviews": {
+            "null": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        },
+        "Zoom": {
+            "null": {
+                "type": "UInt",
+                "options": null,
+                "min": "10",
+                "max": "500",
+                "default": "100",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        },
+        "General": {
+            "null": {
+                "type": "Int",
+                "options": null,
+                "min": "0",
+                "max": "100",
+                "default": "10",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        },
+        "Dlg Presentation": {
+            "null": {
+                "type": "Int",
+                "options": null,
+                "min": "-2",
+                "max": "20",
+                "default": "-2",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        },
+        "Main View": {
+            "null": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        },
+        "Nav Panel": {
+            "null": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "48",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        },
+        "PageView": {
+            "null": {
+                "type": "Color",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": null,
+                "description": "No description",
+                "reload_cmd": false
+            }
+        },
+        "Search": {
+            "null": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        },
+        "Dlg Accessibility": {
+            "null": {
+                "type": "UInt",
+                "options": null,
+                "min": "2",
+                "max": "6",
+                "default": "2",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        },
+        "Identity": {
+            "null": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "userString",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        }
+    },
+    "splashscreensettings": {
+        "KSplash": {
+            "engine": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "theme() == QStringLiteral(\"None\") ? QStringLiteral(\"none\") : QStringLiteral(\"KSplashQML\")",
+                "description": "For future use",
+                "reload_cmd": false
+            },
+            "theme": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "org.kde.breeze.desktop",
+                "description": "Name of the current splash theme",
+                "reload_cmd": false
+            }
+        }
+    },
+    "gssettings": {
+        "General": {
+            "PlatformFonts": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Use Platform Fonts",
+                "reload_cmd": false
+            }
+        }
+    },
+    "stylesettings": {
+        "KDE": {
+            "widgetStyle": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Breeze",
+                "description": "Application style",
+                "reload_cmd": false
+            },
+            "iconsOnButtons": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Show icons on buttons",
+                "reload_cmd": false
+            },
+            "iconsInMenus": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Show icons in menus",
+                "reload_cmd": false
+            }
+        },
+        "Toolbar style": {
+            "toolButtonStyle": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "TextBesideIcon",
+                "description": "Main toolbar label",
+                "reload_cmd": false
+            },
+            "toolButtonStyleOtherToolbars": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "TextBesideIcon",
+                "description": "Secondary toolbar label",
+                "reload_cmd": false
+            }
+        }
+    },
+    "kcmaccessibilitybell": {
+        "Bell": {
+            "SystemBell": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Use System Bell",
+                "reload_cmd": false
+            },
+            "CustomBell": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Customize system bell",
+                "reload_cmd": false
+            },
+            "CustomBellFile": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": null,
+                "description": "Sound file for the Bell",
+                "reload_cmd": false
+            },
+            "VisibleBell": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Use a visual bell instead of a sound",
+                "reload_cmd": false
+            },
+            "InvertScreen": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Invert the system colors on the bell",
+                "reload_cmd": false
+            },
+            "VisibleBellColor": {
+                "type": "Color",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Qt::red",
+                "description": "Color of the Visual Bell",
+                "reload_cmd": false
+            },
+            "VisibleBellPause": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "500",
+                "description": "Duration of the Visual Bell",
+                "reload_cmd": false
+            }
+        }
+    },
+    "dolphin_versioncontrolsettings": {
+        "VersionControl": {
+            "enabledPlugins": {
+                "type": "StringList",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "",
+                "description": "Enabled plugins",
+                "reload_cmd": false
+            }
+        }
+    },
+    "dolphin_contextmenusettings": {
+        "ContextMenu": {
+            "ShowCopyMoveMenu": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Show 'Copy To' and 'Move To' commands in context menu",
+                "reload_cmd": false
+            },
+            "ShowAddToPlaces": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Show 'Add to Places' in context menu.",
+                "reload_cmd": false
+            },
+            "ShowSortBy": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Show 'Sort By' in context menu.",
+                "reload_cmd": false
+            },
+            "ShowViewMode": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Show 'View Mode' in context menu.",
+                "reload_cmd": false
+            },
+            "ShowOpenInNewTab": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Show 'Open in New Tab' and 'Open in New Tabs' in context menu.",
+                "reload_cmd": false
+            },
+            "ShowOpenInNewWindow": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Show 'Open in New Window' in context menu.",
+                "reload_cmd": false
+            },
+            "ShowOpenInSplitView": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Show 'Open In Split View' in context menu.",
+                "reload_cmd": false
+            },
+            "ShowCopyLocation": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Show 'Copy Location' in context menu.",
+                "reload_cmd": false
+            },
+            "ShowDuplicateHere": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Show 'Duplicate Here' in context menu.",
+                "reload_cmd": false
+            },
+            "ShowOpenTerminal": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Show 'Open Terminal' in context menu.",
+                "reload_cmd": false
+            },
+            "ShowCopyToOtherSplitView": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Show 'Copy to other split view' in context menu.",
+                "reload_cmd": false
+            },
+            "ShowMoveToOtherSplitView": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Show 'Move to other split view' in context menu.",
+                "reload_cmd": false
+            }
+        }
+    },
+    "kcmaccessibilitycolorblindnesscorrection": {
+        "Plugins": {
+            "ColorblindnessCorrection": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Whether Colorblindness Correction is enabled",
+                "reload_cmd": false
+            }
+        },
+        "Effect-colorblindnesscorrection": {
+            "Mode": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "Intensity": {
+                "type": "Double",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "1.0",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        }
+    },
+    "workspaceoptions_kwinsettings": {
+        "Input": {
+            "tabletMode": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "auto",
+                "description": "Automatically switch to touch-optimized mode",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            }
+        },
+        "Wayland": {
+            "primarySelection": {
+                "type": "bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Enable middle click selection pasting",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            }
+        }
+    },
+    "krunnersettingsbase": {
+        "General": {
+            "freeFloating": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "activateWhenTypingOnDesktop": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "historyBehavior": {
+                "type": "Enum",
+                "options": [
+                    "Disabled",
+                    "ImmediateCompletion",
+                    "CompletionSuggestion"
+                ],
+                "min": null,
+                "max": null,
+                "default": "CompletionSuggestion",
+                "description": "Option to determine the behavior of KRunner's history and history completion",
+                "reload_cmd": false
+            },
+            "retainPriorSearch": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        }
+    },
+    "fileviewhgpluginsettings": {
+        "CommitDialogSettings": {
+            "commitDialogHeight": {
+                "type": "Int",
+                "options": null,
+                "min": "400",
+                "max": null,
+                "default": "550",
+                "description": "Dialog height",
+                "reload_cmd": false
+            },
+            "commitDialogWidth": {
+                "type": "Int",
+                "options": null,
+                "min": "500",
+                "max": null,
+                "default": "900",
+                "description": "Dialog width",
+                "reload_cmd": false
+            },
+            "verticalSplitterSizes": {
+                "type": "IntList",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "200,700",
+                "description": "Divides file list and editors with commit details",
+                "reload_cmd": false
+            },
+            "horizontalSplitterSizes": {
+                "type": "IntList",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "100,350",
+                "description": "Divides commit editor and diff editor",
+                "reload_cmd": false
+            }
+        },
+        "ConfigDialogSettings": {
+            "configDialogHeight": {
+                "type": "Int",
+                "options": null,
+                "min": "400",
+                "max": null,
+                "default": "550",
+                "description": "Dialog height",
+                "reload_cmd": false
+            },
+            "configDialogWidth": {
+                "type": "Int",
+                "options": null,
+                "min": "500",
+                "max": null,
+                "default": "900",
+                "description": "Dialog width",
+                "reload_cmd": false
+            }
+        },
+        "CloneDialogSettings": {
+            "cloneDialogHeight": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "550",
+                "description": "Dialog height",
+                "reload_cmd": false
+            },
+            "cloneDialogWidth": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "900",
+                "description": "Dialog width",
+                "reload_cmd": false
+            }
+        },
+        "PushDialogSettings": {
+            "pushDialogBigHeight": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "550",
+                "description": "Dialog height",
+                "reload_cmd": false
+            },
+            "pushDialogBigWidth": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "900",
+                "description": "Dialog width",
+                "reload_cmd": false
+            }
+        },
+        "PullDialogSettings": {
+            "pullDialogBigHeight": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "550",
+                "description": "Dialog height",
+                "reload_cmd": false
+            },
+            "pullDialogBigWidth": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "900",
+                "description": "Dialog width",
+                "reload_cmd": false
+            }
+        },
+        "MergeDialogSettings": {
+            "mergeDialogHeight": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "550",
+                "description": "Dialog height",
+                "reload_cmd": false
+            },
+            "mergeDialogWidth": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "900",
+                "description": "Dialog width",
+                "reload_cmd": false
+            }
+        },
+        "BundleDialogSettings": {
+            "bundleDialogHeight": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "550",
+                "description": "Dialog height",
+                "reload_cmd": false
+            },
+            "bundleDialogWidth": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "900",
+                "description": "Dialog width",
+                "reload_cmd": false
+            }
+        },
+        "ExportDialogSettings": {
+            "exportDialogHeight": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "550",
+                "description": "Dialog height",
+                "reload_cmd": false
+            },
+            "exportDialogWidth": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "900",
+                "description": "Dialog width",
+                "reload_cmd": false
+            }
+        },
+        "ImportDialogSettings": {
+            "importDialogHeight": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "540",
+                "description": "Dialog height",
+                "reload_cmd": false
+            },
+            "importDialogWidth": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "500",
+                "description": "Dialog width",
+                "reload_cmd": false
+            }
+        },
+        "ServeDialogSettings": {
+            "serveDialogHeight": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "600",
+                "description": "Dialog height",
+                "reload_cmd": false
+            },
+            "serveDialogWidth": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "500",
+                "description": "Dialog width",
+                "reload_cmd": false
+            }
+        },
+        "BackoutDialogSettings": {
+            "backoutDialogHeight": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "346",
+                "description": "Dialog height",
+                "reload_cmd": false
+            },
+            "backoutDialogWidth": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "537",
+                "description": "Dialog width",
+                "reload_cmd": false
+            }
+        }
+    },
+    "landingpage_kdeglobalssettings": {
+        "General": {
+            "colorScheme": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "BreezeLight",
+                "description": "Color scheme name",
+                "reload_cmd": false
+            }
+        },
+        "KDE": {
+            "singleClick": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Single click to open files",
+                "reload_cmd": false
+            },
+            "automaticLookAndFeel": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Switch the look and feel package depending on time of day",
+                "reload_cmd": false
+            },
+            "lookAndFeelPackage": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "org.kde.breeze.desktop",
+                "description": "Global Look and Feel package",
+                "reload_cmd": false
+            },
+            "defaultLightLookAndFeel": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "org.kde.breeze.desktop",
+                "description": "Global Look and Feel package, alternate",
+                "reload_cmd": false
+            },
+            "defaultDarkLookAndFeel": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "org.kde.breezedark.desktop",
+                "description": "Global Look and Feel package, alternate",
+                "reload_cmd": false
+            },
+            "animationDurationFactor": {
+                "type": "Double",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "1.0",
+                "description": "Animation speed",
+                "reload_cmd": false
+            }
+        }
+    },
+    "kcmaccessibilityzoommagnifier": {
+        "Plugins": {
+            "Zoom": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Whether the Zoom effect is enabled",
+                "reload_cmd": false
+            },
+            "Magnifier": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Whether the Magnifier effect is enabled",
+                "reload_cmd": false
+            }
+        },
+        "Effect-zoom": {
+            "SharedZoomFactor": {
+                "type": "Double",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "1.2",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "ZoomMousePointer": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "ZoomMouseTracking": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "ZoomEnableFocusTracking": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "ZoomEnableTextCaretTracking": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "ZoomPixelGridZoom": {
+                "type": "Double",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "15.0",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "ZoomPointerAxisGestureModifiers": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Meta+Control",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        },
+        "Effect-magnifier": {
+            "MagnifierWidth": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "200",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "MagnifierHeight": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "200",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        }
+    },
+    "kactivitymanagerd_plugins_settings": {
+        "Plugin-org.kde.ActivityManager.Resources.Scoring": {
+            "keepHistoryFor": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "4",
+                "description": "How many months keep the activity history",
+                "reload_cmd": false
+            },
+            "blockedByDefault": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "whatToRemember": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0",
+                "description": "Which data to keep in activity history",
+                "reload_cmd": false
+            },
+            "allowedApplications": {
+                "type": "StringList",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": null,
+                "description": "List of Applications whose activity history to save",
+                "reload_cmd": false
+            },
+            "blockedApplications": {
+                "type": "StringList",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": null,
+                "description": "List of Applications whose activity history not to save",
+                "reload_cmd": false
+            }
+        }
+    },
+    "kwindecorationsettings": {
+        "org.kde.kdecoration2": {
+            "pluginName": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "org.kde.breeze",
+                "description": "Plugin name",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "theme": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Breeze",
+                "description": "Theme name",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "borderSize": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Normal",
+                "description": "Window border size",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "borderSizeAuto": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Use theme's default window border size",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "closeOnDoubleClickOnMenu": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Close windows by double clicking the window menu button",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "showToolTips": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Show titlebar button tooltips",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "buttonsOnLeft": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "MSE",
+                "description": "Titlebar left buttons",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "buttonsOnRight": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "HIAX",
+                "description": "Titlebar right buttons",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "alwaysShowExcludeFromCapture": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Always show \"Hide from Screencast\" button, even if the window is not excluded from screencast already.",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            }
+        }
+    },
+    "fileviewgitpluginsettings": {
+        "CommitDialogSettings": {
+            "commitDialogHeight": {
+                "type": "Int",
+                "options": null,
+                "min": "50",
+                "max": null,
+                "default": "300",
+                "description": "Dialog height",
+                "reload_cmd": false
+            },
+            "commitDialogWidth": {
+                "type": "Int",
+                "options": null,
+                "min": "50",
+                "max": null,
+                "default": "500",
+                "description": "Dialog width",
+                "reload_cmd": false
+            }
+        }
+    },
+    "fileviewsvnpluginsettings": {
+        "General": {
+            "showUpdates": {
+                "type": "bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Show updates",
+                "reload_cmd": false
+            }
+        }
+    },
+    "iconssettingsbase": {
+        "Icons": {
+            "Theme": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "breeze",
+                "description": "Name of the current icon theme",
+                "reload_cmd": false
+            }
+        }
+    },
+    "kcmaccessibilitymouse": {
+        "Mouse": {
+            "MouseKeys": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Use keys to control the mouse",
+                "reload_cmd": false
+            },
+            "AccelerationDelay": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "160",
+                "description": "Delay for the mouse movement",
+                "reload_cmd": false
+            },
+            "RepetitionInterval": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "40",
+                "description": "Repetition interval for the mouse movement",
+                "reload_cmd": false
+            },
+            "AccelerationTime": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "30",
+                "description": "Time to hit maximum velocity",
+                "reload_cmd": false
+            },
+            "MaxSpeed": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "30",
+                "description": "Maximum Velocity",
+                "reload_cmd": false
+            },
+            "ProfileCurve": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0",
+                "description": "Mouse Key Curve",
+                "reload_cmd": false
+            }
+        }
+    },
+    "ffmpegthumbnailersettings5": {
+        "General": {
+            "filmstrip": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Embed filmstrip effect",
+                "reload_cmd": false
+            },
+            "sequenceSeekPercentages": {
+                "type": "IntList",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "20,35,50,65,80",
+                "description": "Sequence seek percentages",
+                "reload_cmd": false
+            },
+            "cacheSize": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "51200",
+                "description": "Cache size (KiB)",
+                "reload_cmd": false
+            }
+        }
+    },
+    "colorssettings": {
+        "General": {
+            "colorScheme": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "BreezeLight",
+                "description": "Color scheme name",
+                "reload_cmd": false
+            },
+            "accentColor": {
+                "type": "Color",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "transparent",
+                "description": "Accent color",
+                "reload_cmd": false
+            },
+            "lastUsedCustomAccentColor": {
+                "type": "Color",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "transparent",
+                "description": "The last used custom accent color before user switched to wallpaper generated color or default color",
+                "reload_cmd": false
+            },
+            "accentColorFromWallpaper": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Whether accent color from wallpaper should be applied",
+                "reload_cmd": false
+            }
+        }
+    },
+    "kcmaccessibilityshakecursor": {
+        "Plugins": {
+            "ShakeCursor": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Whether Shake Pointer is enabled",
+                "reload_cmd": false
+            }
+        },
+        "Effect-shakecursor": {
+            "ShakeCursorMagnification": {
+                "type": "Double",
+                "options": null,
+                "min": "1",
+                "max": null,
+                "default": "3",
+                "description": "Magnification",
+                "reload_cmd": false
+            }
+        }
+    },
+    "dolphin_compactmodesettings": {
+        "CompactMode": {
+            "UseSystemFont": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Use system font",
+                "reload_cmd": false
+            },
+            "ViewFont": {
+                "type": "Font",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "QFont()",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "IconSize": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "KIconLoader::SizeSmall",
+                "description": "Icon size",
+                "reload_cmd": false
+            },
+            "PreviewSize": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "KIconLoader::SizeLarge",
+                "description": "Preview size",
+                "reload_cmd": false
+            },
+            "MaximumTextWidthIndex": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0",
+                "description": "Maximum text width index (0 means unlimited)",
+                "reload_cmd": false
+            }
+        }
+    },
+    "kcmaccessibilityscreenreader": {
+        "ScreenReader": {
+            "Enabled": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Enable Screen Reader",
+                "reload_cmd": false
+            }
+        }
+    },
+    "virtualdesktopssettings": {
+        "Windows": {
+            "rollOverDesktops": {
+                "type": "bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Whether or not, we circle through the virtual desktop when moving from one to the next",
+                "reload_cmd": false
+            }
+        },
+        "Plugins": {
+            "desktopChangeOsdEnabled": {
+                "type": "bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Display in an OSD the virtual desktop name when switching between virtual desktops",
+                "reload_cmd": false
+            }
+        },
+        "Script-desktopchangeosd": {
+            "popupHideDelay": {
+                "type": "int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "1000",
+                "description": "Duraton of the OSD",
+                "reload_cmd": false
+            },
+            "textOnly": {
+                "type": "bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Whether or not to display desktop layout in the OSD",
+                "reload_cmd": false
+            }
+        }
+    },
+    "lookandfeelsettings": {
+        "KDE": {
+            "lookAndFeelPackage": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "org.kde.breeze.desktop",
+                "description": "Global look and feel",
+                "reload_cmd": false
+            },
+            "defaultLightLookAndFeel": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "org.kde.breeze.desktop",
+                "description": "Global Look and Feel package, alternate",
+                "reload_cmd": false
+            },
+            "defaultDarkLookAndFeel": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "org.kde.breezedark.desktop",
+                "description": "Global Look and Feel package, alternate",
+                "reload_cmd": false
+            },
+            "automaticLookAndFeel": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Switch between dark and light global themes depending on time of day",
+                "reload_cmd": false
+            },
+            "automaticLookAndFeelOnIdle": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Switch between dark and light global themes when the computer is idle",
+                "reload_cmd": false
+            },
+            "automaticLookAndFeelIdleInterval": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "5",
+                "description": "How long the computer should be idle in order to switch between dark and light global themes, in seconds",
+                "reload_cmd": false
+            }
+        }
+    },
+    "fontssettings": {
+        "General": {
+            "font": {
+                "type": "Font",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "generalFont",
+                "description": "General font",
+                "reload_cmd": false
+            },
+            "fixed": {
+                "type": "Font",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "fixedWidthFont",
+                "description": "Fixed width font",
+                "reload_cmd": false
+            },
+            "smallestReadableFont": {
+                "type": "Font",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "smallFont",
+                "description": "Small font",
+                "reload_cmd": false
+            },
+            "toolBarFont": {
+                "type": "Font",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "toolBarFont",
+                "description": "Tool bar font",
+                "reload_cmd": false
+            },
+            "menuFont": {
+                "type": "Font",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "menuFont",
+                "description": "Menu font",
+                "reload_cmd": false
+            }
+        },
+        "WM": {
+            "activeFont": {
+                "type": "Font",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "windowTitleFont",
+                "description": "Window title font",
+                "reload_cmd": false
+            }
+        }
+    },
+    "cursorthemesettings": {
+        "Mouse": {
+            "cursorTheme": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "default",
+                "description": "Name of the current cursor theme",
+                "reload_cmd": false
+            },
+            "cursorSize": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "24",
+                "description": "Current cursor size",
+                "reload_cmd": false
+            }
+        }
+    },
+    "workspaceoptions_kdeglobalssettings": {
+        "KDE": {
+            "singleClick": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Single click to open files",
+                "reload_cmd": false
+            },
+            "dndBehavior": {
+                "type": "Enum",
+                "options": [
+                    "AlwaysAsk",
+                    "MoveIfSameDevice"
+                ],
+                "min": null,
+                "max": null,
+                "default": "AlwaysAsk",
+                "description": "For local files on the same device, whether dragging and dropping will perform a move operation instead of showing the options menu",
+                "reload_cmd": false
+            },
+            "smoothScroll": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Smooth scrolling",
+                "reload_cmd": false
+            },
+            "scrollbarLeftClickNavigatesByPage": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Left-click in scrollbar track moves scrollbar by one page",
+                "reload_cmd": false
+            },
+            "doubleClickInterval": {
+                "type": "Int",
+                "options": null,
+                "min": "100",
+                "max": "2000",
+                "default": "400",
+                "description": "Double click interval",
+                "reload_cmd": false
+            }
+        }
+    },
+    "dolphin_detailsmodesettings": {
+        "DetailsMode": {
+            "ViewFont": {
+                "type": "Font",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "QFont()",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "UseSystemFont": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Use system font",
+                "reload_cmd": false
+            },
+            "IconSize": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "KIconLoader::SizeSmall",
+                "description": "Icon size",
+                "reload_cmd": false
+            },
+            "PreviewSize": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "KIconLoader::SizeLarge",
+                "description": "Preview size",
+                "reload_cmd": false
+            },
+            "ColumnPositions": {
+                "type": "IntList",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0,1,2,3,4,5,6,7,8",
+                "description": "Position of columns",
+                "reload_cmd": false
+            },
+            "LeftPadding": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "20",
+                "description": "Left side padding",
+                "reload_cmd": false
+            },
+            "RightPadding": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "20",
+                "description": "Right side padding",
+                "reload_cmd": false
+            },
+            "HighlightEntireRow": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Highlight entire row",
+                "reload_cmd": false
+            },
+            "ExpandableFolders": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Expandable folders",
+                "reload_cmd": false
+            }
+        }
+    },
+    "dolphin_directoryviewpropertysettings": {
+        "Settings": {
+            "HiddenFilesShown": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Hidden files shown",
+                "reload_cmd": false
+            }
+        },
+        "Dolphin": {
+            "Version": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "-1",
+                "description": "Version",
+                "reload_cmd": false
+            },
+            "ViewMode": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "DolphinView::IconsView",
+                "description": "View Mode",
+                "reload_cmd": false
+            },
+            "PreviewsShown": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Previews shown",
+                "reload_cmd": false
+            },
+            "GroupedSorting": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Grouped Sorting",
+                "reload_cmd": false
+            },
+            "SortRole": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "text",
+                "description": "Sort files by",
+                "reload_cmd": false
+            },
+            "SortOrder": {
+                "type": "Int",
+                "options": null,
+                "min": "Qt::AscendingOrder",
+                "max": "Qt::DescendingOrder",
+                "default": "Qt::AscendingOrder",
+                "description": "Order in which to sort files",
+                "reload_cmd": false
+            },
+            "SortFoldersFirst": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Show folders first when sorting files and folders",
+                "reload_cmd": false
+            },
+            "SortHiddenLast": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Show hidden files and folders last",
+                "reload_cmd": false
+            },
+            "VisibleRoles": {
+                "type": "StringList",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "",
+                "description": "Visible roles",
+                "reload_cmd": false
+            },
+            "HeaderColumnWidths": {
+                "type": "IntList",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "",
+                "description": "Header column widths",
+                "reload_cmd": false
+            },
+            "Timestamp": {
+                "type": "DateTime",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": null,
+                "description": "Properties last changed",
+                "reload_cmd": false
+            },
+            "DynamicViewPassed": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "View mode changed once by dynamic view",
+                "reload_cmd": false
+            },
+            "AdditionalInfo": {
+                "type": "StringList",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "",
+                "description": "Additional Information",
+                "reload_cmd": false
+            }
+        }
+    },
+    "kcmaccessibilityinvert": {
+        "Plugins": {
+            "Invert": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Whether the Invert effect is enabled",
+                "reload_cmd": false
+            }
+        }
+    },
+    "dolphin_generalsettings": {
+        "General": {
+            "DoubleClickViewAction": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "edit_select_all",
+                "description": "Select Action",
+                "reload_cmd": false
+            },
+            "DoubleClickViewCustomAction": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": null,
+                "description": "Custom Action",
+                "reload_cmd": false
+            },
+            "EditableUrl": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Should the URL be editable for the user",
+                "reload_cmd": false
+            },
+            "UrlCompletionMode": {
+                "type": "Enum",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "KCompletion::CompletionPopupAuto",
+                "description": "Text completion mode of the URL Navigator",
+                "reload_cmd": false
+            },
+            "ShowFullPath": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Should the full path be shown inside the location bar",
+                "reload_cmd": false
+            },
+            "ShowFullPathInTitlebar": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Should the full path be shown in the title bar",
+                "reload_cmd": false
+            },
+            "OpenExternallyCalledFolderInNewTab": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Should an externally called folder open in a new tab in an existing Dolphin instance",
+                "reload_cmd": false
+            },
+            "Version": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0",
+                "description": "Internal config version of Dolphin, mainly Used to determine whether an updated version of Dolphin is running, so as to migrate config entries that were removed/renamed ...etc",
+                "reload_cmd": false
+            },
+            "ModifiedStartupSettings": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Have the startup settings been modified (internal setting not shown in the UI)",
+                "reload_cmd": false
+            },
+            "HomeUrl": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "QUrl::fromLocalFile(QDir::homePath()).toDisplayString(QUrl::PreferLocalFile)",
+                "description": "Home URL",
+                "reload_cmd": false
+            },
+            "RememberOpenedTabs": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Remember open folders and tabs",
+                "reload_cmd": false
+            },
+            "SplitView": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Place two views side by side",
+                "reload_cmd": false
+            },
+            "FilterBar": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Should the filter bar be shown",
+                "reload_cmd": false
+            },
+            "GlobalViewProps": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Should the view properties be used for all folders",
+                "reload_cmd": false
+            },
+            "BrowseThroughArchives": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Browse through archives",
+                "reload_cmd": false
+            },
+            "ConfirmClosingMultipleTabs": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Ask for confirmation when closing windows with multiple tabs.",
+                "reload_cmd": false
+            },
+            "ConfirmClosingTerminalRunningProgram": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Ask for confirmation when closing windows with a program that is still running in the Terminal panel.",
+                "reload_cmd": false
+            },
+            "RenameInline": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Rename single items inline",
+                "reload_cmd": false
+            },
+            "ShowSelectionToggle": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Show selection toggle",
+                "reload_cmd": false
+            },
+            "ShowPasteBarAfterCopying": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Show a bar for easy pasting after a cut or copy was done using the selection mode bottom bar.",
+                "reload_cmd": false
+            },
+            "UseTabForSwitchingSplitView": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Use tab for switching between right and left view",
+                "reload_cmd": false
+            },
+            "CloseActiveSplitView": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Close the view in focus when turning off split view",
+                "reload_cmd": false
+            },
+            "OpenNewTabAfterLastTab": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "New tab will be open after last one",
+                "reload_cmd": false
+            },
+            "ShowToolTips": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Show item information on hover",
+                "reload_cmd": false
+            },
+            "ViewPropsTimestamp": {
+                "type": "DateTime",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": null,
+                "description": "Timestamp since when the view properties are valid",
+                "reload_cmd": false
+            },
+            "AutoExpandFolders": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Use auto-expanding folders for all view types",
+                "reload_cmd": false
+            },
+            "ShowStatusBar": {
+                "type": "Enum",
+                "options": [
+                    "Small",
+                    "FullWidth",
+                    "Disabled"
+                ],
+                "min": null,
+                "max": null,
+                "default": "0",
+                "description": "Statusbar",
+                "reload_cmd": false
+            },
+            "ShowZoomSlider": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Show zoom slider in the statusbar",
+                "reload_cmd": false
+            },
+            "LockPanels": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Lock the layout of the panels",
+                "reload_cmd": false
+            },
+            "EnlargeSmallPreviews": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Enlarge Small Previews",
+                "reload_cmd": false
+            },
+            "SortingChoice": {
+                "type": "Enum",
+                "options": [
+                    "NaturalSorting",
+                    "CaseInsensitiveSorting",
+                    "CaseSensitiveSorting"
+                ],
+                "min": null,
+                "max": null,
+                "default": "0",
+                "description": "Choose Natural, Case Sensitive, or Case Insensitive order of sorting the items",
+                "reload_cmd": false
+            },
+            "HideXTrashFile": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Also hide files with application/x-trash mimetype",
+                "reload_cmd": false
+            },
+            "DynamicView": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Enable dynamic view",
+                "reload_cmd": false
+            }
+        },
+        "Notification Messages": {
+            "ConfirmOpenManyFolders": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Ask for confirmation when opening many folders at once.",
+                "reload_cmd": false
+            },
+            "ConfirmOpenManyTerminals": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Ask for confirmation when opening many terminals at once.",
+                "reload_cmd": false
+            },
+            "ConfirmRenameFileType": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Ask for confirmation when renaming file changes its type.",
+                "reload_cmd": false
+            }
+        }
+    },
+    "ark": {
+        "General": {
+            "showEncryptionWarning": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Whether to show a warning when creating zip archives with AES encryption.",
+                "reload_cmd": false
+            },
+            "defaultOpenAction": {
+                "type": "Enum",
+                "options": [
+                    "Preview",
+                    "Open"
+                ],
+                "min": null,
+                "max": null,
+                "default": "Preview",
+                "description": "Default action when opening archive entries.",
+                "reload_cmd": false
+            }
+        },
+        "Extraction": {
+            "openDestinationFolderAfterExtraction": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Open destination folder after extraction.",
+                "reload_cmd": false
+            },
+            "closeAfterExtraction": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Close Ark after extraction.",
+                "reload_cmd": false
+            },
+            "preservePaths": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Preserve paths when extracting.",
+                "reload_cmd": false
+            },
+            "extractToSubfolder": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Extract to a subfolder if the archive has more than one top-level entry.",
+                "reload_cmd": false
+            }
+        },
+        "MainWindow": {
+            "splitterSizes": {
+                "type": "IntList",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "200,100",
+                "description": "How the main window is divided.",
+                "reload_cmd": false
+            },
+            "showInfoPanel": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Whether to show the information panel.",
+                "reload_cmd": false
+            }
+        },
+        "Plugins": {
+            "disabledPlugins": {
+                "type": "StringList",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": null,
+                "description": "No description",
+                "reload_cmd": false
+            }
+        },
+        "Preview": {
+            "limitPreviewFileSize": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Whether to limit the preview according to file size.",
+                "reload_cmd": false
+            },
+            "previewFileSizeLimit": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "200",
+                "description": "Preview file size limit in megabytes.",
+                "reload_cmd": false
+            }
+        }
+    },
+    "nightlightsettings": {
+        "NightColor": {
+            "Active": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "Mode": {
+                "type": "Enum",
+                "options": [
+                    "Constant",
+                    "DarkLight"
+                ],
+                "min": null,
+                "max": null,
+                "default": "NightLightMode::DarkLight",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "DayTemperature": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "6500",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "NightTemperature": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "4500",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        }
+    },
+    "feedbacksettings": {
+        "Global": {
+            "feedbackLevel": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "KUserFeedback::Provider::NoTelemetry",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        }
+    },
+    "jpegcreatorsettings5": {
+        "General": {
+            "rotate": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Rotate JPEG automatically",
+                "reload_cmd": false
+            }
+        }
+    },
+    "freespacenotifier": {
+        "General": {
+            "minimumSpace": {
+                "type": "Int",
+                "options": null,
+                "min": "1",
+                "max": "100000",
+                "default": "200",
+                "description": "Minimum free space before user starts being notified.",
+                "reload_cmd": false
+            },
+            "minimumSpacePercentage": {
+                "type": "Int",
+                "options": null,
+                "min": "1",
+                "max": "30",
+                "default": "5",
+                "description": "Minimum percentage free space before user starts being notified.",
+                "reload_cmd": false
+            },
+            "enableNotification": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "1",
+                "description": "Is the free space notification enabled.",
+                "reload_cmd": false
+            }
+        }
+    },
+    "launchfeedbacksettings": {
+        "BusyCursorSettings": {
+            "blinking": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "bouncing": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "cursorTimeout": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "5",
+                "description": "Timeout in seconds",
+                "reload_cmd": false
+            }
+        },
+        "FeedbackStyle": {
+            "busyCursor": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "taskbarButton": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        },
+        "TaskbarButtonSettings": {
+            "taskbarTimeout": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "5",
+                "description": "Timeout in seconds",
+                "reload_cmd": false
+            }
+        }
+    },
+    "partitionmanager": {
+        "KDE Partition Manager": {
+            "treePartitionColumnWidths": {
+                "type": "IntList",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "140,150,120,80,0,110,0,90,90,0,0,0,0,0",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "treePartitionColumnPositions": {
+                "type": "IntList",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0,1,2,3,4,5,6,7,8,9,10,11,12,13",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "treePartitionColumnVisible": {
+                "type": "IntList",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "1,1,1,1,0,1,0,1,1,0,0,0,0,0",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "treeLogColumnWidths": {
+                "type": "IntList",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "32,192,800",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "treeLogColumnPositions": {
+                "type": "IntList",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0,1,2",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "treeLogColumnVisible": {
+                "type": "IntList",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "1,1,1",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "treeSmartAttributesColumnWidths": {
+                "type": "IntList",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "32,430,96,96,64,64,64,96,96,96",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "treeSmartAttributesColumnPositions": {
+                "type": "IntList",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0,1,2,3,4,5,6,7,8,9",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "treeSmartAttributesColumnVisible": {
+                "type": "IntList",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "1,1,0,0,0,0,0,0,1,1",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "firstRun": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Is this the first time KDE Partition Manager is being run?",
+                "reload_cmd": false
+            },
+            "minLogLevel": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0",
+                "description": "Hide log messages below",
+                "reload_cmd": false
+            },
+            "sectorAlignment": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "2048",
+                "description": "Partition sector alignment",
+                "reload_cmd": false
+            },
+            "alignDefault": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Align partitions per default",
+                "reload_cmd": false
+            },
+            "null": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        }
+    },
+    "pdfsettings": {
+        "General": {
+            "null": {
+                "type": "Enum",
+                "options": [
+                    "Never",
+                    "Always",
+                    "Automatic"
+                ],
+                "min": null,
+                "max": null,
+                "default": "Automatic",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        },
+        "PDF Printing": {
+            "null": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": "2",
+                "default": "0",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        },
+        "Signatures": {
+            "null": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        }
+    },
+    "dolphin_iconsmodesettings": {
+        "IconsMode": {
+            "UseSystemFont": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Use system font",
+                "reload_cmd": false
+            },
+            "ViewFont": {
+                "type": "Font",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "QFont()",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "IconSize": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "KIconLoader::SizeMedium",
+                "description": "Icon size",
+                "reload_cmd": false
+            },
+            "PreviewSize": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "KIconLoader::SizeHuge",
+                "description": "Preview size",
+                "reload_cmd": false
+            },
+            "TextWidthIndex": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "1",
+                "description": "Text width index",
+                "reload_cmd": false
+            },
+            "MaximumTextLines": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "3",
+                "description": "Maximum textlines (0 means unlimited)",
+                "reload_cmd": false
+            }
+        }
+    },
+    "kcmaccessibilitykeyboard": {
+        "Keyboard": {
+            "StickyKeys": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Use sticky Keys",
+                "reload_cmd": false
+            },
+            "StickyKeysLatch": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Lock the sticky keys",
+                "reload_cmd": false
+            },
+            "StickyKeysAutoOff": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Turn sticky keys off when two keys are pressed simultaneously",
+                "reload_cmd": false
+            },
+            "StickyKeysBeep": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Beep on a sticky key press",
+                "reload_cmd": false
+            },
+            "ToggleKeysBeep": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Toggle keys beep",
+                "reload_cmd": false
+            },
+            "KeyboardNotifyModifiers": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Notify when a keyboard modifier is pressed",
+                "reload_cmd": false
+            }
+        }
+    },
+    "kwin": {
+        "MouseBindings": {
+            "CommandTitlebarWheel": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Nothing",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "CommandAllKey": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Meta",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "CommandAllWheel": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Nothing",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "CommandActiveTitlebar1": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Raise",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "CommandActiveTitlebar2": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Nothing",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "CommandActiveTitlebar3": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Operations menu",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "CommandInactiveTitlebar1": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Activate and raise",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "CommandInactiveTitlebar2": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Nothing",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "CommandInactiveTitlebar3": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Operations menu",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "CommandWindow1": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Activate, pass click and raise on release",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "CommandWindow2": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Activate and pass click",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "CommandWindow3": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Activate and pass click",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "CommandWindowWheel": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Scroll",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "CommandAll1": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Move",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "CommandAll2": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Toggle raise and lower",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "CommandAll3": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Resize",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "DoubleClickBorderToMaximize": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            }
+        },
+        "ElectricBorders": {
+            "Top": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "None",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "TopRight": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "None",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "Right": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "None",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "BottomRight": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "None",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "Bottom": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "None",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "BottomLeft": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "None",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "Left": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "None",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "TopLeft": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "None",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            }
+        },
+        "Windows": {
+            "CondensedTitle": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "FocusPolicy": {
+                "type": "Enum",
+                "options": [
+                    "ClickToFocus",
+                    "FocusFollowsMouse",
+                    "FocusUnderMouse",
+                    "FocusStrictlyUnderMouse"
+                ],
+                "min": null,
+                "max": null,
+                "default": "Options::ClickToFocus",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "NextFocusPrefersMouse": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "SeparateScreenFocus": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "RollOverDesktops": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "FocusStealingPreventionLevel": {
+                "type": "Int",
+                "options": null,
+                "min": "0",
+                "max": "4",
+                "default": "1",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "Placement": {
+                "type": "Enum",
+                "options": [
+                    "PlacementNone",
+                    "PlacementDefault",
+                    "PlacementUnknown",
+                    "PlacementRandom",
+                    "PlacementSmart",
+                    "PlacementCentered",
+                    "PlacementZeroCornered",
+                    "PlacementUnderMouse",
+                    "PlacementOnMainWindow",
+                    "PlacementMaximizing"
+                ],
+                "min": null,
+                "max": null,
+                "default": "[] {\n                #if KWIN_BUILD_DECORATIONS\n                    return PlacementCentered;\n                #else\n                    return PlacementMaximizing;\n                #endif\n            }()",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "ActivationDesktopPolicy": {
+                "type": "Enum",
+                "options": [
+                    "SwitchToOtherDesktop",
+                    "BringToCurrentDesktop",
+                    "DoNothing"
+                ],
+                "min": null,
+                "max": null,
+                "default": "KWin::Options::ActivationDesktopPolicy::SwitchToOtherDesktop",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "AutoRaise": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "AutoRaiseInterval": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "750",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "DelayFocusInterval": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "300",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "ClickRaise": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "BorderSnapZone": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "10",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "WindowSnapZone": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "10",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "CenterSnapZone": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "SnapOnlyWhenOverlapping": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "ElectricBorders": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "ElectricBorderDelay": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "75",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "ElectricBorderCooldown": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "350",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "ElectricBorderPushbackPixels": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "1",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "ElectricBorderMaximize": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "ElectricBorderAllScreenCorner": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "ElectricBorderTiling": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "ElectricBorderCornerRatio": {
+                "type": "Double",
+                "options": null,
+                "min": "0.0",
+                "max": "1.0",
+                "default": "0.25",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "TitlebarDoubleClickCommand": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Maximize",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "MaximizeButtonLeftClickCommand": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Maximize",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "MaximizeButtonMiddleClickCommand": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Maximize (vertical only)",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "MaximizeButtonRightClickCommand": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "Maximize (horizontal only)",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "KillPingTimeout": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "5000",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "InactiveTabsSkipTaskbar": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "AutogroupSimilarWindows": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "AutogroupInForeground": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "BorderlessMaximizedWindows": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "InteractiveWindowMoveEnabled": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "PictureInPictureHomeCorner": {
+                "type": "Enum",
+                "options": [
+                    "TopLeftCorner",
+                    "TopRightCorner",
+                    "BottomLeftCorner",
+                    "BottomRightCorner"
+                ],
+                "min": null,
+                "max": null,
+                "default": "Qt::BottomRightCorner",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "PictureInPictureMargin": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "20",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "OverlayVirtualKeyboardOnWindows": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            }
+        },
+        "EdgeBarrier": {
+            "CornerBarrier": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "EdgeBarrier": {
+                "type": "Int",
+                "options": null,
+                "min": "0",
+                "max": "1000",
+                "default": "100",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            }
+        },
+        "ScreenEdges": {
+            "RemainActiveOnFullscreen": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "TouchTarget": {
+                "type": "Int",
+                "options": null,
+                "min": "1",
+                "max": null,
+                "default": "8",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            }
+        },
+        "Compositing": {
+            "Backend": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "OpenGL",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "Enabled": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "LastFailureTimestamp": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "AllowTearing": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            }
+        },
+        "TabBox": {
+            "DelayTime": {
+                "type": "Int",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "90",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "DesktopMode": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "1",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "ActivitiesMode": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "1",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "ApplicationsMode": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "MinimizedMode": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "ShowDesktopMode": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "MultiScreenMode": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "SwitchingMode": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "ShowOutline": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "ShowTabBox": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "HighlightWindows": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "LayoutName": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "thumbnail_grid",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            }
+        },
+        "KDE": {
+            "AnimationDurationFactor": {
+                "type": "Double",
+                "options": null,
+                "min": "0",
+                "max": null,
+                "default": "1",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            }
+        },
+        "Wayland": {
+            "InputMethod": {
+                "type": "Path",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": null,
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "DoubleTapWakeup": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "EnablePrimarySelection": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            }
+        },
+        "Xwayland": {
+            "XwaylandCrashPolicy": {
+                "type": "Enum",
+                "options": [
+                    "Stop",
+                    "Restart"
+                ],
+                "min": null,
+                "max": null,
+                "default": "XwaylandCrashPolicy::Restart",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "XwaylandMaxCrashCount": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "3",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "XwaylandEavesdrops": {
+                "type": "Enum",
+                "options": [
+                    "None",
+                    "Modifiers",
+                    "Combinations",
+                    "All"
+                ],
+                "min": null,
+                "max": null,
+                "default": "Combinations",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "XwaylandEavesdropsMouse": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "XwaylandEisNoPrompt": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            }
+        }
+    },
+    "okular_core": {
+        "Core Performance": {
+            "null": {
+                "type": "Enum",
+                "options": [
+                    "Disabled",
+                    "Enabled"
+                ],
+                "min": null,
+                "max": null,
+                "default": "Disabled",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        },
+        "Document": {
+            "null": {
+                "type": "Enum",
+                "options": [
+                    "Inverted",
+                    "Paper",
+                    "Recolor",
+                    "BlackWhite",
+                    "InvertLightness",
+                    "InvertLuma",
+                    "InvertLumaSymmetric",
+                    "HueShiftPositive",
+                    "HueShiftNegative"
+                ],
+                "min": null,
+                "max": null,
+                "default": "Inverted",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        },
+        "Core General": {
+            "null": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        },
+        "Core Presentation": {
+            "null": {
+                "type": "Enum",
+                "options": [
+                    "ForwardBackward",
+                    "Forward",
+                    "Disabled"
+                ],
+                "min": null,
+                "max": null,
+                "default": "Forward",
+                "description": "No description",
+                "reload_cmd": false
+            }
+        }
+    },
+    "workspaceoptions_plasmasettings": {
+        "PlasmaToolTips": {
+            "delay": {
+                "type": "Double",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0.7",
+                "description": "Display large panel and widget tooltips",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            }
+        },
+        "OSD": {
+            "osdEnabled": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Display small popups for status changes",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            },
+            "osdKbdLayoutChangedEnabled": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "OSD on layout change",
+                "reload_cmd": "qdbus org.kde.KWin /KWin reconfigure"
+            }
+        }
+    },
+    "kcalc": {
+        "Colors": {
+            "FollowSystemTheme": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "ForeColor": {
+                "type": "Color",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "defaultColor",
+                "description": "The foreground color of the display.",
+                "reload_cmd": false
+            },
+            "BackColor": {
+                "type": "Color",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "defaultColor",
+                "description": "The background color of the display.",
+                "reload_cmd": false
+            },
+            "NumberButtonsColor": {
+                "type": "Color",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "defaultButtonColor",
+                "description": "The color of number buttons.",
+                "reload_cmd": false
+            },
+            "FunctionButtonsColor": {
+                "type": "Color",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "defaultButtonColor",
+                "description": "The color of function buttons.",
+                "reload_cmd": false
+            },
+            "StatButtonsColor": {
+                "type": "Color",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "defaultButtonColor",
+                "description": "The color of statistical buttons.",
+                "reload_cmd": false
+            },
+            "HexButtonsColor": {
+                "type": "Color",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "defaultButtonColor",
+                "description": "The color of hex buttons.",
+                "reload_cmd": false
+            },
+            "MemoryButtonsColor": {
+                "type": "Color",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "defaultButtonColor",
+                "description": "The color of memory buttons.",
+                "reload_cmd": false
+            },
+            "OperationButtonsColor": {
+                "type": "Color",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "defaultButtonColor",
+                "description": "The color of operation buttons.",
+                "reload_cmd": false
+            },
+            "ConstantsButtonsColor": {
+                "type": "Color",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "defaultButtonColor",
+                "description": "The color of constants buttons.",
+                "reload_cmd": false
+            },
+            "NumberFontsColor": {
+                "type": "Color",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "defaultFontColor",
+                "description": "The color of number fonts.",
+                "reload_cmd": false
+            },
+            "FunctionFontsColor": {
+                "type": "Color",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "defaultFontColor",
+                "description": "The color of function fonts.",
+                "reload_cmd": false
+            },
+            "StatFontsColor": {
+                "type": "Color",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "defaultFontColor",
+                "description": "The color of statistical fonts.",
+                "reload_cmd": false
+            },
+            "HexFontsColor": {
+                "type": "Color",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "defaultFontColor",
+                "description": "The color of hex fonts.",
+                "reload_cmd": false
+            },
+            "MemoryFontsColor": {
+                "type": "Color",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "defaultFontColor",
+                "description": "The color of memory fonts.",
+                "reload_cmd": false
+            },
+            "OperationFontsColor": {
+                "type": "Color",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "defaultFontColor",
+                "description": "The color of operation font.",
+                "reload_cmd": false
+            },
+            "ConstantsFontsColor": {
+                "type": "Color",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "defaultFontColor",
+                "description": "The color of constants fonts.",
+                "reload_cmd": false
+            }
+        },
+        "Font": {
+            "ButtonFont": {
+                "type": "Font",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "QFontDatabase::systemFont(QFontDatabase::GeneralFont)",
+                "description": "The font to use for the buttons.",
+                "reload_cmd": false
+            },
+            "DisplayFont": {
+                "type": "Font",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "defaultDisplayFont",
+                "description": "The font to use in the display.",
+                "reload_cmd": false
+            },
+            "HistoryFont": {
+                "type": "Font",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "QFontDatabase::systemFont(QFontDatabase::GeneralFont)",
+                "description": "The font to use in the history.",
+                "reload_cmd": false
+            }
+        },
+        "Precision": {
+            "Precision": {
+                "type": "UInt",
+                "options": null,
+                "min": "8",
+                "max": "200",
+                "default": "12",
+                "description": "Maximum number of digits displayed.",
+                "reload_cmd": false
+            },
+            "FixedPrecision": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "2",
+                "description": "Number of fixed decimal digits.",
+                "reload_cmd": false
+            },
+            "Fixed": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Whether to use fixed decimal places.",
+                "reload_cmd": false
+            }
+        },
+        "General": {
+            "Beep": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Whether to beep on error.",
+                "reload_cmd": false
+            },
+            "CaptionResult": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Whether to show the result in the window title.",
+                "reload_cmd": false
+            },
+            "GroupDigits": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Whether to group digits.",
+                "reload_cmd": false
+            },
+            "TwosComplement": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "true",
+                "description": "Whether to use Two's Complement for non-decimal numbers.",
+                "reload_cmd": false
+            },
+            "CalculatorMode": {
+                "type": "Enum",
+                "options": [
+                    "simple",
+                    "science",
+                    "statistics",
+                    "numeral"
+                ],
+                "min": null,
+                "max": null,
+                "default": null,
+                "description": "No description",
+                "reload_cmd": false
+            },
+            "ShowBitset": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Whether to show the bit edit widget.",
+                "reload_cmd": false
+            },
+            "ShowConstants": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Whether to show constant buttons.",
+                "reload_cmd": false
+            },
+            "ShowHistory": {
+                "type": "Bool",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "false",
+                "description": "Whether to show the history window.",
+                "reload_cmd": false
+            },
+            "AngleMode": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0",
+                "description": "Degrees, radians or grads",
+                "reload_cmd": false
+            },
+            "BaseMode": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "10",
+                "description": "Numeric base",
+                "reload_cmd": false
+            }
+        },
+        "Grouping": {
+            "BinaryGrouping": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "4",
+                "description": "Binary figures will be separated by a whitespace after every Xth digit.",
+                "reload_cmd": false
+            },
+            "OctalGrouping": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "4",
+                "description": "Octal figures will be separated by a whitespace after every Xth digit.",
+                "reload_cmd": false
+            },
+            "HexadecimalGrouping": {
+                "type": "UInt",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "2",
+                "description": "Hexadecimal figures will be separated by a whitespace after every Xth digit.",
+                "reload_cmd": false
+            }
+        },
+        "UserConstants": {
+            "nameConstant$(ConstIndex)": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "nameConstant0",
+                "description": "Name of the user programmable constants.",
+                "reload_cmd": false
+            },
+            "valueConstant$(ConstIndex)": {
+                "type": "String",
+                "options": null,
+                "min": null,
+                "max": null,
+                "default": "0",
+                "description": "List of user programmable constants",
+                "reload_cmd": false
+            }
+        }
+    }
+}

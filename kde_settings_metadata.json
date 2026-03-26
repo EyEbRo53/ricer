@@ -1,0 +1,757 @@
+{
+    "kdeglobals": {
+        "ColorEffects:Disabled": {
+            "changeselectioncolor": {
+                "current_value": "",
+                "type": "string",
+                "description": "Key 'changeselectioncolor' found in [ColorEffects:Disabled] of kdeglobals"
+            },
+            "color": {
+                "current_value": "56,56,56",
+                "type": "string",
+                "description": "Key 'color' found in [ColorEffects:Disabled] of kdeglobals"
+            },
+            "coloramount": {
+                "current_value": "0",
+                "type": "integer",
+                "description": "Key 'coloramount' found in [ColorEffects:Disabled] of kdeglobals"
+            },
+            "coloreffect": {
+                "current_value": "0",
+                "type": "integer",
+                "description": "Key 'coloreffect' found in [ColorEffects:Disabled] of kdeglobals"
+            },
+            "contrastamount": {
+                "current_value": "0.65",
+                "type": "float",
+                "description": "Key 'contrastamount' found in [ColorEffects:Disabled] of kdeglobals"
+            },
+            "contrasteffect": {
+                "current_value": "1",
+                "type": "integer",
+                "description": "Key 'contrasteffect' found in [ColorEffects:Disabled] of kdeglobals"
+            },
+            "enable": {
+                "current_value": "",
+                "type": "string",
+                "description": "Key 'enable' found in [ColorEffects:Disabled] of kdeglobals"
+            },
+            "intensityamount": {
+                "current_value": "0.1",
+                "type": "float",
+                "description": "Key 'intensityamount' found in [ColorEffects:Disabled] of kdeglobals"
+            },
+            "intensityeffect": {
+                "current_value": "2",
+                "type": "integer",
+                "description": "Key 'intensityeffect' found in [ColorEffects:Disabled] of kdeglobals"
+            }
+        },
+        "ColorEffects:Inactive": {
+            "changeselectioncolor": {
+                "current_value": "true",
+                "type": "boolean",
+                "description": "Key 'changeselectioncolor' found in [ColorEffects:Inactive] of kdeglobals"
+            },
+            "color": {
+                "current_value": "112,111,110",
+                "type": "string",
+                "description": "Key 'color' found in [ColorEffects:Inactive] of kdeglobals"
+            },
+            "coloramount": {
+                "current_value": "0.025",
+                "type": "float",
+                "description": "Key 'coloramount' found in [ColorEffects:Inactive] of kdeglobals"
+            },
+            "coloreffect": {
+                "current_value": "2",
+                "type": "integer",
+                "description": "Key 'coloreffect' found in [ColorEffects:Inactive] of kdeglobals"
+            },
+            "contrastamount": {
+                "current_value": "0.1",
+                "type": "float",
+                "description": "Key 'contrastamount' found in [ColorEffects:Inactive] of kdeglobals"
+            },
+            "contrasteffect": {
+                "current_value": "2",
+                "type": "integer",
+                "description": "Key 'contrasteffect' found in [ColorEffects:Inactive] of kdeglobals"
+            },
+            "enable": {
+                "current_value": "false",
+                "type": "boolean",
+                "description": "Key 'enable' found in [ColorEffects:Inactive] of kdeglobals"
+            },
+            "intensityamount": {
+                "current_value": "0",
+                "type": "integer",
+                "description": "Key 'intensityamount' found in [ColorEffects:Inactive] of kdeglobals"
+            },
+            "intensityeffect": {
+                "current_value": "0",
+                "type": "integer",
+                "description": "Key 'intensityeffect' found in [ColorEffects:Inactive] of kdeglobals"
+            }
+        },
+        "Colors:Button": {
+            "backgroundalternate": {
+                "current_value": "177,152,235",
+                "type": "string",
+                "description": "Key 'backgroundalternate' found in [Colors:Button] of kdeglobals"
+            },
+            "backgroundnormal": {
+                "current_value": "252,252,252",
+                "type": "string",
+                "description": "Key 'backgroundnormal' found in [Colors:Button] of kdeglobals"
+            },
+            "decorationfocus": {
+                "current_value": "146,110,228",
+                "type": "string",
+                "description": "Key 'decorationfocus' found in [Colors:Button] of kdeglobals"
+            },
+            "decorationhover": {
+                "current_value": "146,110,228",
+                "type": "string",
+                "description": "Key 'decorationhover' found in [Colors:Button] of kdeglobals"
+            },
+            "foregroundactive": {
+                "current_value": "146,110,228",
+                "type": "string",
+                "description": "Key 'foregroundactive' found in [Colors:Button] of kdeglobals"
+            },
+            "foregroundinactive": {
+                "current_value": "112,125,138",
+                "type": "string",
+                "description": "Key 'foregroundinactive' found in [Colors:Button] of kdeglobals"
+            },
+            "foregroundlink": {
+                "current_value": "118,54,221",
+                "type": "string",
+                "description": "Key 'foregroundlink' found in [Colors:Button] of kdeglobals"
+            },
+            "foregroundnegative": {
+                "current_value": "218,68,83",
+                "type": "string",
+                "description": "Key 'foregroundnegative' found in [Colors:Button] of kdeglobals"
+            },
+            "foregroundneutral": {
+                "current_value": "246,116,0",
+                "type": "string",
+                "description": "Key 'foregroundneutral' found in [Colors:Button] of kdeglobals"
+            },
+            "foregroundnormal": {
+                "current_value": "35,38,41",
+                "type": "string",
+                "description": "Key 'foregroundnormal' found in [Colors:Button] of kdeglobals"
+            },
+            "foregroundpositive": {
+                "current_value": "39,174,96",
+                "type": "string",
+                "description": "Key 'foregroundpositive' found in [Colors:Button] of kdeglobals"
+            },
+            "foregroundvisited": {
+                "current_value": "155,89,182",
+                "type": "string",
+                "description": "Key 'foregroundvisited' found in [Colors:Button] of kdeglobals"
+            }
+        },
+        "Colors:Complementary": {
+            "backgroundalternate": {
+                "current_value": "27,30,32",
+                "type": "string",
+                "description": "Key 'backgroundalternate' found in [Colors:Complementary] of kdeglobals"
+            },
+            "backgroundnormal": {
+                "current_value": "42,46,50",
+                "type": "string",
+                "description": "Key 'backgroundnormal' found in [Colors:Complementary] of kdeglobals"
+            },
+            "decorationfocus": {
+                "current_value": "146,110,228",
+                "type": "string",
+                "description": "Key 'decorationfocus' found in [Colors:Complementary] of kdeglobals"
+            },
+            "decorationhover": {
+                "current_value": "146,110,228",
+                "type": "string",
+                "description": "Key 'decorationhover' found in [Colors:Complementary] of kdeglobals"
+            },
+            "foregroundactive": {
+                "current_value": "146,110,228",
+                "type": "string",
+                "description": "Key 'foregroundactive' found in [Colors:Complementary] of kdeglobals"
+            },
+            "foregroundinactive": {
+                "current_value": "161,169,177",
+                "type": "string",
+                "description": "Key 'foregroundinactive' found in [Colors:Complementary] of kdeglobals"
+            },
+            "foregroundlink": {
+                "current_value": "209,199,242",
+                "type": "string",
+                "description": "Key 'foregroundlink' found in [Colors:Complementary] of kdeglobals"
+            },
+            "foregroundnegative": {
+                "current_value": "218,68,83",
+                "type": "string",
+                "description": "Key 'foregroundnegative' found in [Colors:Complementary] of kdeglobals"
+            },
+            "foregroundneutral": {
+                "current_value": "246,116,0",
+                "type": "string",
+                "description": "Key 'foregroundneutral' found in [Colors:Complementary] of kdeglobals"
+            },
+            "foregroundnormal": {
+                "current_value": "252,252,252",
+                "type": "string",
+                "description": "Key 'foregroundnormal' found in [Colors:Complementary] of kdeglobals"
+            },
+            "foregroundpositive": {
+                "current_value": "39,174,96",
+                "type": "string",
+                "description": "Key 'foregroundpositive' found in [Colors:Complementary] of kdeglobals"
+            },
+            "foregroundvisited": {
+                "current_value": "155,89,182",
+                "type": "string",
+                "description": "Key 'foregroundvisited' found in [Colors:Complementary] of kdeglobals"
+            }
+        },
+        "Colors:Header": {
+            "backgroundalternate": {
+                "current_value": "239,240,241",
+                "type": "string",
+                "description": "Key 'backgroundalternate' found in [Colors:Header] of kdeglobals"
+            },
+            "backgroundnormal": {
+                "current_value": "222,224,226",
+                "type": "string",
+                "description": "Key 'backgroundnormal' found in [Colors:Header] of kdeglobals"
+            },
+            "decorationfocus": {
+                "current_value": "146,110,228",
+                "type": "string",
+                "description": "Key 'decorationfocus' found in [Colors:Header] of kdeglobals"
+            },
+            "decorationhover": {
+                "current_value": "146,110,228",
+                "type": "string",
+                "description": "Key 'decorationhover' found in [Colors:Header] of kdeglobals"
+            },
+            "foregroundactive": {
+                "current_value": "146,110,228",
+                "type": "string",
+                "description": "Key 'foregroundactive' found in [Colors:Header] of kdeglobals"
+            },
+            "foregroundinactive": {
+                "current_value": "112,125,138",
+                "type": "string",
+                "description": "Key 'foregroundinactive' found in [Colors:Header] of kdeglobals"
+            },
+            "foregroundlink": {
+                "current_value": "118,54,221",
+                "type": "string",
+                "description": "Key 'foregroundlink' found in [Colors:Header] of kdeglobals"
+            },
+            "foregroundnegative": {
+                "current_value": "218,68,83",
+                "type": "string",
+                "description": "Key 'foregroundnegative' found in [Colors:Header] of kdeglobals"
+            },
+            "foregroundneutral": {
+                "current_value": "246,116,0",
+                "type": "string",
+                "description": "Key 'foregroundneutral' found in [Colors:Header] of kdeglobals"
+            },
+            "foregroundnormal": {
+                "current_value": "35,38,41",
+                "type": "string",
+                "description": "Key 'foregroundnormal' found in [Colors:Header] of kdeglobals"
+            },
+            "foregroundpositive": {
+                "current_value": "39,174,96",
+                "type": "string",
+                "description": "Key 'foregroundpositive' found in [Colors:Header] of kdeglobals"
+            },
+            "foregroundvisited": {
+                "current_value": "155,89,182",
+                "type": "string",
+                "description": "Key 'foregroundvisited' found in [Colors:Header] of kdeglobals"
+            }
+        },
+        "Colors:Header][Inactive": {
+            "backgroundalternate": {
+                "current_value": "227,229,231",
+                "type": "string",
+                "description": "Key 'backgroundalternate' found in [Colors:Header][Inactive] of kdeglobals"
+            },
+            "backgroundnormal": {
+                "current_value": "239,240,241",
+                "type": "string",
+                "description": "Key 'backgroundnormal' found in [Colors:Header][Inactive] of kdeglobals"
+            },
+            "decorationfocus": {
+                "current_value": "61,174,233",
+                "type": "string",
+                "description": "Key 'decorationfocus' found in [Colors:Header][Inactive] of kdeglobals"
+            },
+            "decorationhover": {
+                "current_value": "61,174,233",
+                "type": "string",
+                "description": "Key 'decorationhover' found in [Colors:Header][Inactive] of kdeglobals"
+            },
+            "foregroundactive": {
+                "current_value": "61,174,233",
+                "type": "string",
+                "description": "Key 'foregroundactive' found in [Colors:Header][Inactive] of kdeglobals"
+            },
+            "foregroundinactive": {
+                "current_value": "112,125,138",
+                "type": "string",
+                "description": "Key 'foregroundinactive' found in [Colors:Header][Inactive] of kdeglobals"
+            },
+            "foregroundlink": {
+                "current_value": "41,128,185",
+                "type": "string",
+                "description": "Key 'foregroundlink' found in [Colors:Header][Inactive] of kdeglobals"
+            },
+            "foregroundnegative": {
+                "current_value": "218,68,83",
+                "type": "string",
+                "description": "Key 'foregroundnegative' found in [Colors:Header][Inactive] of kdeglobals"
+            },
+            "foregroundneutral": {
+                "current_value": "246,116,0",
+                "type": "string",
+                "description": "Key 'foregroundneutral' found in [Colors:Header][Inactive] of kdeglobals"
+            },
+            "foregroundnormal": {
+                "current_value": "35,38,41",
+                "type": "string",
+                "description": "Key 'foregroundnormal' found in [Colors:Header][Inactive] of kdeglobals"
+            },
+            "foregroundpositive": {
+                "current_value": "39,174,96",
+                "type": "string",
+                "description": "Key 'foregroundpositive' found in [Colors:Header][Inactive] of kdeglobals"
+            },
+            "foregroundvisited": {
+                "current_value": "155,89,182",
+                "type": "string",
+                "description": "Key 'foregroundvisited' found in [Colors:Header][Inactive] of kdeglobals"
+            }
+        },
+        "Colors:Selection": {
+            "backgroundalternate": {
+                "current_value": "178,153,236",
+                "type": "string",
+                "description": "Key 'backgroundalternate' found in [Colors:Selection] of kdeglobals"
+            },
+            "backgroundnormal": {
+                "current_value": "178,153,236",
+                "type": "string",
+                "description": "Key 'backgroundnormal' found in [Colors:Selection] of kdeglobals"
+            },
+            "decorationfocus": {
+                "current_value": "146,110,228",
+                "type": "string",
+                "description": "Key 'decorationfocus' found in [Colors:Selection] of kdeglobals"
+            },
+            "decorationhover": {
+                "current_value": "146,110,228",
+                "type": "string",
+                "description": "Key 'decorationhover' found in [Colors:Selection] of kdeglobals"
+            },
+            "foregroundactive": {
+                "current_value": "146,110,228",
+                "type": "string",
+                "description": "Key 'foregroundactive' found in [Colors:Selection] of kdeglobals"
+            },
+            "foregroundinactive": {
+                "current_value": "0,0,0",
+                "type": "string",
+                "description": "Key 'foregroundinactive' found in [Colors:Selection] of kdeglobals"
+            },
+            "foregroundlink": {
+                "current_value": "118,54,221",
+                "type": "string",
+                "description": "Key 'foregroundlink' found in [Colors:Selection] of kdeglobals"
+            },
+            "foregroundnegative": {
+                "current_value": "176,55,69",
+                "type": "string",
+                "description": "Key 'foregroundnegative' found in [Colors:Selection] of kdeglobals"
+            },
+            "foregroundneutral": {
+                "current_value": "198,92,0",
+                "type": "string",
+                "description": "Key 'foregroundneutral' found in [Colors:Selection] of kdeglobals"
+            },
+            "foregroundnormal": {
+                "current_value": "0,0,0",
+                "type": "string",
+                "description": "Key 'foregroundnormal' found in [Colors:Selection] of kdeglobals"
+            },
+            "foregroundpositive": {
+                "current_value": "23,104,57",
+                "type": "string",
+                "description": "Key 'foregroundpositive' found in [Colors:Selection] of kdeglobals"
+            },
+            "foregroundvisited": {
+                "current_value": "155,89,182",
+                "type": "string",
+                "description": "Key 'foregroundvisited' found in [Colors:Selection] of kdeglobals"
+            }
+        },
+        "Colors:Tooltip": {
+            "backgroundalternate": {
+                "current_value": "239,240,241",
+                "type": "string",
+                "description": "Key 'backgroundalternate' found in [Colors:Tooltip] of kdeglobals"
+            },
+            "backgroundnormal": {
+                "current_value": "247,247,247",
+                "type": "string",
+                "description": "Key 'backgroundnormal' found in [Colors:Tooltip] of kdeglobals"
+            },
+            "decorationfocus": {
+                "current_value": "146,110,228",
+                "type": "string",
+                "description": "Key 'decorationfocus' found in [Colors:Tooltip] of kdeglobals"
+            },
+            "decorationhover": {
+                "current_value": "146,110,228",
+                "type": "string",
+                "description": "Key 'decorationhover' found in [Colors:Tooltip] of kdeglobals"
+            },
+            "foregroundactive": {
+                "current_value": "146,110,228",
+                "type": "string",
+                "description": "Key 'foregroundactive' found in [Colors:Tooltip] of kdeglobals"
+            },
+            "foregroundinactive": {
+                "current_value": "112,125,138",
+                "type": "string",
+                "description": "Key 'foregroundinactive' found in [Colors:Tooltip] of kdeglobals"
+            },
+            "foregroundlink": {
+                "current_value": "118,54,221",
+                "type": "string",
+                "description": "Key 'foregroundlink' found in [Colors:Tooltip] of kdeglobals"
+            },
+            "foregroundnegative": {
+                "current_value": "218,68,83",
+                "type": "string",
+                "description": "Key 'foregroundnegative' found in [Colors:Tooltip] of kdeglobals"
+            },
+            "foregroundneutral": {
+                "current_value": "246,116,0",
+                "type": "string",
+                "description": "Key 'foregroundneutral' found in [Colors:Tooltip] of kdeglobals"
+            },
+            "foregroundnormal": {
+                "current_value": "35,38,41",
+                "type": "string",
+                "description": "Key 'foregroundnormal' found in [Colors:Tooltip] of kdeglobals"
+            },
+            "foregroundpositive": {
+                "current_value": "39,174,96",
+                "type": "string",
+                "description": "Key 'foregroundpositive' found in [Colors:Tooltip] of kdeglobals"
+            },
+            "foregroundvisited": {
+                "current_value": "155,89,182",
+                "type": "string",
+                "description": "Key 'foregroundvisited' found in [Colors:Tooltip] of kdeglobals"
+            }
+        },
+        "Colors:View": {
+            "backgroundalternate": {
+                "current_value": "247,247,247",
+                "type": "string",
+                "description": "Key 'backgroundalternate' found in [Colors:View] of kdeglobals"
+            },
+            "backgroundnormal": {
+                "current_value": "255,255,255",
+                "type": "string",
+                "description": "Key 'backgroundnormal' found in [Colors:View] of kdeglobals"
+            },
+            "decorationfocus": {
+                "current_value": "146,110,228",
+                "type": "string",
+                "description": "Key 'decorationfocus' found in [Colors:View] of kdeglobals"
+            },
+            "decorationhover": {
+                "current_value": "146,110,228",
+                "type": "string",
+                "description": "Key 'decorationhover' found in [Colors:View] of kdeglobals"
+            },
+            "foregroundactive": {
+                "current_value": "146,110,228",
+                "type": "string",
+                "description": "Key 'foregroundactive' found in [Colors:View] of kdeglobals"
+            },
+            "foregroundinactive": {
+                "current_value": "112,125,138",
+                "type": "string",
+                "description": "Key 'foregroundinactive' found in [Colors:View] of kdeglobals"
+            },
+            "foregroundlink": {
+                "current_value": "118,54,221",
+                "type": "string",
+                "description": "Key 'foregroundlink' found in [Colors:View] of kdeglobals"
+            },
+            "foregroundnegative": {
+                "current_value": "218,68,83",
+                "type": "string",
+                "description": "Key 'foregroundnegative' found in [Colors:View] of kdeglobals"
+            },
+            "foregroundneutral": {
+                "current_value": "246,116,0",
+                "type": "string",
+                "description": "Key 'foregroundneutral' found in [Colors:View] of kdeglobals"
+            },
+            "foregroundnormal": {
+                "current_value": "35,38,41",
+                "type": "string",
+                "description": "Key 'foregroundnormal' found in [Colors:View] of kdeglobals"
+            },
+            "foregroundpositive": {
+                "current_value": "39,174,96",
+                "type": "string",
+                "description": "Key 'foregroundpositive' found in [Colors:View] of kdeglobals"
+            },
+            "foregroundvisited": {
+                "current_value": "155,89,182",
+                "type": "string",
+                "description": "Key 'foregroundvisited' found in [Colors:View] of kdeglobals"
+            }
+        },
+        "Colors:Window": {
+            "backgroundalternate": {
+                "current_value": "227,229,231",
+                "type": "string",
+                "description": "Key 'backgroundalternate' found in [Colors:Window] of kdeglobals"
+            },
+            "backgroundnormal": {
+                "current_value": "239,240,241",
+                "type": "string",
+                "description": "Key 'backgroundnormal' found in [Colors:Window] of kdeglobals"
+            },
+            "decorationfocus": {
+                "current_value": "146,110,228",
+                "type": "string",
+                "description": "Key 'decorationfocus' found in [Colors:Window] of kdeglobals"
+            },
+            "decorationhover": {
+                "current_value": "146,110,228",
+                "type": "string",
+                "description": "Key 'decorationhover' found in [Colors:Window] of kdeglobals"
+            },
+            "foregroundactive": {
+                "current_value": "146,110,228",
+                "type": "string",
+                "description": "Key 'foregroundactive' found in [Colors:Window] of kdeglobals"
+            },
+            "foregroundinactive": {
+                "current_value": "112,125,138",
+                "type": "string",
+                "description": "Key 'foregroundinactive' found in [Colors:Window] of kdeglobals"
+            },
+            "foregroundlink": {
+                "current_value": "118,54,221",
+                "type": "string",
+                "description": "Key 'foregroundlink' found in [Colors:Window] of kdeglobals"
+            },
+            "foregroundnegative": {
+                "current_value": "218,68,83",
+                "type": "string",
+                "description": "Key 'foregroundnegative' found in [Colors:Window] of kdeglobals"
+            },
+            "foregroundneutral": {
+                "current_value": "246,116,0",
+                "type": "string",
+                "description": "Key 'foregroundneutral' found in [Colors:Window] of kdeglobals"
+            },
+            "foregroundnormal": {
+                "current_value": "35,38,41",
+                "type": "string",
+                "description": "Key 'foregroundnormal' found in [Colors:Window] of kdeglobals"
+            },
+            "foregroundpositive": {
+                "current_value": "39,174,96",
+                "type": "string",
+                "description": "Key 'foregroundpositive' found in [Colors:Window] of kdeglobals"
+            },
+            "foregroundvisited": {
+                "current_value": "155,89,182",
+                "type": "string",
+                "description": "Key 'foregroundvisited' found in [Colors:Window] of kdeglobals"
+            }
+        },
+        "General": {
+            "colorschemehash": {
+                "current_value": "9f63c7711a13123582e720791ea0f8c0172977d2",
+                "type": "string",
+                "description": "Key 'colorschemehash' found in [General] of kdeglobals"
+            },
+            "fixed": {
+                "current_value": "Hack,14,-1,5,50,0,0,0,0,0",
+                "type": "string",
+                "description": "Key 'fixed' found in [General] of kdeglobals"
+            },
+            "font": {
+                "current_value": "Noto Sans,14,-1,5,50,0,0,0,0,0",
+                "type": "string",
+                "description": "Key 'font' found in [General] of kdeglobals"
+            },
+            "menufont": {
+                "current_value": "Noto Sans,14,-1,5,50,0,0,0,0,0",
+                "type": "string",
+                "description": "Key 'menufont' found in [General] of kdeglobals"
+            },
+            "toolbarfont": {
+                "current_value": "Noto Sans,14,-1,5,50,0,0,0,0,0",
+                "type": "string",
+                "description": "Key 'toolbarfont' found in [General] of kdeglobals"
+            }
+        },
+        "KDE": {
+            "singleclick": {
+                "current_value": "true",
+                "type": "boolean",
+                "description": "Key 'singleclick' found in [KDE] of kdeglobals"
+            },
+            "contrast": {
+                "current_value": "4",
+                "type": "integer",
+                "description": "Key 'contrast' found in [KDE] of kdeglobals"
+            },
+            "framecontrast": {
+                "current_value": "0.2",
+                "type": "float",
+                "description": "Key 'framecontrast' found in [KDE] of kdeglobals"
+            }
+        },
+        "KScreen": {
+            "scalefactor": {
+                "current_value": "1.5",
+                "type": "float",
+                "description": "Key 'scalefactor' found in [KScreen] of kdeglobals"
+            }
+        },
+        "WM": {
+            "activebackground": {
+                "current_value": "227,229,231",
+                "type": "string",
+                "description": "Key 'activebackground' found in [WM] of kdeglobals"
+            },
+            "activeblend": {
+                "current_value": "227,229,231",
+                "type": "string",
+                "description": "Key 'activeblend' found in [WM] of kdeglobals"
+            },
+            "activeforeground": {
+                "current_value": "35,38,41",
+                "type": "string",
+                "description": "Key 'activeforeground' found in [WM] of kdeglobals"
+            },
+            "inactivebackground": {
+                "current_value": "239,240,241",
+                "type": "string",
+                "description": "Key 'inactivebackground' found in [WM] of kdeglobals"
+            },
+            "inactiveblend": {
+                "current_value": "239,240,241",
+                "type": "string",
+                "description": "Key 'inactiveblend' found in [WM] of kdeglobals"
+            },
+            "inactiveforeground": {
+                "current_value": "112,125,138",
+                "type": "string",
+                "description": "Key 'inactiveforeground' found in [WM] of kdeglobals"
+            }
+        }
+    },
+    "kwinrc": {
+        "Desktops": {
+            "id_1": {
+                "current_value": "b1454e68-e37b-4556-87ed-974271767d7f",
+                "type": "string",
+                "description": "Key 'id_1' found in [Desktops] of kwinrc"
+            },
+            "number": {
+                "current_value": "1",
+                "type": "integer",
+                "description": "Key 'number' found in [Desktops] of kwinrc"
+            },
+            "rows": {
+                "current_value": "1",
+                "type": "integer",
+                "description": "Key 'rows' found in [Desktops] of kwinrc"
+            }
+        },
+        "Plugins": {
+            "shakecursorenabled": {
+                "current_value": "true",
+                "type": "boolean",
+                "description": "Key 'shakecursorenabled' found in [Plugins] of kwinrc"
+            }
+        },
+        "Tiling][b1454e68-e37b-4556-87ed-974271767d7f][3b6cd5cc-960a-4424-bf48-dc555e345587": {
+            "padding": {
+                "current_value": "4",
+                "type": "integer",
+                "description": "Key 'padding' found in [Tiling][b1454e68-e37b-4556-87ed-974271767d7f][3b6cd5cc-960a-4424-bf48-dc555e345587] of kwinrc"
+            },
+            "tiles": {
+                "current_value": "{\"layoutDirection\":\"horizontal\",\"tiles\":[{\"width\":0.25},{\"width\":0.5},{\"width\":0.25}]}",
+                "type": "string",
+                "description": "Key 'tiles' found in [Tiling][b1454e68-e37b-4556-87ed-974271767d7f][3b6cd5cc-960a-4424-bf48-dc555e345587] of kwinrc"
+            }
+        },
+        "Windows": {
+            "bordersnapzone": {
+                "current_value": "0",
+                "type": "integer",
+                "description": "Key 'bordersnapzone' found in [Windows] of kwinrc"
+            },
+            "windowsnapzone": {
+                "current_value": "0",
+                "type": "integer",
+                "description": "Key 'windowsnapzone' found in [Windows] of kwinrc"
+            }
+        },
+        "Xwayland": {
+            "scale": {
+                "current_value": "1",
+                "type": "integer",
+                "description": "Key 'scale' found in [Xwayland] of kwinrc"
+            }
+        }
+    },
+    "kcminputrc": {
+        "Mouse": {
+            "cursorsize": {
+                "current_value": "48",
+                "type": "integer",
+                "description": "Key 'cursorsize' found in [Mouse] of kcminputrc"
+            },
+            "cursortheme": {
+                "current_value": "Breeze_Snow",
+                "type": "string",
+                "description": "Key 'cursortheme' found in [Mouse] of kcminputrc"
+            }
+        }
+    },
+    "plasmarc": {
+        "Panels": {
+            "thickness": {
+                "current_value": "60",
+                "type": "integer",
+                "description": "Key 'thickness' found in [Panels] of plasmarc"
+            }
+        }
+    }
+}

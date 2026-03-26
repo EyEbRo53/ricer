@@ -1,0 +1,3154 @@
+{
+    "okularrc": {
+        "Dlg Performance": {
+            "null": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "okular.kcfg"
+            }
+        },
+        "Debugging Options": {
+            "null": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "okular.kcfg"
+            }
+        },
+        "Contents": {
+            "null": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "okular.kcfg"
+            }
+        },
+        "Layers": {
+            "null": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "okular.kcfg"
+            }
+        },
+        "Reviews": {
+            "null": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "okular.kcfg"
+            }
+        },
+        "Zoom": {
+            "null": {
+                "type": "UInt",
+                "min": "10",
+                "max": "500",
+                "description": "No description available",
+                "source_kcfg": "okular.kcfg"
+            }
+        },
+        "General": {
+            "null": {
+                "type": "Int",
+                "min": "0",
+                "max": "100",
+                "description": "No description available",
+                "source_kcfg": "okular.kcfg"
+            }
+        },
+        "Dlg Presentation": {
+            "null": {
+                "type": "Int",
+                "min": "-2",
+                "max": "20",
+                "description": "No description available",
+                "source_kcfg": "okular.kcfg"
+            }
+        },
+        "Main View": {
+            "null": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "okular.kcfg"
+            }
+        },
+        "Nav Panel": {
+            "null": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "okular.kcfg"
+            }
+        },
+        "PageView": {
+            "null": {
+                "type": "Color",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "okular.kcfg"
+            }
+        },
+        "Search": {
+            "null": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "okular.kcfg"
+            }
+        },
+        "Dlg Accessibility": {
+            "null": {
+                "type": "UInt",
+                "min": "2",
+                "max": "6",
+                "description": "No description available",
+                "source_kcfg": "okular.kcfg"
+            }
+        },
+        "Identity": {
+            "null": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "okular.kcfg"
+            }
+        }
+    },
+    "splashscreensettingsrc": {
+        "KSplash": {
+            "engine": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "For future use",
+                "source_kcfg": "splashscreensettings.kcfg"
+            },
+            "theme": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Name of the current splash theme",
+                "source_kcfg": "splashscreensettings.kcfg"
+            }
+        }
+    },
+    "gssettingsrc": {
+        "General": {
+            "PlatformFonts": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Use Platform Fonts",
+                "source_kcfg": "gssettings.kcfg"
+            }
+        }
+    },
+    "stylesettingsrc": {
+        "KDE": {
+            "widgetStyle": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Application style",
+                "source_kcfg": "stylesettings.kcfg"
+            },
+            "iconsOnButtons": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Show icons on buttons",
+                "source_kcfg": "stylesettings.kcfg"
+            },
+            "iconsInMenus": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Show icons in menus",
+                "source_kcfg": "stylesettings.kcfg"
+            }
+        },
+        "Toolbar style": {
+            "toolButtonStyle": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Main toolbar label",
+                "source_kcfg": "stylesettings.kcfg"
+            },
+            "toolButtonStyleOtherToolbars": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Secondary toolbar label",
+                "source_kcfg": "stylesettings.kcfg"
+            }
+        }
+    },
+    "kcmaccessibilitybellrc": {
+        "Bell": {
+            "SystemBell": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Use System Bell",
+                "source_kcfg": "kcmaccessibilitybell.kcfg"
+            },
+            "CustomBell": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Customize system bell",
+                "source_kcfg": "kcmaccessibilitybell.kcfg"
+            },
+            "CustomBellFile": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Sound file for the Bell",
+                "source_kcfg": "kcmaccessibilitybell.kcfg"
+            },
+            "VisibleBell": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Use a visual bell instead of a sound",
+                "source_kcfg": "kcmaccessibilitybell.kcfg"
+            },
+            "InvertScreen": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Invert the system colors on the bell",
+                "source_kcfg": "kcmaccessibilitybell.kcfg"
+            },
+            "VisibleBellColor": {
+                "type": "Color",
+                "min": null,
+                "max": null,
+                "description": "Color of the Visual Bell",
+                "source_kcfg": "kcmaccessibilitybell.kcfg"
+            },
+            "VisibleBellPause": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Duration of the Visual Bell",
+                "source_kcfg": "kcmaccessibilitybell.kcfg"
+            }
+        }
+    },
+    "dolphin_versioncontrolsettingsrc": {
+        "VersionControl": {
+            "enabledPlugins": {
+                "type": "StringList",
+                "min": null,
+                "max": null,
+                "description": "Enabled plugins",
+                "source_kcfg": "dolphin_versioncontrolsettings.kcfg"
+            }
+        }
+    },
+    "dolphin_contextmenusettingsrc": {
+        "ContextMenu": {
+            "ShowCopyMoveMenu": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Show 'Copy To' and 'Move To' commands in context menu",
+                "source_kcfg": "dolphin_contextmenusettings.kcfg"
+            },
+            "ShowAddToPlaces": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Show 'Add to Places' in context menu.",
+                "source_kcfg": "dolphin_contextmenusettings.kcfg"
+            },
+            "ShowSortBy": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Show 'Sort By' in context menu.",
+                "source_kcfg": "dolphin_contextmenusettings.kcfg"
+            },
+            "ShowViewMode": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Show 'View Mode' in context menu.",
+                "source_kcfg": "dolphin_contextmenusettings.kcfg"
+            },
+            "ShowOpenInNewTab": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Show 'Open in New Tab' and 'Open in New Tabs' in context menu.",
+                "source_kcfg": "dolphin_contextmenusettings.kcfg"
+            },
+            "ShowOpenInNewWindow": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Show 'Open in New Window' in context menu.",
+                "source_kcfg": "dolphin_contextmenusettings.kcfg"
+            },
+            "ShowOpenInSplitView": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Show 'Open In Split View' in context menu.",
+                "source_kcfg": "dolphin_contextmenusettings.kcfg"
+            },
+            "ShowCopyLocation": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Show 'Copy Location' in context menu.",
+                "source_kcfg": "dolphin_contextmenusettings.kcfg"
+            },
+            "ShowDuplicateHere": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Show 'Duplicate Here' in context menu.",
+                "source_kcfg": "dolphin_contextmenusettings.kcfg"
+            },
+            "ShowOpenTerminal": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Show 'Open Terminal' in context menu.",
+                "source_kcfg": "dolphin_contextmenusettings.kcfg"
+            },
+            "ShowCopyToOtherSplitView": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Show 'Copy to other split view' in context menu.",
+                "source_kcfg": "dolphin_contextmenusettings.kcfg"
+            },
+            "ShowMoveToOtherSplitView": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Show 'Move to other split view' in context menu.",
+                "source_kcfg": "dolphin_contextmenusettings.kcfg"
+            }
+        }
+    },
+    "kcmaccessibilitycolorblindnesscorrectionrc": {
+        "Plugins": {
+            "ColorblindnessCorrection": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Whether Colorblindness Correction is enabled",
+                "source_kcfg": "kcmaccessibilitycolorblindnesscorrection.kcfg"
+            }
+        },
+        "Effect-colorblindnesscorrection": {
+            "Mode": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kcmaccessibilitycolorblindnesscorrection.kcfg"
+            },
+            "Intensity": {
+                "type": "Double",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kcmaccessibilitycolorblindnesscorrection.kcfg"
+            }
+        }
+    },
+    "workspaceoptions_kwinsettingsrc": {
+        "Input": {
+            "tabletMode": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Automatically switch to touch-optimized mode",
+                "source_kcfg": "workspaceoptions_kwinsettings.kcfg"
+            }
+        },
+        "Wayland": {
+            "primarySelection": {
+                "type": "bool",
+                "min": null,
+                "max": null,
+                "description": "Enable middle click selection pasting",
+                "source_kcfg": "workspaceoptions_kwinsettings.kcfg"
+            }
+        }
+    },
+    "krunnersettingsbaserc": {
+        "General": {
+            "freeFloating": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "krunnersettingsbase.kcfg"
+            },
+            "activateWhenTypingOnDesktop": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "krunnersettingsbase.kcfg"
+            },
+            "historyBehavior": {
+                "type": "Enum",
+                "min": null,
+                "max": null,
+                "description": "Option to determine the behavior of KRunner's history and history completion",
+                "source_kcfg": "krunnersettingsbase.kcfg"
+            },
+            "retainPriorSearch": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "krunnersettingsbase.kcfg"
+            }
+        }
+    },
+    "fileviewhgpluginsettingsrc": {
+        "CommitDialogSettings": {
+            "commitDialogHeight": {
+                "type": "Int",
+                "min": "400",
+                "max": null,
+                "description": "Dialog height",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            },
+            "commitDialogWidth": {
+                "type": "Int",
+                "min": "500",
+                "max": null,
+                "description": "Dialog width",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            },
+            "verticalSplitterSizes": {
+                "type": "IntList",
+                "min": null,
+                "max": null,
+                "description": "Divides file list and editors with commit details",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            },
+            "horizontalSplitterSizes": {
+                "type": "IntList",
+                "min": null,
+                "max": null,
+                "description": "Divides commit editor and diff editor",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            }
+        },
+        "ConfigDialogSettings": {
+            "configDialogHeight": {
+                "type": "Int",
+                "min": "400",
+                "max": null,
+                "description": "Dialog height",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            },
+            "configDialogWidth": {
+                "type": "Int",
+                "min": "500",
+                "max": null,
+                "description": "Dialog width",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            }
+        },
+        "CloneDialogSettings": {
+            "cloneDialogHeight": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Dialog height",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            },
+            "cloneDialogWidth": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Dialog width",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            }
+        },
+        "PushDialogSettings": {
+            "pushDialogBigHeight": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Dialog height",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            },
+            "pushDialogBigWidth": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Dialog width",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            }
+        },
+        "PullDialogSettings": {
+            "pullDialogBigHeight": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Dialog height",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            },
+            "pullDialogBigWidth": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Dialog width",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            }
+        },
+        "MergeDialogSettings": {
+            "mergeDialogHeight": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Dialog height",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            },
+            "mergeDialogWidth": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Dialog width",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            }
+        },
+        "BundleDialogSettings": {
+            "bundleDialogHeight": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Dialog height",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            },
+            "bundleDialogWidth": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Dialog width",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            }
+        },
+        "ExportDialogSettings": {
+            "exportDialogHeight": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Dialog height",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            },
+            "exportDialogWidth": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Dialog width",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            }
+        },
+        "ImportDialogSettings": {
+            "importDialogHeight": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Dialog height",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            },
+            "importDialogWidth": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Dialog width",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            }
+        },
+        "ServeDialogSettings": {
+            "serveDialogHeight": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Dialog height",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            },
+            "serveDialogWidth": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Dialog width",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            }
+        },
+        "BackoutDialogSettings": {
+            "backoutDialogHeight": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Dialog height",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            },
+            "backoutDialogWidth": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Dialog width",
+                "source_kcfg": "fileviewhgpluginsettings.kcfg"
+            }
+        }
+    },
+    "landingpage_kdeglobalssettingsrc": {
+        "General": {
+            "colorScheme": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Color scheme name",
+                "source_kcfg": "landingpage_kdeglobalssettings.kcfg"
+            }
+        },
+        "KDE": {
+            "singleClick": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Single click to open files",
+                "source_kcfg": "landingpage_kdeglobalssettings.kcfg"
+            },
+            "automaticLookAndFeel": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Switch the look and feel package depending on time of day",
+                "source_kcfg": "landingpage_kdeglobalssettings.kcfg"
+            },
+            "lookAndFeelPackage": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Global Look and Feel package",
+                "source_kcfg": "landingpage_kdeglobalssettings.kcfg"
+            },
+            "defaultLightLookAndFeel": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Global Look and Feel package, alternate",
+                "source_kcfg": "landingpage_kdeglobalssettings.kcfg"
+            },
+            "defaultDarkLookAndFeel": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Global Look and Feel package, alternate",
+                "source_kcfg": "landingpage_kdeglobalssettings.kcfg"
+            },
+            "animationDurationFactor": {
+                "type": "Double",
+                "min": null,
+                "max": null,
+                "description": "Animation speed",
+                "source_kcfg": "landingpage_kdeglobalssettings.kcfg"
+            }
+        }
+    },
+    "kcmaccessibilityzoommagnifierrc": {
+        "Plugins": {
+            "Zoom": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Whether the Zoom effect is enabled",
+                "source_kcfg": "kcmaccessibilityzoommagnifier.kcfg"
+            },
+            "Magnifier": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Whether the Magnifier effect is enabled",
+                "source_kcfg": "kcmaccessibilityzoommagnifier.kcfg"
+            }
+        },
+        "Effect-zoom": {
+            "SharedZoomFactor": {
+                "type": "Double",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kcmaccessibilityzoommagnifier.kcfg"
+            },
+            "ZoomMousePointer": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kcmaccessibilityzoommagnifier.kcfg"
+            },
+            "ZoomMouseTracking": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kcmaccessibilityzoommagnifier.kcfg"
+            },
+            "ZoomEnableFocusTracking": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kcmaccessibilityzoommagnifier.kcfg"
+            },
+            "ZoomEnableTextCaretTracking": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kcmaccessibilityzoommagnifier.kcfg"
+            },
+            "ZoomPixelGridZoom": {
+                "type": "Double",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kcmaccessibilityzoommagnifier.kcfg"
+            },
+            "ZoomPointerAxisGestureModifiers": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kcmaccessibilityzoommagnifier.kcfg"
+            }
+        },
+        "Effect-magnifier": {
+            "MagnifierWidth": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kcmaccessibilityzoommagnifier.kcfg"
+            },
+            "MagnifierHeight": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kcmaccessibilityzoommagnifier.kcfg"
+            }
+        }
+    },
+    "kactivitymanagerd_plugins_settingsrc": {
+        "Plugin-org.kde.ActivityManager.Resources.Scoring": {
+            "keepHistoryFor": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "How many months keep the activity history",
+                "source_kcfg": "kactivitymanagerd_plugins_settings.kcfg"
+            },
+            "blockedByDefault": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kactivitymanagerd_plugins_settings.kcfg"
+            },
+            "whatToRemember": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Which data to keep in activity history",
+                "source_kcfg": "kactivitymanagerd_plugins_settings.kcfg"
+            },
+            "allowedApplications": {
+                "type": "StringList",
+                "min": null,
+                "max": null,
+                "description": "List of Applications whose activity history to save",
+                "source_kcfg": "kactivitymanagerd_plugins_settings.kcfg"
+            },
+            "blockedApplications": {
+                "type": "StringList",
+                "min": null,
+                "max": null,
+                "description": "List of Applications whose activity history not to save",
+                "source_kcfg": "kactivitymanagerd_plugins_settings.kcfg"
+            }
+        }
+    },
+    "kwindecorationsettingsrc": {
+        "org.kde.kdecoration2": {
+            "pluginName": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Plugin name",
+                "source_kcfg": "kwindecorationsettings.kcfg"
+            },
+            "theme": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Theme name",
+                "source_kcfg": "kwindecorationsettings.kcfg"
+            },
+            "borderSize": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Window border size",
+                "source_kcfg": "kwindecorationsettings.kcfg"
+            },
+            "borderSizeAuto": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Use theme's default window border size",
+                "source_kcfg": "kwindecorationsettings.kcfg"
+            },
+            "closeOnDoubleClickOnMenu": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Close windows by double clicking the window menu button",
+                "source_kcfg": "kwindecorationsettings.kcfg"
+            },
+            "showToolTips": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Show titlebar button tooltips",
+                "source_kcfg": "kwindecorationsettings.kcfg"
+            },
+            "buttonsOnLeft": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Titlebar left buttons",
+                "source_kcfg": "kwindecorationsettings.kcfg"
+            },
+            "buttonsOnRight": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Titlebar right buttons",
+                "source_kcfg": "kwindecorationsettings.kcfg"
+            },
+            "alwaysShowExcludeFromCapture": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Always show \"Hide from Screencast\" button, even if the window is not excluded from screencast already.",
+                "source_kcfg": "kwindecorationsettings.kcfg"
+            }
+        }
+    },
+    "fileviewgitpluginsettingsrc": {
+        "CommitDialogSettings": {
+            "commitDialogHeight": {
+                "type": "Int",
+                "min": "50",
+                "max": null,
+                "description": "Dialog height",
+                "source_kcfg": "fileviewgitpluginsettings.kcfg"
+            },
+            "commitDialogWidth": {
+                "type": "Int",
+                "min": "50",
+                "max": null,
+                "description": "Dialog width",
+                "source_kcfg": "fileviewgitpluginsettings.kcfg"
+            }
+        }
+    },
+    "fileviewsvnpluginsettingsrc": {
+        "General": {
+            "showUpdates": {
+                "type": "bool",
+                "min": null,
+                "max": null,
+                "description": "Show updates",
+                "source_kcfg": "fileviewsvnpluginsettings.kcfg"
+            }
+        }
+    },
+    "iconssettingsbaserc": {
+        "Icons": {
+            "Theme": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Name of the current icon theme",
+                "source_kcfg": "iconssettingsbase.kcfg"
+            }
+        }
+    },
+    "kcmaccessibilitymouserc": {
+        "Mouse": {
+            "MouseKeys": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Use keys to control the mouse",
+                "source_kcfg": "kcmaccessibilitymouse.kcfg"
+            },
+            "AccelerationDelay": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Delay for the mouse movement",
+                "source_kcfg": "kcmaccessibilitymouse.kcfg"
+            },
+            "RepetitionInterval": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Repetition interval for the mouse movement",
+                "source_kcfg": "kcmaccessibilitymouse.kcfg"
+            },
+            "AccelerationTime": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Time to hit maximum velocity",
+                "source_kcfg": "kcmaccessibilitymouse.kcfg"
+            },
+            "MaxSpeed": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Maximum Velocity",
+                "source_kcfg": "kcmaccessibilitymouse.kcfg"
+            },
+            "ProfileCurve": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Mouse Key Curve",
+                "source_kcfg": "kcmaccessibilitymouse.kcfg"
+            }
+        }
+    },
+    "ffmpegthumbnailersettings5rc": {
+        "General": {
+            "filmstrip": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Embed filmstrip effect",
+                "source_kcfg": "ffmpegthumbnailersettings5.kcfg"
+            },
+            "sequenceSeekPercentages": {
+                "type": "IntList",
+                "min": null,
+                "max": null,
+                "description": "Sequence seek percentages",
+                "source_kcfg": "ffmpegthumbnailersettings5.kcfg"
+            },
+            "cacheSize": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "Cache size (KiB)",
+                "source_kcfg": "ffmpegthumbnailersettings5.kcfg"
+            }
+        }
+    },
+    "colorssettingsrc": {
+        "General": {
+            "colorScheme": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Color scheme name",
+                "source_kcfg": "colorssettings.kcfg"
+            },
+            "accentColor": {
+                "type": "Color",
+                "min": null,
+                "max": null,
+                "description": "Accent color",
+                "source_kcfg": "colorssettings.kcfg"
+            },
+            "lastUsedCustomAccentColor": {
+                "type": "Color",
+                "min": null,
+                "max": null,
+                "description": "The last used custom accent color before user switched to wallpaper generated color or default color",
+                "source_kcfg": "colorssettings.kcfg"
+            },
+            "accentColorFromWallpaper": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Whether accent color from wallpaper should be applied",
+                "source_kcfg": "colorssettings.kcfg"
+            }
+        }
+    },
+    "kcmaccessibilityshakecursorrc": {
+        "Plugins": {
+            "ShakeCursor": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Whether Shake Pointer is enabled",
+                "source_kcfg": "kcmaccessibilityshakecursor.kcfg"
+            }
+        },
+        "Effect-shakecursor": {
+            "ShakeCursorMagnification": {
+                "type": "Double",
+                "min": "1",
+                "max": null,
+                "description": "Magnification",
+                "source_kcfg": "kcmaccessibilityshakecursor.kcfg"
+            }
+        }
+    },
+    "dolphin_compactmodesettingsrc": {
+        "CompactMode": {
+            "UseSystemFont": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Use system font",
+                "source_kcfg": "dolphin_compactmodesettings.kcfg"
+            },
+            "ViewFont": {
+                "type": "Font",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "dolphin_compactmodesettings.kcfg"
+            },
+            "IconSize": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Icon size",
+                "source_kcfg": "dolphin_compactmodesettings.kcfg"
+            },
+            "PreviewSize": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Preview size",
+                "source_kcfg": "dolphin_compactmodesettings.kcfg"
+            },
+            "MaximumTextWidthIndex": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Maximum text width index (0 means unlimited)",
+                "source_kcfg": "dolphin_compactmodesettings.kcfg"
+            }
+        }
+    },
+    "kcmaccessibilityscreenreaderrc": {
+        "ScreenReader": {
+            "Enabled": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Enable Screen Reader",
+                "source_kcfg": "kcmaccessibilityscreenreader.kcfg"
+            }
+        }
+    },
+    "virtualdesktopssettingsrc": {
+        "Windows": {
+            "rollOverDesktops": {
+                "type": "bool",
+                "min": null,
+                "max": null,
+                "description": "Whether or not, we circle through the virtual desktop when moving from one to the next",
+                "source_kcfg": "virtualdesktopssettings.kcfg"
+            }
+        },
+        "Plugins": {
+            "desktopChangeOsdEnabled": {
+                "type": "bool",
+                "min": null,
+                "max": null,
+                "description": "Display in an OSD the virtual desktop name when switching between virtual desktops",
+                "source_kcfg": "virtualdesktopssettings.kcfg"
+            }
+        },
+        "Script-desktopchangeosd": {
+            "popupHideDelay": {
+                "type": "int",
+                "min": null,
+                "max": null,
+                "description": "Duraton of the OSD",
+                "source_kcfg": "virtualdesktopssettings.kcfg"
+            },
+            "textOnly": {
+                "type": "bool",
+                "min": null,
+                "max": null,
+                "description": "Whether or not to display desktop layout in the OSD",
+                "source_kcfg": "virtualdesktopssettings.kcfg"
+            }
+        }
+    },
+    "lookandfeelsettingsrc": {
+        "KDE": {
+            "lookAndFeelPackage": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Global look and feel",
+                "source_kcfg": "lookandfeelsettings.kcfg"
+            },
+            "defaultLightLookAndFeel": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Global Look and Feel package, alternate",
+                "source_kcfg": "lookandfeelsettings.kcfg"
+            },
+            "defaultDarkLookAndFeel": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Global Look and Feel package, alternate",
+                "source_kcfg": "lookandfeelsettings.kcfg"
+            },
+            "automaticLookAndFeel": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Switch between dark and light global themes depending on time of day",
+                "source_kcfg": "lookandfeelsettings.kcfg"
+            },
+            "automaticLookAndFeelOnIdle": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Switch between dark and light global themes when the computer is idle",
+                "source_kcfg": "lookandfeelsettings.kcfg"
+            },
+            "automaticLookAndFeelIdleInterval": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "How long the computer should be idle in order to switch between dark and light global themes, in seconds",
+                "source_kcfg": "lookandfeelsettings.kcfg"
+            }
+        }
+    },
+    "fontssettingsrc": {
+        "General": {
+            "font": {
+                "type": "Font",
+                "min": null,
+                "max": null,
+                "description": "General font",
+                "source_kcfg": "fontssettings.kcfg"
+            },
+            "fixed": {
+                "type": "Font",
+                "min": null,
+                "max": null,
+                "description": "Fixed width font",
+                "source_kcfg": "fontssettings.kcfg"
+            },
+            "smallestReadableFont": {
+                "type": "Font",
+                "min": null,
+                "max": null,
+                "description": "Small font",
+                "source_kcfg": "fontssettings.kcfg"
+            },
+            "toolBarFont": {
+                "type": "Font",
+                "min": null,
+                "max": null,
+                "description": "Tool bar font",
+                "source_kcfg": "fontssettings.kcfg"
+            },
+            "menuFont": {
+                "type": "Font",
+                "min": null,
+                "max": null,
+                "description": "Menu font",
+                "source_kcfg": "fontssettings.kcfg"
+            }
+        },
+        "WM": {
+            "activeFont": {
+                "type": "Font",
+                "min": null,
+                "max": null,
+                "description": "Window title font",
+                "source_kcfg": "fontssettings.kcfg"
+            }
+        }
+    },
+    "cursorthemesettingsrc": {
+        "Mouse": {
+            "cursorTheme": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Name of the current cursor theme",
+                "source_kcfg": "cursorthemesettings.kcfg"
+            },
+            "cursorSize": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Current cursor size",
+                "source_kcfg": "cursorthemesettings.kcfg"
+            }
+        }
+    },
+    "workspaceoptions_kdeglobalssettingsrc": {
+        "KDE": {
+            "singleClick": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Single click to open files",
+                "source_kcfg": "workspaceoptions_kdeglobalssettings.kcfg"
+            },
+            "dndBehavior": {
+                "type": "Enum",
+                "min": null,
+                "max": null,
+                "description": "For local files on the same device, whether dragging and dropping will perform a move operation instead of showing the options menu",
+                "source_kcfg": "workspaceoptions_kdeglobalssettings.kcfg"
+            },
+            "smoothScroll": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Smooth scrolling",
+                "source_kcfg": "workspaceoptions_kdeglobalssettings.kcfg"
+            },
+            "scrollbarLeftClickNavigatesByPage": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Left-click in scrollbar track moves scrollbar by one page",
+                "source_kcfg": "workspaceoptions_kdeglobalssettings.kcfg"
+            },
+            "doubleClickInterval": {
+                "type": "Int",
+                "min": "100",
+                "max": "2000",
+                "description": "Double click interval",
+                "source_kcfg": "workspaceoptions_kdeglobalssettings.kcfg"
+            }
+        }
+    },
+    "dolphin_detailsmodesettingsrc": {
+        "DetailsMode": {
+            "ViewFont": {
+                "type": "Font",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "dolphin_detailsmodesettings.kcfg"
+            },
+            "UseSystemFont": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Use system font",
+                "source_kcfg": "dolphin_detailsmodesettings.kcfg"
+            },
+            "IconSize": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Icon size",
+                "source_kcfg": "dolphin_detailsmodesettings.kcfg"
+            },
+            "PreviewSize": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Preview size",
+                "source_kcfg": "dolphin_detailsmodesettings.kcfg"
+            },
+            "ColumnPositions": {
+                "type": "IntList",
+                "min": null,
+                "max": null,
+                "description": "Position of columns",
+                "source_kcfg": "dolphin_detailsmodesettings.kcfg"
+            },
+            "LeftPadding": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "Left side padding",
+                "source_kcfg": "dolphin_detailsmodesettings.kcfg"
+            },
+            "RightPadding": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "Right side padding",
+                "source_kcfg": "dolphin_detailsmodesettings.kcfg"
+            },
+            "HighlightEntireRow": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Highlight entire row",
+                "source_kcfg": "dolphin_detailsmodesettings.kcfg"
+            },
+            "ExpandableFolders": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Expandable folders",
+                "source_kcfg": "dolphin_detailsmodesettings.kcfg"
+            }
+        }
+    },
+    "dolphin_directoryviewpropertysettingsrc": {
+        "Settings": {
+            "HiddenFilesShown": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Hidden files shown",
+                "source_kcfg": "dolphin_directoryviewpropertysettings.kcfg"
+            }
+        },
+        "Dolphin": {
+            "Version": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Version",
+                "source_kcfg": "dolphin_directoryviewpropertysettings.kcfg"
+            },
+            "ViewMode": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "View Mode",
+                "source_kcfg": "dolphin_directoryviewpropertysettings.kcfg"
+            },
+            "PreviewsShown": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Previews shown",
+                "source_kcfg": "dolphin_directoryviewpropertysettings.kcfg"
+            },
+            "GroupedSorting": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Grouped Sorting",
+                "source_kcfg": "dolphin_directoryviewpropertysettings.kcfg"
+            },
+            "SortRole": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Sort files by",
+                "source_kcfg": "dolphin_directoryviewpropertysettings.kcfg"
+            },
+            "SortOrder": {
+                "type": "Int",
+                "min": "Qt::AscendingOrder",
+                "max": "Qt::DescendingOrder",
+                "description": "Order in which to sort files",
+                "source_kcfg": "dolphin_directoryviewpropertysettings.kcfg"
+            },
+            "SortFoldersFirst": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Show folders first when sorting files and folders",
+                "source_kcfg": "dolphin_directoryviewpropertysettings.kcfg"
+            },
+            "SortHiddenLast": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Show hidden files and folders last",
+                "source_kcfg": "dolphin_directoryviewpropertysettings.kcfg"
+            },
+            "VisibleRoles": {
+                "type": "StringList",
+                "min": null,
+                "max": null,
+                "description": "Visible roles",
+                "source_kcfg": "dolphin_directoryviewpropertysettings.kcfg"
+            },
+            "HeaderColumnWidths": {
+                "type": "IntList",
+                "min": null,
+                "max": null,
+                "description": "Header column widths",
+                "source_kcfg": "dolphin_directoryviewpropertysettings.kcfg"
+            },
+            "Timestamp": {
+                "type": "DateTime",
+                "min": null,
+                "max": null,
+                "description": "Properties last changed",
+                "source_kcfg": "dolphin_directoryviewpropertysettings.kcfg"
+            },
+            "DynamicViewPassed": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "View mode changed once by dynamic view",
+                "source_kcfg": "dolphin_directoryviewpropertysettings.kcfg"
+            },
+            "AdditionalInfo": {
+                "type": "StringList",
+                "min": null,
+                "max": null,
+                "description": "Additional Information",
+                "source_kcfg": "dolphin_directoryviewpropertysettings.kcfg"
+            }
+        }
+    },
+    "kcmaccessibilityinvertrc": {
+        "Plugins": {
+            "Invert": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Whether the Invert effect is enabled",
+                "source_kcfg": "kcmaccessibilityinvert.kcfg"
+            }
+        }
+    },
+    "dolphin_generalsettingsrc": {
+        "General": {
+            "DoubleClickViewAction": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Select Action",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "DoubleClickViewCustomAction": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Custom Action",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "EditableUrl": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Should the URL be editable for the user",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "UrlCompletionMode": {
+                "type": "Enum",
+                "min": null,
+                "max": null,
+                "description": "Text completion mode of the URL Navigator",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "ShowFullPath": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Should the full path be shown inside the location bar",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "ShowFullPathInTitlebar": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Should the full path be shown in the title bar",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "OpenExternallyCalledFolderInNewTab": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Should an externally called folder open in a new tab in an existing Dolphin instance",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "Version": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Internal config version of Dolphin, mainly Used to determine whether an updated version of Dolphin is running, so as to migrate config entries that were removed/renamed ...etc",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "ModifiedStartupSettings": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Have the startup settings been modified (internal setting not shown in the UI)",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "HomeUrl": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Home URL",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "RememberOpenedTabs": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Remember open folders and tabs",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "SplitView": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Place two views side by side",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "FilterBar": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Should the filter bar be shown",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "GlobalViewProps": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Should the view properties be used for all folders",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "BrowseThroughArchives": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Browse through archives",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "ConfirmClosingMultipleTabs": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Ask for confirmation when closing windows with multiple tabs.",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "ConfirmClosingTerminalRunningProgram": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Ask for confirmation when closing windows with a program that is still running in the Terminal panel.",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "RenameInline": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Rename single items inline",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "ShowSelectionToggle": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Show selection toggle",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "ShowPasteBarAfterCopying": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Show a bar for easy pasting after a cut or copy was done using the selection mode bottom bar.",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "UseTabForSwitchingSplitView": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Use tab for switching between right and left view",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "CloseActiveSplitView": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Close the view in focus when turning off split view",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "OpenNewTabAfterLastTab": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "New tab will be open after last one",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "ShowToolTips": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Show item information on hover",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "ViewPropsTimestamp": {
+                "type": "DateTime",
+                "min": null,
+                "max": null,
+                "description": "Timestamp since when the view properties are valid",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "AutoExpandFolders": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Use auto-expanding folders for all view types",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "ShowStatusBar": {
+                "type": "Enum",
+                "min": null,
+                "max": null,
+                "description": "Statusbar",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "ShowZoomSlider": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Show zoom slider in the statusbar",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "LockPanels": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Lock the layout of the panels",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "EnlargeSmallPreviews": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Enlarge Small Previews",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "SortingChoice": {
+                "type": "Enum",
+                "min": null,
+                "max": null,
+                "description": "Choose Natural, Case Sensitive, or Case Insensitive order of sorting the items",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "HideXTrashFile": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Also hide files with application/x-trash mimetype",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "DynamicView": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Enable dynamic view",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            }
+        },
+        "Notification Messages": {
+            "ConfirmOpenManyFolders": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Ask for confirmation when opening many folders at once.",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "ConfirmOpenManyTerminals": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Ask for confirmation when opening many terminals at once.",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            },
+            "ConfirmRenameFileType": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Ask for confirmation when renaming file changes its type.",
+                "source_kcfg": "dolphin_generalsettings.kcfg"
+            }
+        }
+    },
+    "arkrc": {
+        "General": {
+            "showEncryptionWarning": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Whether to show a warning when creating zip archives with AES encryption.",
+                "source_kcfg": "ark.kcfg"
+            },
+            "defaultOpenAction": {
+                "type": "Enum",
+                "min": null,
+                "max": null,
+                "description": "Default action when opening archive entries.",
+                "source_kcfg": "ark.kcfg"
+            }
+        },
+        "Extraction": {
+            "openDestinationFolderAfterExtraction": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Open destination folder after extraction.",
+                "source_kcfg": "ark.kcfg"
+            },
+            "closeAfterExtraction": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Close Ark after extraction.",
+                "source_kcfg": "ark.kcfg"
+            },
+            "preservePaths": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Preserve paths when extracting.",
+                "source_kcfg": "ark.kcfg"
+            },
+            "extractToSubfolder": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Extract to a subfolder if the archive has more than one top-level entry.",
+                "source_kcfg": "ark.kcfg"
+            }
+        },
+        "MainWindow": {
+            "splitterSizes": {
+                "type": "IntList",
+                "min": null,
+                "max": null,
+                "description": "How the main window is divided.",
+                "source_kcfg": "ark.kcfg"
+            },
+            "showInfoPanel": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Whether to show the information panel.",
+                "source_kcfg": "ark.kcfg"
+            }
+        },
+        "Plugins": {
+            "disabledPlugins": {
+                "type": "StringList",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "ark.kcfg"
+            }
+        },
+        "Preview": {
+            "limitPreviewFileSize": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Whether to limit the preview according to file size.",
+                "source_kcfg": "ark.kcfg"
+            },
+            "previewFileSizeLimit": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Preview file size limit in megabytes.",
+                "source_kcfg": "ark.kcfg"
+            }
+        }
+    },
+    "nightlightsettingsrc": {
+        "NightColor": {
+            "Active": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "nightlightsettings.kcfg"
+            },
+            "Mode": {
+                "type": "Enum",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "nightlightsettings.kcfg"
+            },
+            "DayTemperature": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "nightlightsettings.kcfg"
+            },
+            "NightTemperature": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "nightlightsettings.kcfg"
+            }
+        }
+    },
+    "feedbacksettingsrc": {
+        "Global": {
+            "feedbackLevel": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "feedbacksettings.kcfg"
+            }
+        }
+    },
+    "jpegcreatorsettings5rc": {
+        "General": {
+            "rotate": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Rotate JPEG automatically",
+                "source_kcfg": "jpegcreatorsettings5.kcfg"
+            }
+        }
+    },
+    "freespacenotifierrc": {
+        "General": {
+            "minimumSpace": {
+                "type": "Int",
+                "min": "1",
+                "max": "100000",
+                "description": "Minimum free space before user starts being notified.",
+                "source_kcfg": "freespacenotifier.kcfg"
+            },
+            "minimumSpacePercentage": {
+                "type": "Int",
+                "min": "1",
+                "max": "30",
+                "description": "Minimum percentage free space before user starts being notified.",
+                "source_kcfg": "freespacenotifier.kcfg"
+            },
+            "enableNotification": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Is the free space notification enabled.",
+                "source_kcfg": "freespacenotifier.kcfg"
+            }
+        }
+    },
+    "launchfeedbacksettingsrc": {
+        "BusyCursorSettings": {
+            "blinking": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "launchfeedbacksettings.kcfg"
+            },
+            "bouncing": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "launchfeedbacksettings.kcfg"
+            },
+            "cursorTimeout": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Timeout in seconds",
+                "source_kcfg": "launchfeedbacksettings.kcfg"
+            }
+        },
+        "FeedbackStyle": {
+            "busyCursor": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "launchfeedbacksettings.kcfg"
+            },
+            "taskbarButton": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "launchfeedbacksettings.kcfg"
+            }
+        },
+        "TaskbarButtonSettings": {
+            "taskbarTimeout": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Timeout in seconds",
+                "source_kcfg": "launchfeedbacksettings.kcfg"
+            }
+        }
+    },
+    "partitionmanagerrc": {
+        "KDE Partition Manager": {
+            "treePartitionColumnWidths": {
+                "type": "IntList",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "partitionmanager.kcfg"
+            },
+            "treePartitionColumnPositions": {
+                "type": "IntList",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "partitionmanager.kcfg"
+            },
+            "treePartitionColumnVisible": {
+                "type": "IntList",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "partitionmanager.kcfg"
+            },
+            "treeLogColumnWidths": {
+                "type": "IntList",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "partitionmanager.kcfg"
+            },
+            "treeLogColumnPositions": {
+                "type": "IntList",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "partitionmanager.kcfg"
+            },
+            "treeLogColumnVisible": {
+                "type": "IntList",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "partitionmanager.kcfg"
+            },
+            "treeSmartAttributesColumnWidths": {
+                "type": "IntList",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "partitionmanager.kcfg"
+            },
+            "treeSmartAttributesColumnPositions": {
+                "type": "IntList",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "partitionmanager.kcfg"
+            },
+            "treeSmartAttributesColumnVisible": {
+                "type": "IntList",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "partitionmanager.kcfg"
+            },
+            "firstRun": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Is this the first time KDE Partition Manager is being run?",
+                "source_kcfg": "partitionmanager.kcfg"
+            },
+            "minLogLevel": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Hide log messages below",
+                "source_kcfg": "partitionmanager.kcfg"
+            },
+            "sectorAlignment": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Partition sector alignment",
+                "source_kcfg": "partitionmanager.kcfg"
+            },
+            "alignDefault": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Align partitions per default",
+                "source_kcfg": "partitionmanager.kcfg"
+            },
+            "null": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "partitionmanager.kcfg"
+            }
+        }
+    },
+    "pdfsettingsrc": {
+        "General": {
+            "null": {
+                "type": "Enum",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "pdfsettings.kcfg"
+            }
+        },
+        "PDF Printing": {
+            "null": {
+                "type": "UInt",
+                "min": null,
+                "max": "2",
+                "description": "No description available",
+                "source_kcfg": "pdfsettings.kcfg"
+            }
+        },
+        "Signatures": {
+            "null": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "pdfsettings.kcfg"
+            }
+        }
+    },
+    "dolphin_iconsmodesettingsrc": {
+        "IconsMode": {
+            "UseSystemFont": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Use system font",
+                "source_kcfg": "dolphin_iconsmodesettings.kcfg"
+            },
+            "ViewFont": {
+                "type": "Font",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "dolphin_iconsmodesettings.kcfg"
+            },
+            "IconSize": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Icon size",
+                "source_kcfg": "dolphin_iconsmodesettings.kcfg"
+            },
+            "PreviewSize": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Preview size",
+                "source_kcfg": "dolphin_iconsmodesettings.kcfg"
+            },
+            "TextWidthIndex": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Text width index",
+                "source_kcfg": "dolphin_iconsmodesettings.kcfg"
+            },
+            "MaximumTextLines": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "Maximum textlines (0 means unlimited)",
+                "source_kcfg": "dolphin_iconsmodesettings.kcfg"
+            }
+        }
+    },
+    "kcmaccessibilitykeyboardrc": {
+        "Keyboard": {
+            "StickyKeys": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Use sticky Keys",
+                "source_kcfg": "kcmaccessibilitykeyboard.kcfg"
+            },
+            "StickyKeysLatch": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Lock the sticky keys",
+                "source_kcfg": "kcmaccessibilitykeyboard.kcfg"
+            },
+            "StickyKeysAutoOff": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Turn sticky keys off when two keys are pressed simultaneously",
+                "source_kcfg": "kcmaccessibilitykeyboard.kcfg"
+            },
+            "StickyKeysBeep": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Beep on a sticky key press",
+                "source_kcfg": "kcmaccessibilitykeyboard.kcfg"
+            },
+            "ToggleKeysBeep": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Toggle keys beep",
+                "source_kcfg": "kcmaccessibilitykeyboard.kcfg"
+            },
+            "KeyboardNotifyModifiers": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Notify when a keyboard modifier is pressed",
+                "source_kcfg": "kcmaccessibilitykeyboard.kcfg"
+            }
+        }
+    },
+    "kwinrc": {
+        "MouseBindings": {
+            "CommandTitlebarWheel": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "CommandAllKey": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "CommandAllWheel": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "CommandActiveTitlebar1": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "CommandActiveTitlebar2": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "CommandActiveTitlebar3": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "CommandInactiveTitlebar1": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "CommandInactiveTitlebar2": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "CommandInactiveTitlebar3": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "CommandWindow1": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "CommandWindow2": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "CommandWindow3": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "CommandWindowWheel": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "CommandAll1": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "CommandAll2": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "CommandAll3": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "DoubleClickBorderToMaximize": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            }
+        },
+        "ElectricBorders": {
+            "Top": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "TopRight": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "Right": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "BottomRight": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "Bottom": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "BottomLeft": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "Left": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "TopLeft": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            }
+        },
+        "Windows": {
+            "CondensedTitle": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "FocusPolicy": {
+                "type": "Enum",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "NextFocusPrefersMouse": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "SeparateScreenFocus": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "RollOverDesktops": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "FocusStealingPreventionLevel": {
+                "type": "Int",
+                "min": "0",
+                "max": "4",
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "Placement": {
+                "type": "Enum",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "ActivationDesktopPolicy": {
+                "type": "Enum",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "AutoRaise": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "AutoRaiseInterval": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "DelayFocusInterval": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "ClickRaise": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "BorderSnapZone": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "WindowSnapZone": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "CenterSnapZone": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "SnapOnlyWhenOverlapping": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "ElectricBorders": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "ElectricBorderDelay": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "ElectricBorderCooldown": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "ElectricBorderPushbackPixels": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "ElectricBorderMaximize": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "ElectricBorderAllScreenCorner": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "ElectricBorderTiling": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "ElectricBorderCornerRatio": {
+                "type": "Double",
+                "min": "0.0",
+                "max": "1.0",
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "TitlebarDoubleClickCommand": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "MaximizeButtonLeftClickCommand": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "MaximizeButtonMiddleClickCommand": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "MaximizeButtonRightClickCommand": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "KillPingTimeout": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "InactiveTabsSkipTaskbar": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "AutogroupSimilarWindows": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "AutogroupInForeground": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "BorderlessMaximizedWindows": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "InteractiveWindowMoveEnabled": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "PictureInPictureHomeCorner": {
+                "type": "Enum",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "PictureInPictureMargin": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "OverlayVirtualKeyboardOnWindows": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            }
+        },
+        "EdgeBarrier": {
+            "CornerBarrier": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "EdgeBarrier": {
+                "type": "Int",
+                "min": "0",
+                "max": "1000",
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            }
+        },
+        "ScreenEdges": {
+            "RemainActiveOnFullscreen": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "TouchTarget": {
+                "type": "Int",
+                "min": "1",
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            }
+        },
+        "Compositing": {
+            "Backend": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "Enabled": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "LastFailureTimestamp": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "AllowTearing": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            }
+        },
+        "TabBox": {
+            "DelayTime": {
+                "type": "Int",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "DesktopMode": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "ActivitiesMode": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "ApplicationsMode": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "MinimizedMode": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "ShowDesktopMode": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "MultiScreenMode": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "SwitchingMode": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "ShowOutline": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "ShowTabBox": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "HighlightWindows": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "LayoutName": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            }
+        },
+        "KDE": {
+            "AnimationDurationFactor": {
+                "type": "Double",
+                "min": "0",
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            }
+        },
+        "Wayland": {
+            "InputMethod": {
+                "type": "Path",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "DoubleTapWakeup": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "EnablePrimarySelection": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            }
+        },
+        "Xwayland": {
+            "XwaylandCrashPolicy": {
+                "type": "Enum",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "XwaylandMaxCrashCount": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "XwaylandEavesdrops": {
+                "type": "Enum",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "XwaylandEavesdropsMouse": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            },
+            "XwaylandEisNoPrompt": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kwin.kcfg"
+            }
+        }
+    },
+    "okular_corerc": {
+        "Core Performance": {
+            "null": {
+                "type": "Enum",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "okular_core.kcfg"
+            }
+        },
+        "Document": {
+            "null": {
+                "type": "Enum",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "okular_core.kcfg"
+            }
+        },
+        "Core General": {
+            "null": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "okular_core.kcfg"
+            }
+        },
+        "Core Presentation": {
+            "null": {
+                "type": "Enum",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "okular_core.kcfg"
+            }
+        }
+    },
+    "workspaceoptions_plasmasettingsrc": {
+        "PlasmaToolTips": {
+            "delay": {
+                "type": "Double",
+                "min": null,
+                "max": null,
+                "description": "Display large panel and widget tooltips",
+                "source_kcfg": "workspaceoptions_plasmasettings.kcfg"
+            }
+        },
+        "OSD": {
+            "osdEnabled": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Display small popups for status changes",
+                "source_kcfg": "workspaceoptions_plasmasettings.kcfg"
+            },
+            "osdKbdLayoutChangedEnabled": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "OSD on layout change",
+                "source_kcfg": "workspaceoptions_plasmasettings.kcfg"
+            }
+        }
+    },
+    "kcalcrc": {
+        "Colors": {
+            "FollowSystemTheme": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "ForeColor": {
+                "type": "Color",
+                "min": null,
+                "max": null,
+                "description": "The foreground color of the display.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "BackColor": {
+                "type": "Color",
+                "min": null,
+                "max": null,
+                "description": "The background color of the display.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "NumberButtonsColor": {
+                "type": "Color",
+                "min": null,
+                "max": null,
+                "description": "The color of number buttons.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "FunctionButtonsColor": {
+                "type": "Color",
+                "min": null,
+                "max": null,
+                "description": "The color of function buttons.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "StatButtonsColor": {
+                "type": "Color",
+                "min": null,
+                "max": null,
+                "description": "The color of statistical buttons.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "HexButtonsColor": {
+                "type": "Color",
+                "min": null,
+                "max": null,
+                "description": "The color of hex buttons.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "MemoryButtonsColor": {
+                "type": "Color",
+                "min": null,
+                "max": null,
+                "description": "The color of memory buttons.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "OperationButtonsColor": {
+                "type": "Color",
+                "min": null,
+                "max": null,
+                "description": "The color of operation buttons.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "ConstantsButtonsColor": {
+                "type": "Color",
+                "min": null,
+                "max": null,
+                "description": "The color of constants buttons.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "NumberFontsColor": {
+                "type": "Color",
+                "min": null,
+                "max": null,
+                "description": "The color of number fonts.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "FunctionFontsColor": {
+                "type": "Color",
+                "min": null,
+                "max": null,
+                "description": "The color of function fonts.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "StatFontsColor": {
+                "type": "Color",
+                "min": null,
+                "max": null,
+                "description": "The color of statistical fonts.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "HexFontsColor": {
+                "type": "Color",
+                "min": null,
+                "max": null,
+                "description": "The color of hex fonts.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "MemoryFontsColor": {
+                "type": "Color",
+                "min": null,
+                "max": null,
+                "description": "The color of memory fonts.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "OperationFontsColor": {
+                "type": "Color",
+                "min": null,
+                "max": null,
+                "description": "The color of operation font.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "ConstantsFontsColor": {
+                "type": "Color",
+                "min": null,
+                "max": null,
+                "description": "The color of constants fonts.",
+                "source_kcfg": "kcalc.kcfg"
+            }
+        },
+        "Font": {
+            "ButtonFont": {
+                "type": "Font",
+                "min": null,
+                "max": null,
+                "description": "The font to use for the buttons.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "DisplayFont": {
+                "type": "Font",
+                "min": null,
+                "max": null,
+                "description": "The font to use in the display.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "HistoryFont": {
+                "type": "Font",
+                "min": null,
+                "max": null,
+                "description": "The font to use in the history.",
+                "source_kcfg": "kcalc.kcfg"
+            }
+        },
+        "Precision": {
+            "Precision": {
+                "type": "UInt",
+                "min": "8",
+                "max": "200",
+                "description": "Maximum number of digits displayed.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "FixedPrecision": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "Number of fixed decimal digits.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "Fixed": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Whether to use fixed decimal places.",
+                "source_kcfg": "kcalc.kcfg"
+            }
+        },
+        "General": {
+            "Beep": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Whether to beep on error.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "CaptionResult": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Whether to show the result in the window title.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "GroupDigits": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Whether to group digits.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "TwosComplement": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Whether to use Two's Complement for non-decimal numbers.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "CalculatorMode": {
+                "type": "Enum",
+                "min": null,
+                "max": null,
+                "description": "No description available",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "ShowBitset": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Whether to show the bit edit widget.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "ShowConstants": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Whether to show constant buttons.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "ShowHistory": {
+                "type": "Bool",
+                "min": null,
+                "max": null,
+                "description": "Whether to show the history window.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "AngleMode": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "Degrees, radians or grads",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "BaseMode": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "Numeric base",
+                "source_kcfg": "kcalc.kcfg"
+            }
+        },
+        "Grouping": {
+            "BinaryGrouping": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "Binary figures will be separated by a whitespace after every Xth digit.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "OctalGrouping": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "Octal figures will be separated by a whitespace after every Xth digit.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "HexadecimalGrouping": {
+                "type": "UInt",
+                "min": null,
+                "max": null,
+                "description": "Hexadecimal figures will be separated by a whitespace after every Xth digit.",
+                "source_kcfg": "kcalc.kcfg"
+            }
+        },
+        "UserConstants": {
+            "nameConstant$(ConstIndex)": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "Name of the user programmable constants.",
+                "source_kcfg": "kcalc.kcfg"
+            },
+            "valueConstant$(ConstIndex)": {
+                "type": "String",
+                "min": null,
+                "max": null,
+                "description": "List of user programmable constants",
+                "source_kcfg": "kcalc.kcfg"
+            }
+        }
+    }
+}

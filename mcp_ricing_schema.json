@@ -1,0 +1,3375 @@
+{
+  "okular": {
+    "Dlg Performance": {},
+    "Debugging Options": {},
+    "Contents": {},
+    "Layers": {},
+    "Reviews": {},
+    "Zoom": {},
+    "General": {},
+    "Dlg Presentation": {},
+    "Main View": {},
+    "Nav Panel": {},
+    "PageView": {},
+    "Search": {},
+    "Dlg Accessibility": {},
+    "Identity": {}
+  },
+  "splashscreensettings": {
+    "KSplash": {
+      "engine": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "For future use",
+        "command": "kwriteconfig6 --file splashscreensettings --group \"KSplash\" --key engine"
+      },
+      "theme": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Name of the current splash theme",
+        "command": "kwriteconfig6 --file splashscreensettings --group \"KSplash\" --key theme"
+      }
+    }
+  },
+  "gssettings": {
+    "General": {
+      "PlatformFonts": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Use Platform Fonts",
+        "command": "kwriteconfig6 --file gssettings --group \"General\" --key PlatformFonts"
+      }
+    }
+  },
+  "stylesettings": {
+    "KDE": {
+      "widgetStyle": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Application style",
+        "command": "kwriteconfig6 --file stylesettings --group \"KDE\" --key widgetStyle"
+      },
+      "iconsOnButtons": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Show icons on buttons",
+        "command": "kwriteconfig6 --file stylesettings --group \"KDE\" --key iconsOnButtons"
+      },
+      "iconsInMenus": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Show icons in menus",
+        "command": "kwriteconfig6 --file stylesettings --group \"KDE\" --key iconsInMenus"
+      }
+    },
+    "Toolbar style": {
+      "toolButtonStyle": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Main toolbar label",
+        "command": "kwriteconfig6 --file stylesettings --group \"Toolbar style\" --key toolButtonStyle"
+      },
+      "toolButtonStyleOtherToolbars": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Secondary toolbar label",
+        "command": "kwriteconfig6 --file stylesettings --group \"Toolbar style\" --key toolButtonStyleOtherToolbars"
+      }
+    }
+  },
+  "kcmaccessibilitybell": {
+    "Bell": {
+      "SystemBell": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Use System Bell",
+        "command": "kwriteconfig6 --file kcmaccessibilitybell --group \"Bell\" --key SystemBell"
+      },
+      "CustomBell": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Customize system bell",
+        "command": "kwriteconfig6 --file kcmaccessibilitybell --group \"Bell\" --key CustomBell"
+      },
+      "CustomBellFile": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Sound file for the Bell",
+        "command": "kwriteconfig6 --file kcmaccessibilitybell --group \"Bell\" --key CustomBellFile"
+      },
+      "VisibleBell": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Use a visual bell instead of a sound",
+        "command": "kwriteconfig6 --file kcmaccessibilitybell --group \"Bell\" --key VisibleBell"
+      },
+      "InvertScreen": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Invert the system colors on the bell",
+        "command": "kwriteconfig6 --file kcmaccessibilitybell --group \"Bell\" --key InvertScreen"
+      },
+      "VisibleBellColor": {
+        "type": "Color",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Color of the Visual Bell",
+        "command": "kwriteconfig6 --file kcmaccessibilitybell --group \"Bell\" --key VisibleBellColor"
+      },
+      "VisibleBellPause": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Duration of the Visual Bell",
+        "command": "kwriteconfig6 --file kcmaccessibilitybell --group \"Bell\" --key VisibleBellPause"
+      }
+    }
+  },
+  "dolphin_versioncontrolsettings": {
+    "VersionControl": {
+      "enabledPlugins": {
+        "type": "StringList",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Enabled plugins",
+        "command": "kwriteconfig6 --file dolphin_versioncontrolsettings --group \"VersionControl\" --key enabledPlugins"
+      }
+    }
+  },
+  "dolphin_contextmenusettings": {
+    "ContextMenu": {
+      "ShowCopyMoveMenu": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Show 'Copy To' and 'Move To' commands in context menu",
+        "command": "kwriteconfig6 --file dolphin_contextmenusettings --group \"ContextMenu\" --key ShowCopyMoveMenu"
+      },
+      "ShowAddToPlaces": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Show 'Add to Places' in context menu.",
+        "command": "kwriteconfig6 --file dolphin_contextmenusettings --group \"ContextMenu\" --key ShowAddToPlaces"
+      },
+      "ShowSortBy": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Show 'Sort By' in context menu.",
+        "command": "kwriteconfig6 --file dolphin_contextmenusettings --group \"ContextMenu\" --key ShowSortBy"
+      },
+      "ShowViewMode": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Show 'View Mode' in context menu.",
+        "command": "kwriteconfig6 --file dolphin_contextmenusettings --group \"ContextMenu\" --key ShowViewMode"
+      },
+      "ShowOpenInNewTab": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Show 'Open in New Tab' and 'Open in New Tabs' in context menu.",
+        "command": "kwriteconfig6 --file dolphin_contextmenusettings --group \"ContextMenu\" --key ShowOpenInNewTab"
+      },
+      "ShowOpenInNewWindow": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Show 'Open in New Window' in context menu.",
+        "command": "kwriteconfig6 --file dolphin_contextmenusettings --group \"ContextMenu\" --key ShowOpenInNewWindow"
+      },
+      "ShowOpenInSplitView": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Show 'Open In Split View' in context menu.",
+        "command": "kwriteconfig6 --file dolphin_contextmenusettings --group \"ContextMenu\" --key ShowOpenInSplitView"
+      },
+      "ShowCopyLocation": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Show 'Copy Location' in context menu.",
+        "command": "kwriteconfig6 --file dolphin_contextmenusettings --group \"ContextMenu\" --key ShowCopyLocation"
+      },
+      "ShowDuplicateHere": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Show 'Duplicate Here' in context menu.",
+        "command": "kwriteconfig6 --file dolphin_contextmenusettings --group \"ContextMenu\" --key ShowDuplicateHere"
+      },
+      "ShowOpenTerminal": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Show 'Open Terminal' in context menu.",
+        "command": "kwriteconfig6 --file dolphin_contextmenusettings --group \"ContextMenu\" --key ShowOpenTerminal"
+      },
+      "ShowCopyToOtherSplitView": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Show 'Copy to other split view' in context menu.",
+        "command": "kwriteconfig6 --file dolphin_contextmenusettings --group \"ContextMenu\" --key ShowCopyToOtherSplitView"
+      },
+      "ShowMoveToOtherSplitView": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Show 'Move to other split view' in context menu.",
+        "command": "kwriteconfig6 --file dolphin_contextmenusettings --group \"ContextMenu\" --key ShowMoveToOtherSplitView"
+      }
+    }
+  },
+  "kcmaccessibilitycolorblindnesscorrection": {
+    "Plugins": {
+      "ColorblindnessCorrection": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Whether Colorblindness Correction is enabled",
+        "command": "kwriteconfig6 --file kcmaccessibilitycolorblindnesscorrection --group \"Plugins\" --key ColorblindnessCorrection"
+      }
+    },
+    "Effect-colorblindnesscorrection": {
+      "Mode": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control Mode in Effect-colorblindnesscorrection",
+        "command": "kwriteconfig6 --file kcmaccessibilitycolorblindnesscorrection --group \"Effect-colorblindnesscorrection\" --key Mode"
+      },
+      "Intensity": {
+        "type": "Double",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control Intensity in Effect-colorblindnesscorrection",
+        "command": "kwriteconfig6 --file kcmaccessibilitycolorblindnesscorrection --group \"Effect-colorblindnesscorrection\" --key Intensity"
+      }
+    }
+  },
+  "workspaceoptions_kwinsettings": {
+    "Input": {
+      "tabletMode": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Automatically switch to touch-optimized mode",
+        "command": "kwriteconfig6 --file workspaceoptions_kwinsettings --group \"Input\" --key tabletMode"
+      }
+    },
+    "Wayland": {
+      "primarySelection": {
+        "type": "bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Enable middle click selection pasting",
+        "command": "kwriteconfig6 --file workspaceoptions_kwinsettings --group \"Wayland\" --key primarySelection"
+      }
+    }
+  },
+  "krunnersettingsbase": {
+    "General": {
+      "freeFloating": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control freeFloating in General",
+        "command": "kwriteconfig6 --file krunnersettingsbase --group \"General\" --key freeFloating"
+      },
+      "activateWhenTypingOnDesktop": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control activateWhenTypingOnDesktop in General",
+        "command": "kwriteconfig6 --file krunnersettingsbase --group \"General\" --key activateWhenTypingOnDesktop"
+      },
+      "historyBehavior": {
+        "type": "Enum",
+        "options": ["Disabled", "ImmediateCompletion", "CompletionSuggestion"],
+        "min": null,
+        "max": null,
+        "description": "Option to determine the behavior of KRunner's history and history completion",
+        "command": "kwriteconfig6 --file krunnersettingsbase --group \"General\" --key historyBehavior"
+      },
+      "retainPriorSearch": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control retainPriorSearch in General",
+        "command": "kwriteconfig6 --file krunnersettingsbase --group \"General\" --key retainPriorSearch"
+      }
+    }
+  },
+  "fileviewhgpluginsettings": {
+    "CommitDialogSettings": {
+      "commitDialogHeight": {
+        "type": "Int",
+        "options": null,
+        "min": "400",
+        "max": null,
+        "description": "Dialog height",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"CommitDialogSettings\" --key commitDialogHeight"
+      },
+      "commitDialogWidth": {
+        "type": "Int",
+        "options": null,
+        "min": "500",
+        "max": null,
+        "description": "Dialog width",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"CommitDialogSettings\" --key commitDialogWidth"
+      },
+      "verticalSplitterSizes": {
+        "type": "IntList",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Divides file list and editors with commit details",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"CommitDialogSettings\" --key verticalSplitterSizes"
+      },
+      "horizontalSplitterSizes": {
+        "type": "IntList",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Divides commit editor and diff editor",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"CommitDialogSettings\" --key horizontalSplitterSizes"
+      }
+    },
+    "ConfigDialogSettings": {
+      "configDialogHeight": {
+        "type": "Int",
+        "options": null,
+        "min": "400",
+        "max": null,
+        "description": "Dialog height",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"ConfigDialogSettings\" --key configDialogHeight"
+      },
+      "configDialogWidth": {
+        "type": "Int",
+        "options": null,
+        "min": "500",
+        "max": null,
+        "description": "Dialog width",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"ConfigDialogSettings\" --key configDialogWidth"
+      }
+    },
+    "CloneDialogSettings": {
+      "cloneDialogHeight": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Dialog height",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"CloneDialogSettings\" --key cloneDialogHeight"
+      },
+      "cloneDialogWidth": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Dialog width",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"CloneDialogSettings\" --key cloneDialogWidth"
+      }
+    },
+    "PushDialogSettings": {
+      "pushDialogBigHeight": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Dialog height",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"PushDialogSettings\" --key pushDialogBigHeight"
+      },
+      "pushDialogBigWidth": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Dialog width",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"PushDialogSettings\" --key pushDialogBigWidth"
+      }
+    },
+    "PullDialogSettings": {
+      "pullDialogBigHeight": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Dialog height",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"PullDialogSettings\" --key pullDialogBigHeight"
+      },
+      "pullDialogBigWidth": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Dialog width",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"PullDialogSettings\" --key pullDialogBigWidth"
+      }
+    },
+    "MergeDialogSettings": {
+      "mergeDialogHeight": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Dialog height",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"MergeDialogSettings\" --key mergeDialogHeight"
+      },
+      "mergeDialogWidth": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Dialog width",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"MergeDialogSettings\" --key mergeDialogWidth"
+      }
+    },
+    "BundleDialogSettings": {
+      "bundleDialogHeight": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Dialog height",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"BundleDialogSettings\" --key bundleDialogHeight"
+      },
+      "bundleDialogWidth": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Dialog width",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"BundleDialogSettings\" --key bundleDialogWidth"
+      }
+    },
+    "ExportDialogSettings": {
+      "exportDialogHeight": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Dialog height",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"ExportDialogSettings\" --key exportDialogHeight"
+      },
+      "exportDialogWidth": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Dialog width",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"ExportDialogSettings\" --key exportDialogWidth"
+      }
+    },
+    "ImportDialogSettings": {
+      "importDialogHeight": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Dialog height",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"ImportDialogSettings\" --key importDialogHeight"
+      },
+      "importDialogWidth": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Dialog width",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"ImportDialogSettings\" --key importDialogWidth"
+      }
+    },
+    "ServeDialogSettings": {
+      "serveDialogHeight": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Dialog height",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"ServeDialogSettings\" --key serveDialogHeight"
+      },
+      "serveDialogWidth": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Dialog width",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"ServeDialogSettings\" --key serveDialogWidth"
+      }
+    },
+    "BackoutDialogSettings": {
+      "backoutDialogHeight": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Dialog height",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"BackoutDialogSettings\" --key backoutDialogHeight"
+      },
+      "backoutDialogWidth": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Dialog width",
+        "command": "kwriteconfig6 --file fileviewhgpluginsettings --group \"BackoutDialogSettings\" --key backoutDialogWidth"
+      }
+    }
+  },
+  "landingpage_kdeglobalssettings": {
+    "General": {
+      "colorScheme": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Color scheme name",
+        "command": "kwriteconfig6 --file landingpage_kdeglobalssettings --group \"General\" --key colorScheme"
+      }
+    },
+    "KDE": {
+      "singleClick": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Single click to open files",
+        "command": "kwriteconfig6 --file landingpage_kdeglobalssettings --group \"KDE\" --key singleClick"
+      },
+      "automaticLookAndFeel": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Switch the look and feel package depending on time of day",
+        "command": "kwriteconfig6 --file landingpage_kdeglobalssettings --group \"KDE\" --key automaticLookAndFeel"
+      },
+      "lookAndFeelPackage": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Global Look and Feel package",
+        "command": "kwriteconfig6 --file landingpage_kdeglobalssettings --group \"KDE\" --key lookAndFeelPackage"
+      },
+      "defaultLightLookAndFeel": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Global Look and Feel package, alternate",
+        "command": "kwriteconfig6 --file landingpage_kdeglobalssettings --group \"KDE\" --key defaultLightLookAndFeel"
+      },
+      "defaultDarkLookAndFeel": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Global Look and Feel package, alternate",
+        "command": "kwriteconfig6 --file landingpage_kdeglobalssettings --group \"KDE\" --key defaultDarkLookAndFeel"
+      },
+      "animationDurationFactor": {
+        "type": "Double",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Animation speed",
+        "command": "kwriteconfig6 --file landingpage_kdeglobalssettings --group \"KDE\" --key animationDurationFactor"
+      }
+    }
+  },
+  "kcmaccessibilityzoommagnifier": {
+    "Plugins": {
+      "Zoom": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Whether the Zoom effect is enabled",
+        "command": "kwriteconfig6 --file kcmaccessibilityzoommagnifier --group \"Plugins\" --key Zoom"
+      },
+      "Magnifier": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Whether the Magnifier effect is enabled",
+        "command": "kwriteconfig6 --file kcmaccessibilityzoommagnifier --group \"Plugins\" --key Magnifier"
+      }
+    },
+    "Effect-zoom": {
+      "SharedZoomFactor": {
+        "type": "Double",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control SharedZoomFactor in Effect-zoom",
+        "command": "kwriteconfig6 --file kcmaccessibilityzoommagnifier --group \"Effect-zoom\" --key SharedZoomFactor"
+      },
+      "ZoomMousePointer": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control ZoomMousePointer in Effect-zoom",
+        "command": "kwriteconfig6 --file kcmaccessibilityzoommagnifier --group \"Effect-zoom\" --key ZoomMousePointer"
+      },
+      "ZoomMouseTracking": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control ZoomMouseTracking in Effect-zoom",
+        "command": "kwriteconfig6 --file kcmaccessibilityzoommagnifier --group \"Effect-zoom\" --key ZoomMouseTracking"
+      },
+      "ZoomEnableFocusTracking": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control ZoomEnableFocusTracking in Effect-zoom",
+        "command": "kwriteconfig6 --file kcmaccessibilityzoommagnifier --group \"Effect-zoom\" --key ZoomEnableFocusTracking"
+      },
+      "ZoomEnableTextCaretTracking": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control ZoomEnableTextCaretTracking in Effect-zoom",
+        "command": "kwriteconfig6 --file kcmaccessibilityzoommagnifier --group \"Effect-zoom\" --key ZoomEnableTextCaretTracking"
+      },
+      "ZoomPixelGridZoom": {
+        "type": "Double",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control ZoomPixelGridZoom in Effect-zoom",
+        "command": "kwriteconfig6 --file kcmaccessibilityzoommagnifier --group \"Effect-zoom\" --key ZoomPixelGridZoom"
+      },
+      "ZoomPointerAxisGestureModifiers": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control ZoomPointerAxisGestureModifiers in Effect-zoom",
+        "command": "kwriteconfig6 --file kcmaccessibilityzoommagnifier --group \"Effect-zoom\" --key ZoomPointerAxisGestureModifiers"
+      }
+    },
+    "Effect-magnifier": {
+      "MagnifierWidth": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control MagnifierWidth in Effect-magnifier",
+        "command": "kwriteconfig6 --file kcmaccessibilityzoommagnifier --group \"Effect-magnifier\" --key MagnifierWidth"
+      },
+      "MagnifierHeight": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control MagnifierHeight in Effect-magnifier",
+        "command": "kwriteconfig6 --file kcmaccessibilityzoommagnifier --group \"Effect-magnifier\" --key MagnifierHeight"
+      }
+    }
+  },
+  "kactivitymanagerd_plugins_settings": {
+    "Plugin-org.kde.ActivityManager.Resources.Scoring": {
+      "keepHistoryFor": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "How many months keep the activity history",
+        "command": "kwriteconfig6 --file kactivitymanagerd_plugins_settings --group \"Plugin-org.kde.ActivityManager.Resources.Scoring\" --key keepHistoryFor"
+      },
+      "blockedByDefault": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control blockedByDefault in Plugin-org.kde.ActivityManager.Resources.Scoring",
+        "command": "kwriteconfig6 --file kactivitymanagerd_plugins_settings --group \"Plugin-org.kde.ActivityManager.Resources.Scoring\" --key blockedByDefault"
+      },
+      "whatToRemember": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Which data to keep in activity history",
+        "command": "kwriteconfig6 --file kactivitymanagerd_plugins_settings --group \"Plugin-org.kde.ActivityManager.Resources.Scoring\" --key whatToRemember"
+      },
+      "allowedApplications": {
+        "type": "StringList",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "List of Applications whose activity history to save",
+        "command": "kwriteconfig6 --file kactivitymanagerd_plugins_settings --group \"Plugin-org.kde.ActivityManager.Resources.Scoring\" --key allowedApplications"
+      },
+      "blockedApplications": {
+        "type": "StringList",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "List of Applications whose activity history not to save",
+        "command": "kwriteconfig6 --file kactivitymanagerd_plugins_settings --group \"Plugin-org.kde.ActivityManager.Resources.Scoring\" --key blockedApplications"
+      }
+    }
+  },
+  "kwindecorationsettings": {
+    "org.kde.kdecoration2": {
+      "pluginName": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Plugin name",
+        "command": "kwriteconfig6 --file kwindecorationsettings --group \"org.kde.kdecoration2\" --key pluginName"
+      },
+      "theme": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Theme name",
+        "command": "kwriteconfig6 --file kwindecorationsettings --group \"org.kde.kdecoration2\" --key theme"
+      },
+      "borderSize": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Window border size",
+        "command": "kwriteconfig6 --file kwindecorationsettings --group \"org.kde.kdecoration2\" --key borderSize"
+      },
+      "borderSizeAuto": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Use theme's default window border size",
+        "command": "kwriteconfig6 --file kwindecorationsettings --group \"org.kde.kdecoration2\" --key borderSizeAuto"
+      },
+      "closeOnDoubleClickOnMenu": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Close windows by double clicking the window menu button",
+        "command": "kwriteconfig6 --file kwindecorationsettings --group \"org.kde.kdecoration2\" --key closeOnDoubleClickOnMenu"
+      },
+      "showToolTips": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Show titlebar button tooltips",
+        "command": "kwriteconfig6 --file kwindecorationsettings --group \"org.kde.kdecoration2\" --key showToolTips"
+      },
+      "buttonsOnLeft": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Titlebar left buttons",
+        "command": "kwriteconfig6 --file kwindecorationsettings --group \"org.kde.kdecoration2\" --key buttonsOnLeft"
+      },
+      "buttonsOnRight": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Titlebar right buttons",
+        "command": "kwriteconfig6 --file kwindecorationsettings --group \"org.kde.kdecoration2\" --key buttonsOnRight"
+      },
+      "alwaysShowExcludeFromCapture": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Always show \"Hide from Screencast\" button, even if the window is not excluded from screencast already.",
+        "command": "kwriteconfig6 --file kwindecorationsettings --group \"org.kde.kdecoration2\" --key alwaysShowExcludeFromCapture"
+      }
+    }
+  },
+  "fileviewgitpluginsettings": {
+    "CommitDialogSettings": {
+      "commitDialogHeight": {
+        "type": "Int",
+        "options": null,
+        "min": "50",
+        "max": null,
+        "description": "Dialog height",
+        "command": "kwriteconfig6 --file fileviewgitpluginsettings --group \"CommitDialogSettings\" --key commitDialogHeight"
+      },
+      "commitDialogWidth": {
+        "type": "Int",
+        "options": null,
+        "min": "50",
+        "max": null,
+        "description": "Dialog width",
+        "command": "kwriteconfig6 --file fileviewgitpluginsettings --group \"CommitDialogSettings\" --key commitDialogWidth"
+      }
+    }
+  },
+  "fileviewsvnpluginsettings": {
+    "General": {
+      "showUpdates": {
+        "type": "bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Show updates",
+        "command": "kwriteconfig6 --file fileviewsvnpluginsettings --group \"General\" --key showUpdates"
+      }
+    }
+  },
+  "iconssettingsbase": {
+    "Icons": {
+      "Theme": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Name of the current icon theme",
+        "command": "kwriteconfig6 --file iconssettingsbase --group \"Icons\" --key Theme"
+      }
+    }
+  },
+  "kcmaccessibilitymouse": {
+    "Mouse": {
+      "MouseKeys": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Use keys to control the mouse",
+        "command": "kwriteconfig6 --file kcmaccessibilitymouse --group \"Mouse\" --key MouseKeys"
+      },
+      "AccelerationDelay": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Delay for the mouse movement",
+        "command": "kwriteconfig6 --file kcmaccessibilitymouse --group \"Mouse\" --key AccelerationDelay"
+      },
+      "RepetitionInterval": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Repetition interval for the mouse movement",
+        "command": "kwriteconfig6 --file kcmaccessibilitymouse --group \"Mouse\" --key RepetitionInterval"
+      },
+      "AccelerationTime": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Time to hit maximum velocity",
+        "command": "kwriteconfig6 --file kcmaccessibilitymouse --group \"Mouse\" --key AccelerationTime"
+      },
+      "MaxSpeed": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Maximum Velocity",
+        "command": "kwriteconfig6 --file kcmaccessibilitymouse --group \"Mouse\" --key MaxSpeed"
+      },
+      "ProfileCurve": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Mouse Key Curve",
+        "command": "kwriteconfig6 --file kcmaccessibilitymouse --group \"Mouse\" --key ProfileCurve"
+      }
+    }
+  },
+  "ffmpegthumbnailersettings5": {
+    "General": {
+      "filmstrip": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Embed filmstrip effect",
+        "command": "kwriteconfig6 --file ffmpegthumbnailersettings5 --group \"General\" --key filmstrip"
+      },
+      "sequenceSeekPercentages": {
+        "type": "IntList",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Sequence seek percentages",
+        "command": "kwriteconfig6 --file ffmpegthumbnailersettings5 --group \"General\" --key sequenceSeekPercentages"
+      },
+      "cacheSize": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Cache size (KiB)",
+        "command": "kwriteconfig6 --file ffmpegthumbnailersettings5 --group \"General\" --key cacheSize"
+      }
+    }
+  },
+  "colorssettings": {
+    "General": {
+      "colorScheme": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Color scheme name",
+        "command": "kwriteconfig6 --file colorssettings --group \"General\" --key colorScheme"
+      },
+      "accentColor": {
+        "type": "Color",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Accent color",
+        "command": "kwriteconfig6 --file colorssettings --group \"General\" --key accentColor"
+      },
+      "lastUsedCustomAccentColor": {
+        "type": "Color",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "The last used custom accent color before user switched to wallpaper generated color or default color",
+        "command": "kwriteconfig6 --file colorssettings --group \"General\" --key lastUsedCustomAccentColor"
+      },
+      "accentColorFromWallpaper": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Whether accent color from wallpaper should be applied",
+        "command": "kwriteconfig6 --file colorssettings --group \"General\" --key accentColorFromWallpaper"
+      }
+    }
+  },
+  "kcmaccessibilityshakecursor": {
+    "Plugins": {
+      "ShakeCursor": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Whether Shake Pointer is enabled",
+        "command": "kwriteconfig6 --file kcmaccessibilityshakecursor --group \"Plugins\" --key ShakeCursor"
+      }
+    },
+    "Effect-shakecursor": {
+      "ShakeCursorMagnification": {
+        "type": "Double",
+        "options": null,
+        "min": "1",
+        "max": null,
+        "description": "Magnification",
+        "command": "kwriteconfig6 --file kcmaccessibilityshakecursor --group \"Effect-shakecursor\" --key ShakeCursorMagnification"
+      }
+    }
+  },
+  "dolphin_compactmodesettings": {
+    "CompactMode": {
+      "UseSystemFont": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Use system font",
+        "command": "kwriteconfig6 --file dolphin_compactmodesettings --group \"CompactMode\" --key UseSystemFont"
+      },
+      "ViewFont": {
+        "type": "Font",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control ViewFont in CompactMode",
+        "command": "kwriteconfig6 --file dolphin_compactmodesettings --group \"CompactMode\" --key ViewFont"
+      },
+      "IconSize": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Icon size",
+        "command": "kwriteconfig6 --file dolphin_compactmodesettings --group \"CompactMode\" --key IconSize"
+      },
+      "PreviewSize": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Preview size",
+        "command": "kwriteconfig6 --file dolphin_compactmodesettings --group \"CompactMode\" --key PreviewSize"
+      },
+      "MaximumTextWidthIndex": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Maximum text width index (0 means unlimited)",
+        "command": "kwriteconfig6 --file dolphin_compactmodesettings --group \"CompactMode\" --key MaximumTextWidthIndex"
+      }
+    }
+  },
+  "kcmaccessibilityscreenreader": {
+    "ScreenReader": {
+      "Enabled": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Enable Screen Reader",
+        "command": "kwriteconfig6 --file kcmaccessibilityscreenreader --group \"ScreenReader\" --key Enabled"
+      }
+    }
+  },
+  "virtualdesktopssettings": {
+    "Windows": {
+      "rollOverDesktops": {
+        "type": "bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Whether or not, we circle through the virtual desktop when moving from one to the next",
+        "command": "kwriteconfig6 --file virtualdesktopssettings --group \"Windows\" --key rollOverDesktops"
+      }
+    },
+    "Plugins": {
+      "desktopChangeOsdEnabled": {
+        "type": "bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Display in an OSD the virtual desktop name when switching between virtual desktops",
+        "command": "kwriteconfig6 --file virtualdesktopssettings --group \"Plugins\" --key desktopChangeOsdEnabled"
+      }
+    },
+    "Script-desktopchangeosd": {
+      "popupHideDelay": {
+        "type": "int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Duraton of the OSD",
+        "command": "kwriteconfig6 --file virtualdesktopssettings --group \"Script-desktopchangeosd\" --key popupHideDelay"
+      },
+      "textOnly": {
+        "type": "bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Whether or not to display desktop layout in the OSD",
+        "command": "kwriteconfig6 --file virtualdesktopssettings --group \"Script-desktopchangeosd\" --key textOnly"
+      }
+    }
+  },
+  "lookandfeelsettings": {
+    "KDE": {
+      "lookAndFeelPackage": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Global look and feel",
+        "command": "kwriteconfig6 --file lookandfeelsettings --group \"KDE\" --key lookAndFeelPackage"
+      },
+      "defaultLightLookAndFeel": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Global Look and Feel package, alternate",
+        "command": "kwriteconfig6 --file lookandfeelsettings --group \"KDE\" --key defaultLightLookAndFeel"
+      },
+      "defaultDarkLookAndFeel": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Global Look and Feel package, alternate",
+        "command": "kwriteconfig6 --file lookandfeelsettings --group \"KDE\" --key defaultDarkLookAndFeel"
+      },
+      "automaticLookAndFeel": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Switch between dark and light global themes depending on time of day",
+        "command": "kwriteconfig6 --file lookandfeelsettings --group \"KDE\" --key automaticLookAndFeel"
+      },
+      "automaticLookAndFeelOnIdle": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Switch between dark and light global themes when the computer is idle",
+        "command": "kwriteconfig6 --file lookandfeelsettings --group \"KDE\" --key automaticLookAndFeelOnIdle"
+      },
+      "automaticLookAndFeelIdleInterval": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "How long the computer should be idle in order to switch between dark and light global themes, in seconds",
+        "command": "kwriteconfig6 --file lookandfeelsettings --group \"KDE\" --key automaticLookAndFeelIdleInterval"
+      }
+    }
+  },
+  "fontssettings": {
+    "General": {
+      "font": {
+        "type": "Font",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "General font",
+        "command": "kwriteconfig6 --file fontssettings --group \"General\" --key font"
+      },
+      "fixed": {
+        "type": "Font",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Fixed width font",
+        "command": "kwriteconfig6 --file fontssettings --group \"General\" --key fixed"
+      },
+      "smallestReadableFont": {
+        "type": "Font",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Small font",
+        "command": "kwriteconfig6 --file fontssettings --group \"General\" --key smallestReadableFont"
+      },
+      "toolBarFont": {
+        "type": "Font",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Tool bar font",
+        "command": "kwriteconfig6 --file fontssettings --group \"General\" --key toolBarFont"
+      },
+      "menuFont": {
+        "type": "Font",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Menu font",
+        "command": "kwriteconfig6 --file fontssettings --group \"General\" --key menuFont"
+      }
+    },
+    "WM": {
+      "activeFont": {
+        "type": "Font",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Window title font",
+        "command": "kwriteconfig6 --file fontssettings --group \"WM\" --key activeFont"
+      }
+    }
+  },
+  "cursorthemesettings": {
+    "Mouse": {
+      "cursorTheme": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Name of the current cursor theme",
+        "command": "kwriteconfig6 --file cursorthemesettings --group \"Mouse\" --key cursorTheme"
+      },
+      "cursorSize": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Current cursor size",
+        "command": "kwriteconfig6 --file cursorthemesettings --group \"Mouse\" --key cursorSize"
+      }
+    }
+  },
+  "workspaceoptions_kdeglobalssettings": {
+    "KDE": {
+      "singleClick": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Single click to open files",
+        "command": "kwriteconfig6 --file workspaceoptions_kdeglobalssettings --group \"KDE\" --key singleClick"
+      },
+      "dndBehavior": {
+        "type": "Enum",
+        "options": ["AlwaysAsk", "MoveIfSameDevice"],
+        "min": null,
+        "max": null,
+        "description": "For local files on the same device, whether dragging and dropping will perform a move operation instead of showing the options menu",
+        "command": "kwriteconfig6 --file workspaceoptions_kdeglobalssettings --group \"KDE\" --key dndBehavior"
+      },
+      "smoothScroll": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Smooth scrolling",
+        "command": "kwriteconfig6 --file workspaceoptions_kdeglobalssettings --group \"KDE\" --key smoothScroll"
+      },
+      "scrollbarLeftClickNavigatesByPage": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Left-click in scrollbar track moves scrollbar by one page",
+        "command": "kwriteconfig6 --file workspaceoptions_kdeglobalssettings --group \"KDE\" --key scrollbarLeftClickNavigatesByPage"
+      },
+      "doubleClickInterval": {
+        "type": "Int",
+        "options": null,
+        "min": "100",
+        "max": "2000",
+        "description": "Double click interval",
+        "command": "kwriteconfig6 --file workspaceoptions_kdeglobalssettings --group \"KDE\" --key doubleClickInterval"
+      }
+    }
+  },
+  "dolphin_detailsmodesettings": {
+    "DetailsMode": {
+      "ViewFont": {
+        "type": "Font",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control ViewFont in DetailsMode",
+        "command": "kwriteconfig6 --file dolphin_detailsmodesettings --group \"DetailsMode\" --key ViewFont"
+      },
+      "UseSystemFont": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Use system font",
+        "command": "kwriteconfig6 --file dolphin_detailsmodesettings --group \"DetailsMode\" --key UseSystemFont"
+      },
+      "IconSize": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Icon size",
+        "command": "kwriteconfig6 --file dolphin_detailsmodesettings --group \"DetailsMode\" --key IconSize"
+      },
+      "PreviewSize": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Preview size",
+        "command": "kwriteconfig6 --file dolphin_detailsmodesettings --group \"DetailsMode\" --key PreviewSize"
+      },
+      "ColumnPositions": {
+        "type": "IntList",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Position of columns",
+        "command": "kwriteconfig6 --file dolphin_detailsmodesettings --group \"DetailsMode\" --key ColumnPositions"
+      },
+      "LeftPadding": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Left side padding",
+        "command": "kwriteconfig6 --file dolphin_detailsmodesettings --group \"DetailsMode\" --key LeftPadding"
+      },
+      "RightPadding": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Right side padding",
+        "command": "kwriteconfig6 --file dolphin_detailsmodesettings --group \"DetailsMode\" --key RightPadding"
+      },
+      "HighlightEntireRow": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Highlight entire row",
+        "command": "kwriteconfig6 --file dolphin_detailsmodesettings --group \"DetailsMode\" --key HighlightEntireRow"
+      },
+      "ExpandableFolders": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Expandable folders",
+        "command": "kwriteconfig6 --file dolphin_detailsmodesettings --group \"DetailsMode\" --key ExpandableFolders"
+      }
+    }
+  },
+  "dolphin_directoryviewpropertysettings": {
+    "Settings": {
+      "HiddenFilesShown": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Hidden files shown",
+        "command": "kwriteconfig6 --file dolphin_directoryviewpropertysettings --group \"Settings\" --key HiddenFilesShown"
+      }
+    },
+    "Dolphin": {
+      "Version": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Version",
+        "command": "kwriteconfig6 --file dolphin_directoryviewpropertysettings --group \"Dolphin\" --key Version"
+      },
+      "ViewMode": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "View Mode",
+        "command": "kwriteconfig6 --file dolphin_directoryviewpropertysettings --group \"Dolphin\" --key ViewMode"
+      },
+      "PreviewsShown": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Previews shown",
+        "command": "kwriteconfig6 --file dolphin_directoryviewpropertysettings --group \"Dolphin\" --key PreviewsShown"
+      },
+      "GroupedSorting": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Grouped Sorting",
+        "command": "kwriteconfig6 --file dolphin_directoryviewpropertysettings --group \"Dolphin\" --key GroupedSorting"
+      },
+      "SortRole": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Sort files by",
+        "command": "kwriteconfig6 --file dolphin_directoryviewpropertysettings --group \"Dolphin\" --key SortRole"
+      },
+      "SortOrder": {
+        "type": "Int",
+        "options": null,
+        "min": "Qt::AscendingOrder",
+        "max": "Qt::DescendingOrder",
+        "description": "Order in which to sort files",
+        "command": "kwriteconfig6 --file dolphin_directoryviewpropertysettings --group \"Dolphin\" --key SortOrder"
+      },
+      "SortFoldersFirst": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Show folders first when sorting files and folders",
+        "command": "kwriteconfig6 --file dolphin_directoryviewpropertysettings --group \"Dolphin\" --key SortFoldersFirst"
+      },
+      "SortHiddenLast": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Show hidden files and folders last",
+        "command": "kwriteconfig6 --file dolphin_directoryviewpropertysettings --group \"Dolphin\" --key SortHiddenLast"
+      },
+      "VisibleRoles": {
+        "type": "StringList",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Visible roles",
+        "command": "kwriteconfig6 --file dolphin_directoryviewpropertysettings --group \"Dolphin\" --key VisibleRoles"
+      },
+      "HeaderColumnWidths": {
+        "type": "IntList",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Header column widths",
+        "command": "kwriteconfig6 --file dolphin_directoryviewpropertysettings --group \"Dolphin\" --key HeaderColumnWidths"
+      },
+      "Timestamp": {
+        "type": "DateTime",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Properties last changed",
+        "command": "kwriteconfig6 --file dolphin_directoryviewpropertysettings --group \"Dolphin\" --key Timestamp"
+      },
+      "DynamicViewPassed": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "View mode changed once by dynamic view",
+        "command": "kwriteconfig6 --file dolphin_directoryviewpropertysettings --group \"Dolphin\" --key DynamicViewPassed"
+      },
+      "AdditionalInfo": {
+        "type": "StringList",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Additional Information",
+        "command": "kwriteconfig6 --file dolphin_directoryviewpropertysettings --group \"Dolphin\" --key AdditionalInfo"
+      }
+    }
+  },
+  "kcmaccessibilityinvert": {
+    "Plugins": {
+      "Invert": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Whether the Invert effect is enabled",
+        "command": "kwriteconfig6 --file kcmaccessibilityinvert --group \"Plugins\" --key Invert"
+      }
+    }
+  },
+  "dolphin_generalsettings": {
+    "General": {
+      "DoubleClickViewAction": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Select Action",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key DoubleClickViewAction"
+      },
+      "DoubleClickViewCustomAction": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Custom Action",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key DoubleClickViewCustomAction"
+      },
+      "EditableUrl": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Should the URL be editable for the user",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key EditableUrl"
+      },
+      "UrlCompletionMode": {
+        "type": "Enum",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Text completion mode of the URL Navigator",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key UrlCompletionMode"
+      },
+      "ShowFullPath": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Should the full path be shown inside the location bar",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key ShowFullPath"
+      },
+      "ShowFullPathInTitlebar": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Should the full path be shown in the title bar",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key ShowFullPathInTitlebar"
+      },
+      "OpenExternallyCalledFolderInNewTab": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Should an externally called folder open in a new tab in an existing Dolphin instance",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key OpenExternallyCalledFolderInNewTab"
+      },
+      "Version": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Internal config version of Dolphin, mainly Used to determine whether an updated version of Dolphin is running, so as to migrate config entries that were removed/renamed ...etc",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key Version"
+      },
+      "ModifiedStartupSettings": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Have the startup settings been modified (internal setting not shown in the UI)",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key ModifiedStartupSettings"
+      },
+      "HomeUrl": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Home URL",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key HomeUrl"
+      },
+      "RememberOpenedTabs": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Remember open folders and tabs",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key RememberOpenedTabs"
+      },
+      "SplitView": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Place two views side by side",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key SplitView"
+      },
+      "FilterBar": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Should the filter bar be shown",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key FilterBar"
+      },
+      "GlobalViewProps": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Should the view properties be used for all folders",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key GlobalViewProps"
+      },
+      "BrowseThroughArchives": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Browse through archives",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key BrowseThroughArchives"
+      },
+      "ConfirmClosingMultipleTabs": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Ask for confirmation when closing windows with multiple tabs.",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key ConfirmClosingMultipleTabs"
+      },
+      "ConfirmClosingTerminalRunningProgram": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Ask for confirmation when closing windows with a program that is still running in the Terminal panel.",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key ConfirmClosingTerminalRunningProgram"
+      },
+      "RenameInline": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Rename single items inline",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key RenameInline"
+      },
+      "ShowSelectionToggle": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Show selection toggle",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key ShowSelectionToggle"
+      },
+      "ShowPasteBarAfterCopying": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Show a bar for easy pasting after a cut or copy was done using the selection mode bottom bar.",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key ShowPasteBarAfterCopying"
+      },
+      "UseTabForSwitchingSplitView": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Use tab for switching between right and left view",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key UseTabForSwitchingSplitView"
+      },
+      "CloseActiveSplitView": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Close the view in focus when turning off split view",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key CloseActiveSplitView"
+      },
+      "OpenNewTabAfterLastTab": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "New tab will be open after last one",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key OpenNewTabAfterLastTab"
+      },
+      "ShowToolTips": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Show item information on hover",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key ShowToolTips"
+      },
+      "ViewPropsTimestamp": {
+        "type": "DateTime",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Timestamp since when the view properties are valid",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key ViewPropsTimestamp"
+      },
+      "AutoExpandFolders": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Use auto-expanding folders for all view types",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key AutoExpandFolders"
+      },
+      "ShowStatusBar": {
+        "type": "Enum",
+        "options": ["Small", "FullWidth", "Disabled"],
+        "min": null,
+        "max": null,
+        "description": "Statusbar",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key ShowStatusBar"
+      },
+      "ShowZoomSlider": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Show zoom slider in the statusbar",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key ShowZoomSlider"
+      },
+      "LockPanels": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Lock the layout of the panels",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key LockPanels"
+      },
+      "EnlargeSmallPreviews": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Enlarge Small Previews",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key EnlargeSmallPreviews"
+      },
+      "SortingChoice": {
+        "type": "Enum",
+        "options": [
+          "NaturalSorting",
+          "CaseInsensitiveSorting",
+          "CaseSensitiveSorting"
+        ],
+        "min": null,
+        "max": null,
+        "description": "Choose Natural, Case Sensitive, or Case Insensitive order of sorting the items",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key SortingChoice"
+      },
+      "HideXTrashFile": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Also hide files with application/x-trash mimetype",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key HideXTrashFile"
+      },
+      "DynamicView": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Enable dynamic view",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"General\" --key DynamicView"
+      }
+    },
+    "Notification Messages": {
+      "ConfirmOpenManyFolders": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Ask for confirmation when opening many folders at once.",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"Notification Messages\" --key ConfirmOpenManyFolders"
+      },
+      "ConfirmOpenManyTerminals": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Ask for confirmation when opening many terminals at once.",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"Notification Messages\" --key ConfirmOpenManyTerminals"
+      },
+      "ConfirmRenameFileType": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Ask for confirmation when renaming file changes its type.",
+        "command": "kwriteconfig6 --file dolphin_generalsettings --group \"Notification Messages\" --key ConfirmRenameFileType"
+      }
+    }
+  },
+  "ark": {
+    "General": {
+      "showEncryptionWarning": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Whether to show a warning when creating zip archives with AES encryption.",
+        "command": "kwriteconfig6 --file ark --group \"General\" --key showEncryptionWarning"
+      },
+      "defaultOpenAction": {
+        "type": "Enum",
+        "options": ["Preview", "Open"],
+        "min": null,
+        "max": null,
+        "description": "Default action when opening archive entries.",
+        "command": "kwriteconfig6 --file ark --group \"General\" --key defaultOpenAction"
+      }
+    },
+    "Extraction": {
+      "openDestinationFolderAfterExtraction": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Open destination folder after extraction.",
+        "command": "kwriteconfig6 --file ark --group \"Extraction\" --key openDestinationFolderAfterExtraction"
+      },
+      "closeAfterExtraction": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Close Ark after extraction.",
+        "command": "kwriteconfig6 --file ark --group \"Extraction\" --key closeAfterExtraction"
+      },
+      "preservePaths": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Preserve paths when extracting.",
+        "command": "kwriteconfig6 --file ark --group \"Extraction\" --key preservePaths"
+      },
+      "extractToSubfolder": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Extract to a subfolder if the archive has more than one top-level entry.",
+        "command": "kwriteconfig6 --file ark --group \"Extraction\" --key extractToSubfolder"
+      }
+    },
+    "MainWindow": {
+      "splitterSizes": {
+        "type": "IntList",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "How the main window is divided.",
+        "command": "kwriteconfig6 --file ark --group \"MainWindow\" --key splitterSizes"
+      },
+      "showInfoPanel": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Whether to show the information panel.",
+        "command": "kwriteconfig6 --file ark --group \"MainWindow\" --key showInfoPanel"
+      }
+    },
+    "Plugins": {
+      "disabledPlugins": {
+        "type": "StringList",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control disabledPlugins in Plugins",
+        "command": "kwriteconfig6 --file ark --group \"Plugins\" --key disabledPlugins"
+      }
+    },
+    "Preview": {
+      "limitPreviewFileSize": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Whether to limit the preview according to file size.",
+        "command": "kwriteconfig6 --file ark --group \"Preview\" --key limitPreviewFileSize"
+      },
+      "previewFileSizeLimit": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Preview file size limit in megabytes.",
+        "command": "kwriteconfig6 --file ark --group \"Preview\" --key previewFileSizeLimit"
+      }
+    }
+  },
+  "nightlightsettings": {
+    "NightColor": {
+      "Active": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control Active in NightColor",
+        "command": "kwriteconfig6 --file nightlightsettings --group \"NightColor\" --key Active"
+      },
+      "Mode": {
+        "type": "Enum",
+        "options": ["Constant", "DarkLight"],
+        "min": null,
+        "max": null,
+        "description": "Control Mode in NightColor",
+        "command": "kwriteconfig6 --file nightlightsettings --group \"NightColor\" --key Mode"
+      },
+      "DayTemperature": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control DayTemperature in NightColor",
+        "command": "kwriteconfig6 --file nightlightsettings --group \"NightColor\" --key DayTemperature"
+      },
+      "NightTemperature": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control NightTemperature in NightColor",
+        "command": "kwriteconfig6 --file nightlightsettings --group \"NightColor\" --key NightTemperature"
+      }
+    }
+  },
+  "feedbacksettings": {
+    "Global": {
+      "feedbackLevel": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control feedbackLevel in Global",
+        "command": "kwriteconfig6 --file feedbacksettings --group \"Global\" --key feedbackLevel"
+      }
+    }
+  },
+  "jpegcreatorsettings5": {
+    "General": {
+      "rotate": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Rotate JPEG automatically",
+        "command": "kwriteconfig6 --file jpegcreatorsettings5 --group \"General\" --key rotate"
+      }
+    }
+  },
+  "freespacenotifier": {
+    "General": {
+      "minimumSpace": {
+        "type": "Int",
+        "options": null,
+        "min": "1",
+        "max": "100000",
+        "description": "Minimum free space before user starts being notified.",
+        "command": "kwriteconfig6 --file freespacenotifier --group \"General\" --key minimumSpace"
+      },
+      "minimumSpacePercentage": {
+        "type": "Int",
+        "options": null,
+        "min": "1",
+        "max": "30",
+        "description": "Minimum percentage free space before user starts being notified.",
+        "command": "kwriteconfig6 --file freespacenotifier --group \"General\" --key minimumSpacePercentage"
+      },
+      "enableNotification": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Is the free space notification enabled.",
+        "command": "kwriteconfig6 --file freespacenotifier --group \"General\" --key enableNotification"
+      }
+    }
+  },
+  "launchfeedbacksettings": {
+    "BusyCursorSettings": {
+      "blinking": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control blinking in BusyCursorSettings",
+        "command": "kwriteconfig6 --file launchfeedbacksettings --group \"BusyCursorSettings\" --key blinking"
+      },
+      "bouncing": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control bouncing in BusyCursorSettings",
+        "command": "kwriteconfig6 --file launchfeedbacksettings --group \"BusyCursorSettings\" --key bouncing"
+      },
+      "cursorTimeout": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Timeout in seconds",
+        "command": "kwriteconfig6 --file launchfeedbacksettings --group \"BusyCursorSettings\" --key cursorTimeout"
+      }
+    },
+    "FeedbackStyle": {
+      "busyCursor": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control busyCursor in FeedbackStyle",
+        "command": "kwriteconfig6 --file launchfeedbacksettings --group \"FeedbackStyle\" --key busyCursor"
+      },
+      "taskbarButton": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control taskbarButton in FeedbackStyle",
+        "command": "kwriteconfig6 --file launchfeedbacksettings --group \"FeedbackStyle\" --key taskbarButton"
+      }
+    },
+    "TaskbarButtonSettings": {
+      "taskbarTimeout": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Timeout in seconds",
+        "command": "kwriteconfig6 --file launchfeedbacksettings --group \"TaskbarButtonSettings\" --key taskbarTimeout"
+      }
+    }
+  },
+  "partitionmanager": {
+    "KDE Partition Manager": {
+      "treePartitionColumnWidths": {
+        "type": "IntList",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control treePartitionColumnWidths in KDE Partition Manager",
+        "command": "kwriteconfig6 --file partitionmanager --group \"KDE Partition Manager\" --key treePartitionColumnWidths"
+      },
+      "treePartitionColumnPositions": {
+        "type": "IntList",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control treePartitionColumnPositions in KDE Partition Manager",
+        "command": "kwriteconfig6 --file partitionmanager --group \"KDE Partition Manager\" --key treePartitionColumnPositions"
+      },
+      "treePartitionColumnVisible": {
+        "type": "IntList",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control treePartitionColumnVisible in KDE Partition Manager",
+        "command": "kwriteconfig6 --file partitionmanager --group \"KDE Partition Manager\" --key treePartitionColumnVisible"
+      },
+      "treeLogColumnWidths": {
+        "type": "IntList",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control treeLogColumnWidths in KDE Partition Manager",
+        "command": "kwriteconfig6 --file partitionmanager --group \"KDE Partition Manager\" --key treeLogColumnWidths"
+      },
+      "treeLogColumnPositions": {
+        "type": "IntList",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control treeLogColumnPositions in KDE Partition Manager",
+        "command": "kwriteconfig6 --file partitionmanager --group \"KDE Partition Manager\" --key treeLogColumnPositions"
+      },
+      "treeLogColumnVisible": {
+        "type": "IntList",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control treeLogColumnVisible in KDE Partition Manager",
+        "command": "kwriteconfig6 --file partitionmanager --group \"KDE Partition Manager\" --key treeLogColumnVisible"
+      },
+      "treeSmartAttributesColumnWidths": {
+        "type": "IntList",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control treeSmartAttributesColumnWidths in KDE Partition Manager",
+        "command": "kwriteconfig6 --file partitionmanager --group \"KDE Partition Manager\" --key treeSmartAttributesColumnWidths"
+      },
+      "treeSmartAttributesColumnPositions": {
+        "type": "IntList",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control treeSmartAttributesColumnPositions in KDE Partition Manager",
+        "command": "kwriteconfig6 --file partitionmanager --group \"KDE Partition Manager\" --key treeSmartAttributesColumnPositions"
+      },
+      "treeSmartAttributesColumnVisible": {
+        "type": "IntList",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control treeSmartAttributesColumnVisible in KDE Partition Manager",
+        "command": "kwriteconfig6 --file partitionmanager --group \"KDE Partition Manager\" --key treeSmartAttributesColumnVisible"
+      },
+      "firstRun": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Is this the first time KDE Partition Manager is being run?",
+        "command": "kwriteconfig6 --file partitionmanager --group \"KDE Partition Manager\" --key firstRun"
+      },
+      "minLogLevel": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Hide log messages below",
+        "command": "kwriteconfig6 --file partitionmanager --group \"KDE Partition Manager\" --key minLogLevel"
+      },
+      "sectorAlignment": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Partition sector alignment",
+        "command": "kwriteconfig6 --file partitionmanager --group \"KDE Partition Manager\" --key sectorAlignment"
+      },
+      "alignDefault": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Align partitions per default",
+        "command": "kwriteconfig6 --file partitionmanager --group \"KDE Partition Manager\" --key alignDefault"
+      }
+    }
+  },
+  "pdfsettings": {
+    "General": {},
+    "PDF Printing": {},
+    "Signatures": {}
+  },
+  "dolphin_iconsmodesettings": {
+    "IconsMode": {
+      "UseSystemFont": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Use system font",
+        "command": "kwriteconfig6 --file dolphin_iconsmodesettings --group \"IconsMode\" --key UseSystemFont"
+      },
+      "ViewFont": {
+        "type": "Font",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control ViewFont in IconsMode",
+        "command": "kwriteconfig6 --file dolphin_iconsmodesettings --group \"IconsMode\" --key ViewFont"
+      },
+      "IconSize": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Icon size",
+        "command": "kwriteconfig6 --file dolphin_iconsmodesettings --group \"IconsMode\" --key IconSize"
+      },
+      "PreviewSize": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Preview size",
+        "command": "kwriteconfig6 --file dolphin_iconsmodesettings --group \"IconsMode\" --key PreviewSize"
+      },
+      "TextWidthIndex": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Text width index",
+        "command": "kwriteconfig6 --file dolphin_iconsmodesettings --group \"IconsMode\" --key TextWidthIndex"
+      },
+      "MaximumTextLines": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Maximum textlines (0 means unlimited)",
+        "command": "kwriteconfig6 --file dolphin_iconsmodesettings --group \"IconsMode\" --key MaximumTextLines"
+      }
+    }
+  },
+  "kcmaccessibilitykeyboard": {
+    "Keyboard": {
+      "StickyKeys": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Use sticky Keys",
+        "command": "kwriteconfig6 --file kcmaccessibilitykeyboard --group \"Keyboard\" --key StickyKeys"
+      },
+      "StickyKeysLatch": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Lock the sticky keys",
+        "command": "kwriteconfig6 --file kcmaccessibilitykeyboard --group \"Keyboard\" --key StickyKeysLatch"
+      },
+      "StickyKeysAutoOff": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Turn sticky keys off when two keys are pressed simultaneously",
+        "command": "kwriteconfig6 --file kcmaccessibilitykeyboard --group \"Keyboard\" --key StickyKeysAutoOff"
+      },
+      "StickyKeysBeep": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Beep on a sticky key press",
+        "command": "kwriteconfig6 --file kcmaccessibilitykeyboard --group \"Keyboard\" --key StickyKeysBeep"
+      },
+      "ToggleKeysBeep": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Toggle keys beep",
+        "command": "kwriteconfig6 --file kcmaccessibilitykeyboard --group \"Keyboard\" --key ToggleKeysBeep"
+      },
+      "KeyboardNotifyModifiers": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Notify when a keyboard modifier is pressed",
+        "command": "kwriteconfig6 --file kcmaccessibilitykeyboard --group \"Keyboard\" --key KeyboardNotifyModifiers"
+      }
+    }
+  },
+  "kwin": {
+    "MouseBindings": {
+      "CommandTitlebarWheel": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control CommandTitlebarWheel in MouseBindings",
+        "command": "kwriteconfig6 --file kwin --group \"MouseBindings\" --key CommandTitlebarWheel"
+      },
+      "CommandAllKey": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control CommandAllKey in MouseBindings",
+        "command": "kwriteconfig6 --file kwin --group \"MouseBindings\" --key CommandAllKey"
+      },
+      "CommandAllWheel": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control CommandAllWheel in MouseBindings",
+        "command": "kwriteconfig6 --file kwin --group \"MouseBindings\" --key CommandAllWheel"
+      },
+      "CommandActiveTitlebar1": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control CommandActiveTitlebar1 in MouseBindings",
+        "command": "kwriteconfig6 --file kwin --group \"MouseBindings\" --key CommandActiveTitlebar1"
+      },
+      "CommandActiveTitlebar2": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control CommandActiveTitlebar2 in MouseBindings",
+        "command": "kwriteconfig6 --file kwin --group \"MouseBindings\" --key CommandActiveTitlebar2"
+      },
+      "CommandActiveTitlebar3": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control CommandActiveTitlebar3 in MouseBindings",
+        "command": "kwriteconfig6 --file kwin --group \"MouseBindings\" --key CommandActiveTitlebar3"
+      },
+      "CommandInactiveTitlebar1": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control CommandInactiveTitlebar1 in MouseBindings",
+        "command": "kwriteconfig6 --file kwin --group \"MouseBindings\" --key CommandInactiveTitlebar1"
+      },
+      "CommandInactiveTitlebar2": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control CommandInactiveTitlebar2 in MouseBindings",
+        "command": "kwriteconfig6 --file kwin --group \"MouseBindings\" --key CommandInactiveTitlebar2"
+      },
+      "CommandInactiveTitlebar3": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control CommandInactiveTitlebar3 in MouseBindings",
+        "command": "kwriteconfig6 --file kwin --group \"MouseBindings\" --key CommandInactiveTitlebar3"
+      },
+      "CommandWindow1": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control CommandWindow1 in MouseBindings",
+        "command": "kwriteconfig6 --file kwin --group \"MouseBindings\" --key CommandWindow1"
+      },
+      "CommandWindow2": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control CommandWindow2 in MouseBindings",
+        "command": "kwriteconfig6 --file kwin --group \"MouseBindings\" --key CommandWindow2"
+      },
+      "CommandWindow3": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control CommandWindow3 in MouseBindings",
+        "command": "kwriteconfig6 --file kwin --group \"MouseBindings\" --key CommandWindow3"
+      },
+      "CommandWindowWheel": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control CommandWindowWheel in MouseBindings",
+        "command": "kwriteconfig6 --file kwin --group \"MouseBindings\" --key CommandWindowWheel"
+      },
+      "CommandAll1": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control CommandAll1 in MouseBindings",
+        "command": "kwriteconfig6 --file kwin --group \"MouseBindings\" --key CommandAll1"
+      },
+      "CommandAll2": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control CommandAll2 in MouseBindings",
+        "command": "kwriteconfig6 --file kwin --group \"MouseBindings\" --key CommandAll2"
+      },
+      "CommandAll3": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control CommandAll3 in MouseBindings",
+        "command": "kwriteconfig6 --file kwin --group \"MouseBindings\" --key CommandAll3"
+      },
+      "DoubleClickBorderToMaximize": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control DoubleClickBorderToMaximize in MouseBindings",
+        "command": "kwriteconfig6 --file kwin --group \"MouseBindings\" --key DoubleClickBorderToMaximize"
+      }
+    },
+    "ElectricBorders": {
+      "Top": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control Top in ElectricBorders",
+        "command": "kwriteconfig6 --file kwin --group \"ElectricBorders\" --key Top"
+      },
+      "TopRight": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control TopRight in ElectricBorders",
+        "command": "kwriteconfig6 --file kwin --group \"ElectricBorders\" --key TopRight"
+      },
+      "Right": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control Right in ElectricBorders",
+        "command": "kwriteconfig6 --file kwin --group \"ElectricBorders\" --key Right"
+      },
+      "BottomRight": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control BottomRight in ElectricBorders",
+        "command": "kwriteconfig6 --file kwin --group \"ElectricBorders\" --key BottomRight"
+      },
+      "Bottom": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control Bottom in ElectricBorders",
+        "command": "kwriteconfig6 --file kwin --group \"ElectricBorders\" --key Bottom"
+      },
+      "BottomLeft": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control BottomLeft in ElectricBorders",
+        "command": "kwriteconfig6 --file kwin --group \"ElectricBorders\" --key BottomLeft"
+      },
+      "Left": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control Left in ElectricBorders",
+        "command": "kwriteconfig6 --file kwin --group \"ElectricBorders\" --key Left"
+      },
+      "TopLeft": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control TopLeft in ElectricBorders",
+        "command": "kwriteconfig6 --file kwin --group \"ElectricBorders\" --key TopLeft"
+      }
+    },
+    "Windows": {
+      "CondensedTitle": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control CondensedTitle in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key CondensedTitle"
+      },
+      "FocusPolicy": {
+        "type": "Enum",
+        "options": [
+          "ClickToFocus",
+          "FocusFollowsMouse",
+          "FocusUnderMouse",
+          "FocusStrictlyUnderMouse"
+        ],
+        "min": null,
+        "max": null,
+        "description": "Control FocusPolicy in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key FocusPolicy"
+      },
+      "NextFocusPrefersMouse": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control NextFocusPrefersMouse in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key NextFocusPrefersMouse"
+      },
+      "SeparateScreenFocus": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control SeparateScreenFocus in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key SeparateScreenFocus"
+      },
+      "RollOverDesktops": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control RollOverDesktops in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key RollOverDesktops"
+      },
+      "FocusStealingPreventionLevel": {
+        "type": "Int",
+        "options": null,
+        "min": "0",
+        "max": "4",
+        "description": "Control FocusStealingPreventionLevel in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key FocusStealingPreventionLevel"
+      },
+      "Placement": {
+        "type": "Enum",
+        "options": [
+          "PlacementNone",
+          "PlacementDefault",
+          "PlacementUnknown",
+          "PlacementRandom",
+          "PlacementSmart",
+          "PlacementCentered",
+          "PlacementZeroCornered",
+          "PlacementUnderMouse",
+          "PlacementOnMainWindow",
+          "PlacementMaximizing"
+        ],
+        "min": null,
+        "max": null,
+        "description": "Control Placement in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key Placement"
+      },
+      "ActivationDesktopPolicy": {
+        "type": "Enum",
+        "options": [
+          "SwitchToOtherDesktop",
+          "BringToCurrentDesktop",
+          "DoNothing"
+        ],
+        "min": null,
+        "max": null,
+        "description": "Control ActivationDesktopPolicy in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key ActivationDesktopPolicy"
+      },
+      "AutoRaise": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control AutoRaise in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key AutoRaise"
+      },
+      "AutoRaiseInterval": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control AutoRaiseInterval in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key AutoRaiseInterval"
+      },
+      "DelayFocusInterval": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control DelayFocusInterval in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key DelayFocusInterval"
+      },
+      "ClickRaise": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control ClickRaise in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key ClickRaise"
+      },
+      "BorderSnapZone": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control BorderSnapZone in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key BorderSnapZone"
+      },
+      "WindowSnapZone": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control WindowSnapZone in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key WindowSnapZone"
+      },
+      "CenterSnapZone": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control CenterSnapZone in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key CenterSnapZone"
+      },
+      "SnapOnlyWhenOverlapping": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control SnapOnlyWhenOverlapping in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key SnapOnlyWhenOverlapping"
+      },
+      "ElectricBorders": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control ElectricBorders in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key ElectricBorders"
+      },
+      "ElectricBorderDelay": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control ElectricBorderDelay in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key ElectricBorderDelay"
+      },
+      "ElectricBorderCooldown": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control ElectricBorderCooldown in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key ElectricBorderCooldown"
+      },
+      "ElectricBorderPushbackPixels": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control ElectricBorderPushbackPixels in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key ElectricBorderPushbackPixels"
+      },
+      "ElectricBorderMaximize": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control ElectricBorderMaximize in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key ElectricBorderMaximize"
+      },
+      "ElectricBorderAllScreenCorner": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control ElectricBorderAllScreenCorner in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key ElectricBorderAllScreenCorner"
+      },
+      "ElectricBorderTiling": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control ElectricBorderTiling in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key ElectricBorderTiling"
+      },
+      "ElectricBorderCornerRatio": {
+        "type": "Double",
+        "options": null,
+        "min": "0.0",
+        "max": "1.0",
+        "description": "Control ElectricBorderCornerRatio in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key ElectricBorderCornerRatio"
+      },
+      "TitlebarDoubleClickCommand": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control TitlebarDoubleClickCommand in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key TitlebarDoubleClickCommand"
+      },
+      "MaximizeButtonLeftClickCommand": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control MaximizeButtonLeftClickCommand in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key MaximizeButtonLeftClickCommand"
+      },
+      "MaximizeButtonMiddleClickCommand": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control MaximizeButtonMiddleClickCommand in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key MaximizeButtonMiddleClickCommand"
+      },
+      "MaximizeButtonRightClickCommand": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control MaximizeButtonRightClickCommand in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key MaximizeButtonRightClickCommand"
+      },
+      "KillPingTimeout": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control KillPingTimeout in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key KillPingTimeout"
+      },
+      "InactiveTabsSkipTaskbar": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control InactiveTabsSkipTaskbar in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key InactiveTabsSkipTaskbar"
+      },
+      "AutogroupSimilarWindows": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control AutogroupSimilarWindows in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key AutogroupSimilarWindows"
+      },
+      "AutogroupInForeground": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control AutogroupInForeground in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key AutogroupInForeground"
+      },
+      "BorderlessMaximizedWindows": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control BorderlessMaximizedWindows in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key BorderlessMaximizedWindows"
+      },
+      "InteractiveWindowMoveEnabled": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control InteractiveWindowMoveEnabled in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key InteractiveWindowMoveEnabled"
+      },
+      "PictureInPictureHomeCorner": {
+        "type": "Enum",
+        "options": [
+          "TopLeftCorner",
+          "TopRightCorner",
+          "BottomLeftCorner",
+          "BottomRightCorner"
+        ],
+        "min": null,
+        "max": null,
+        "description": "Control PictureInPictureHomeCorner in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key PictureInPictureHomeCorner"
+      },
+      "PictureInPictureMargin": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control PictureInPictureMargin in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key PictureInPictureMargin"
+      },
+      "OverlayVirtualKeyboardOnWindows": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control OverlayVirtualKeyboardOnWindows in Windows",
+        "command": "kwriteconfig6 --file kwin --group \"Windows\" --key OverlayVirtualKeyboardOnWindows"
+      }
+    },
+    "EdgeBarrier": {
+      "CornerBarrier": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control CornerBarrier in EdgeBarrier",
+        "command": "kwriteconfig6 --file kwin --group \"EdgeBarrier\" --key CornerBarrier"
+      },
+      "EdgeBarrier": {
+        "type": "Int",
+        "options": null,
+        "min": "0",
+        "max": "1000",
+        "description": "Control EdgeBarrier in EdgeBarrier",
+        "command": "kwriteconfig6 --file kwin --group \"EdgeBarrier\" --key EdgeBarrier"
+      }
+    },
+    "ScreenEdges": {
+      "RemainActiveOnFullscreen": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control RemainActiveOnFullscreen in ScreenEdges",
+        "command": "kwriteconfig6 --file kwin --group \"ScreenEdges\" --key RemainActiveOnFullscreen"
+      },
+      "TouchTarget": {
+        "type": "Int",
+        "options": null,
+        "min": "1",
+        "max": null,
+        "description": "Control TouchTarget in ScreenEdges",
+        "command": "kwriteconfig6 --file kwin --group \"ScreenEdges\" --key TouchTarget"
+      }
+    },
+    "Compositing": {
+      "Backend": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control Backend in Compositing",
+        "command": "kwriteconfig6 --file kwin --group \"Compositing\" --key Backend"
+      },
+      "Enabled": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control Enabled in Compositing",
+        "command": "kwriteconfig6 --file kwin --group \"Compositing\" --key Enabled"
+      },
+      "LastFailureTimestamp": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control LastFailureTimestamp in Compositing",
+        "command": "kwriteconfig6 --file kwin --group \"Compositing\" --key LastFailureTimestamp"
+      },
+      "AllowTearing": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control AllowTearing in Compositing",
+        "command": "kwriteconfig6 --file kwin --group \"Compositing\" --key AllowTearing"
+      }
+    },
+    "TabBox": {
+      "DelayTime": {
+        "type": "Int",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control DelayTime in TabBox",
+        "command": "kwriteconfig6 --file kwin --group \"TabBox\" --key DelayTime"
+      },
+      "DesktopMode": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control DesktopMode in TabBox",
+        "command": "kwriteconfig6 --file kwin --group \"TabBox\" --key DesktopMode"
+      },
+      "ActivitiesMode": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control ActivitiesMode in TabBox",
+        "command": "kwriteconfig6 --file kwin --group \"TabBox\" --key ActivitiesMode"
+      },
+      "ApplicationsMode": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control ApplicationsMode in TabBox",
+        "command": "kwriteconfig6 --file kwin --group \"TabBox\" --key ApplicationsMode"
+      },
+      "MinimizedMode": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control MinimizedMode in TabBox",
+        "command": "kwriteconfig6 --file kwin --group \"TabBox\" --key MinimizedMode"
+      },
+      "ShowDesktopMode": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control ShowDesktopMode in TabBox",
+        "command": "kwriteconfig6 --file kwin --group \"TabBox\" --key ShowDesktopMode"
+      },
+      "MultiScreenMode": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control MultiScreenMode in TabBox",
+        "command": "kwriteconfig6 --file kwin --group \"TabBox\" --key MultiScreenMode"
+      },
+      "SwitchingMode": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control SwitchingMode in TabBox",
+        "command": "kwriteconfig6 --file kwin --group \"TabBox\" --key SwitchingMode"
+      },
+      "ShowOutline": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control ShowOutline in TabBox",
+        "command": "kwriteconfig6 --file kwin --group \"TabBox\" --key ShowOutline"
+      },
+      "ShowTabBox": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control ShowTabBox in TabBox",
+        "command": "kwriteconfig6 --file kwin --group \"TabBox\" --key ShowTabBox"
+      },
+      "HighlightWindows": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control HighlightWindows in TabBox",
+        "command": "kwriteconfig6 --file kwin --group \"TabBox\" --key HighlightWindows"
+      },
+      "LayoutName": {
+        "type": "String",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control LayoutName in TabBox",
+        "command": "kwriteconfig6 --file kwin --group \"TabBox\" --key LayoutName"
+      }
+    },
+    "KDE": {
+      "AnimationDurationFactor": {
+        "type": "Double",
+        "options": null,
+        "min": "0",
+        "max": null,
+        "description": "Control AnimationDurationFactor in KDE",
+        "command": "kwriteconfig6 --file kwin --group \"KDE\" --key AnimationDurationFactor"
+      }
+    },
+    "Wayland": {
+      "InputMethod": {
+        "type": "Path",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control InputMethod in Wayland",
+        "command": "kwriteconfig6 --file kwin --group \"Wayland\" --key InputMethod"
+      },
+      "DoubleTapWakeup": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control DoubleTapWakeup in Wayland",
+        "command": "kwriteconfig6 --file kwin --group \"Wayland\" --key DoubleTapWakeup"
+      },
+      "EnablePrimarySelection": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control EnablePrimarySelection in Wayland",
+        "command": "kwriteconfig6 --file kwin --group \"Wayland\" --key EnablePrimarySelection"
+      }
+    },
+    "Xwayland": {
+      "XwaylandCrashPolicy": {
+        "type": "Enum",
+        "options": ["Stop", "Restart"],
+        "min": null,
+        "max": null,
+        "description": "Control XwaylandCrashPolicy in Xwayland",
+        "command": "kwriteconfig6 --file kwin --group \"Xwayland\" --key XwaylandCrashPolicy"
+      },
+      "XwaylandMaxCrashCount": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control XwaylandMaxCrashCount in Xwayland",
+        "command": "kwriteconfig6 --file kwin --group \"Xwayland\" --key XwaylandMaxCrashCount"
+      },
+      "XwaylandEavesdrops": {
+        "type": "Enum",
+        "options": ["None", "Modifiers", "Combinations", "All"],
+        "min": null,
+        "max": null,
+        "description": "Control XwaylandEavesdrops in Xwayland",
+        "command": "kwriteconfig6 --file kwin --group \"Xwayland\" --key XwaylandEavesdrops"
+      },
+      "XwaylandEavesdropsMouse": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control XwaylandEavesdropsMouse in Xwayland",
+        "command": "kwriteconfig6 --file kwin --group \"Xwayland\" --key XwaylandEavesdropsMouse"
+      },
+      "XwaylandEisNoPrompt": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control XwaylandEisNoPrompt in Xwayland",
+        "command": "kwriteconfig6 --file kwin --group \"Xwayland\" --key XwaylandEisNoPrompt"
+      }
+    }
+  },
+  "okular_core": {
+    "Core Performance": {},
+    "Document": {},
+    "Core General": {},
+    "Core Presentation": {}
+  },
+  "workspaceoptions_plasmasettings": {
+    "PlasmaToolTips": {
+      "delay": {
+        "type": "Double",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Display large panel and widget tooltips",
+        "command": "kwriteconfig6 --file workspaceoptions_plasmasettings --group \"PlasmaToolTips\" --key delay"
+      }
+    },
+    "OSD": {
+      "osdEnabled": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Display small popups for status changes",
+        "command": "kwriteconfig6 --file workspaceoptions_plasmasettings --group \"OSD\" --key osdEnabled"
+      },
+      "osdKbdLayoutChangedEnabled": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "OSD on layout change",
+        "command": "kwriteconfig6 --file workspaceoptions_plasmasettings --group \"OSD\" --key osdKbdLayoutChangedEnabled"
+      }
+    }
+  },
+  "kcalc": {
+    "Colors": {
+      "FollowSystemTheme": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Control FollowSystemTheme in Colors",
+        "command": "kwriteconfig6 --file kcalc --group \"Colors\" --key FollowSystemTheme"
+      },
+      "ForeColor": {
+        "type": "Color",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "The foreground color of the display.",
+        "command": "kwriteconfig6 --file kcalc --group \"Colors\" --key ForeColor"
+      },
+      "BackColor": {
+        "type": "Color",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "The background color of the display.",
+        "command": "kwriteconfig6 --file kcalc --group \"Colors\" --key BackColor"
+      },
+      "NumberButtonsColor": {
+        "type": "Color",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "The color of number buttons.",
+        "command": "kwriteconfig6 --file kcalc --group \"Colors\" --key NumberButtonsColor"
+      },
+      "FunctionButtonsColor": {
+        "type": "Color",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "The color of function buttons.",
+        "command": "kwriteconfig6 --file kcalc --group \"Colors\" --key FunctionButtonsColor"
+      },
+      "StatButtonsColor": {
+        "type": "Color",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "The color of statistical buttons.",
+        "command": "kwriteconfig6 --file kcalc --group \"Colors\" --key StatButtonsColor"
+      },
+      "HexButtonsColor": {
+        "type": "Color",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "The color of hex buttons.",
+        "command": "kwriteconfig6 --file kcalc --group \"Colors\" --key HexButtonsColor"
+      },
+      "MemoryButtonsColor": {
+        "type": "Color",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "The color of memory buttons.",
+        "command": "kwriteconfig6 --file kcalc --group \"Colors\" --key MemoryButtonsColor"
+      },
+      "OperationButtonsColor": {
+        "type": "Color",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "The color of operation buttons.",
+        "command": "kwriteconfig6 --file kcalc --group \"Colors\" --key OperationButtonsColor"
+      },
+      "ConstantsButtonsColor": {
+        "type": "Color",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "The color of constants buttons.",
+        "command": "kwriteconfig6 --file kcalc --group \"Colors\" --key ConstantsButtonsColor"
+      },
+      "NumberFontsColor": {
+        "type": "Color",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "The color of number fonts.",
+        "command": "kwriteconfig6 --file kcalc --group \"Colors\" --key NumberFontsColor"
+      },
+      "FunctionFontsColor": {
+        "type": "Color",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "The color of function fonts.",
+        "command": "kwriteconfig6 --file kcalc --group \"Colors\" --key FunctionFontsColor"
+      },
+      "StatFontsColor": {
+        "type": "Color",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "The color of statistical fonts.",
+        "command": "kwriteconfig6 --file kcalc --group \"Colors\" --key StatFontsColor"
+      },
+      "HexFontsColor": {
+        "type": "Color",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "The color of hex fonts.",
+        "command": "kwriteconfig6 --file kcalc --group \"Colors\" --key HexFontsColor"
+      },
+      "MemoryFontsColor": {
+        "type": "Color",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "The color of memory fonts.",
+        "command": "kwriteconfig6 --file kcalc --group \"Colors\" --key MemoryFontsColor"
+      },
+      "OperationFontsColor": {
+        "type": "Color",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "The color of operation font.",
+        "command": "kwriteconfig6 --file kcalc --group \"Colors\" --key OperationFontsColor"
+      },
+      "ConstantsFontsColor": {
+        "type": "Color",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "The color of constants fonts.",
+        "command": "kwriteconfig6 --file kcalc --group \"Colors\" --key ConstantsFontsColor"
+      }
+    },
+    "Font": {
+      "ButtonFont": {
+        "type": "Font",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "The font to use for the buttons.",
+        "command": "kwriteconfig6 --file kcalc --group \"Font\" --key ButtonFont"
+      },
+      "DisplayFont": {
+        "type": "Font",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "The font to use in the display.",
+        "command": "kwriteconfig6 --file kcalc --group \"Font\" --key DisplayFont"
+      },
+      "HistoryFont": {
+        "type": "Font",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "The font to use in the history.",
+        "command": "kwriteconfig6 --file kcalc --group \"Font\" --key HistoryFont"
+      }
+    },
+    "Precision": {
+      "Precision": {
+        "type": "UInt",
+        "options": null,
+        "min": "8",
+        "max": "200",
+        "description": "Maximum number of digits displayed.",
+        "command": "kwriteconfig6 --file kcalc --group \"Precision\" --key Precision"
+      },
+      "FixedPrecision": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Number of fixed decimal digits.",
+        "command": "kwriteconfig6 --file kcalc --group \"Precision\" --key FixedPrecision"
+      },
+      "Fixed": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Whether to use fixed decimal places.",
+        "command": "kwriteconfig6 --file kcalc --group \"Precision\" --key Fixed"
+      }
+    },
+    "General": {
+      "Beep": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Whether to beep on error.",
+        "command": "kwriteconfig6 --file kcalc --group \"General\" --key Beep"
+      },
+      "CaptionResult": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Whether to show the result in the window title.",
+        "command": "kwriteconfig6 --file kcalc --group \"General\" --key CaptionResult"
+      },
+      "GroupDigits": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Whether to group digits.",
+        "command": "kwriteconfig6 --file kcalc --group \"General\" --key GroupDigits"
+      },
+      "TwosComplement": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Whether to use Two's Complement for non-decimal numbers.",
+        "command": "kwriteconfig6 --file kcalc --group \"General\" --key TwosComplement"
+      },
+      "CalculatorMode": {
+        "type": "Enum",
+        "options": ["simple", "science", "statistics", "numeral"],
+        "min": null,
+        "max": null,
+        "description": "Control CalculatorMode in General",
+        "command": "kwriteconfig6 --file kcalc --group \"General\" --key CalculatorMode"
+      },
+      "ShowBitset": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Whether to show the bit edit widget.",
+        "command": "kwriteconfig6 --file kcalc --group \"General\" --key ShowBitset"
+      },
+      "ShowConstants": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Whether to show constant buttons.",
+        "command": "kwriteconfig6 --file kcalc --group \"General\" --key ShowConstants"
+      },
+      "ShowHistory": {
+        "type": "Bool",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Whether to show the history window.",
+        "command": "kwriteconfig6 --file kcalc --group \"General\" --key ShowHistory"
+      },
+      "AngleMode": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Degrees, radians or grads",
+        "command": "kwriteconfig6 --file kcalc --group \"General\" --key AngleMode"
+      },
+      "BaseMode": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Numeric base",
+        "command": "kwriteconfig6 --file kcalc --group \"General\" --key BaseMode"
+      }
+    },
+    "Grouping": {
+      "BinaryGrouping": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Binary figures will be separated by a whitespace after every Xth digit.",
+        "command": "kwriteconfig6 --file kcalc --group \"Grouping\" --key BinaryGrouping"
+      },
+      "OctalGrouping": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Octal figures will be separated by a whitespace after every Xth digit.",
+        "command": "kwriteconfig6 --file kcalc --group \"Grouping\" --key OctalGrouping"
+      },
+      "HexadecimalGrouping": {
+        "type": "UInt",
+        "options": null,
+        "min": null,
+        "max": null,
+        "description": "Hexadecimal figures will be separated by a whitespace after every Xth digit.",
+        "command": "kwriteconfig6 --file kcalc --group \"Grouping\" --key HexadecimalGrouping"
+      }
+    },
+    "UserConstants": {}
+  }
+}
