@@ -48,17 +48,19 @@ X-GNOME-Autostart-enabled=true
             """Stage an application to be added to KDE autostart."""
             import json
 
+            parameters = {
+                "app_name": app_name,
+                "command": command,
+                "hidden": hidden,
+            }
+
             receipt = changeset.add(
                 description=(
                     f"Add autostart app '{app_name}' running '{command}'"
                 ),
                 change_type="apps",
                 script="add_autostart_app",
-                parameters={
-                    "app_name": app_name,
-                    "command": command,
-                    "hidden": hidden,
-                },
+                parameters=parameters,
             )
             return json.dumps(receipt, indent=2)
 

@@ -41,16 +41,15 @@ class BluetoothFeature(Feature):
             """Stage bluetooth settings like auto-power and discoverability."""
             import json
 
+            parameters = {k: v for k, v in {"auto_power_on": auto_power_on, "discoverable": discoverable}.items() if v is not None}
+
             receipt = changeset.add(
                 description=(
-                    f"Set bluetooth: auto_power_on={auto_power_on}, discoverable={discoverable}"
+                    f"Set bluetooth: {', '.join(f'{k}={v}' for k, v in parameters.items())}"
                 ),
                 change_type="input",
                 script="set_bluetooth_settings",
-                parameters={
-                    "auto_power_on": auto_power_on,
-                    "discoverable": discoverable,
-                },
+                parameters=parameters,
             )
             return json.dumps(receipt, indent=2)
 

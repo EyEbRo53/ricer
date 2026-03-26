@@ -41,18 +41,7 @@ class PowerManagementFeature(Feature):
 
     def get(self) -> dict:
         """Return current power management settings."""
-        from utils.read.kreadconfig import read_kde_configs
-
-        configs = [
-            ("powermanagementprofilesrc", ["AC", "DimDisplay"], "idleTime", "0"),
-            ("powermanagementprofilesrc", ["AC", "SuspendSession"], "idleTime", "0"),
-            ("powermanagementprofilesrc", ["AC", "LidClosed"], "action", "0"),
-            ("powermanagementprofilesrc", ["Battery", "DimDisplay"], "idleTime", "0"),
-            ("powermanagementprofilesrc", ["Battery", "SuspendSession"], "idleTime", "0"),
-            ("powermanagementprofilesrc", ["Battery", "LidClosed"], "action", "0"),
-        ]
-        values = read_kde_configs(configs)
-        failed_keys = [k for k, v in values.items() if v is None]
+        from utils.read.kreadconfig import read_kde_config
 
         def _ms_to_s(v):
             try:
@@ -68,13 +57,14 @@ class PowerManagementFeature(Feature):
 
         return {
             "setting": "power_management",
-            "file": "powermanagementprofilesrc",
-            "groups": ["AC", "Battery"],
             "values": {
-                "ac_dim_display": _ms_to_s(values.get("idleTime")), # Wait, read_kde_configs keys by "key" name! 
-                # This will conflict because we have "idleTime" multiple times!
+                "ac_dim_display": _ms_to_s(read_kde_config("powermanagementprofilesrc", ["AC", "DimDisplay"], "idleTime", "0")),
+                "ac_suspend": _ms_to_s(read_kde_config("powermanagementprofilesrc", ["AC", "SuspendSession"], "idleTime", "0")),
+                "ac_lid_closed": _int_or_0(read_kde_config("powermanagementprofilesrc", ["AC", "LidClosed"], "action", "0")),
+                "battery_dim_display": _ms_to_s(read_kde_config("powermanagementprofilesrc", ["Battery", "DimDisplay"], "idleTime", "0")),
+                "battery_suspend": _ms_to_s(read_kde_config("powermanagementprofilesrc", ["Battery", "SuspendSession"], "idleTime", "0")),
+                "battery_lid_closed": _int_or_0(read_kde_config("powermanagementprofilesrc", ["Battery", "LidClosed"], "action", "0")),
             },
-            "error": "Not fully implemented due to key collision in reader. Needs custom read logic.",
         }
 
     def register_tool(self, mcp, changeset) -> None:
@@ -90,20 +80,22 @@ class PowerManagementFeature(Feature):
             """Stage power management settings (dim time, suspend time, lid action)."""
             import json
 
+            parameters = {k: v for k, v in {
+                "ac_dim_display": ac_dim_display,
+                "ac_suspend": ac_suspend,
+                "ac_lid_closed": ac_lid_closed,
+                "battery_dim_display": battery_dim_display,
+                "battery_suspend": battery_suspend,
+                "battery_lid_closed": battery_lid_closed,
+            }.items() if v is not None}
+
             receipt = changeset.add(
                 description=(
-                    "Set power management settings."
+                    f"Set power management: {', '.join(f'{k}={v}' for k, v in parameters.items())}"
                 ),
                 change_type="power",
                 script="set_power_management",
-                parameters={
-                    "ac_dim_display": ac_dim_display,
-                    "ac_suspend": ac_suspend,
-                    "ac_lid_closed": ac_lid_closed,
-                    "battery_dim_display": battery_dim_display,
-                    "battery_suspend": battery_suspend,
-                    "battery_lid_closed": battery_lid_closed,
-                },
+                parameters=parameters,
             )
             return json.dumps(receipt, indent=2)
 

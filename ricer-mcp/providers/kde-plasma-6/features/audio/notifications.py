@@ -59,20 +59,15 @@ class NotificationsFeature(Feature):
             """Stage notification settings."""
             import json
 
+            parameters = {k: v for k, v in {"enabled": enabled, "do_not_disturb": do_not_disturb, "app_name": app_name, "app_settings": app_settings}.items() if v is not None}
+
             receipt = changeset.add(
                 description=(
-                    f"Set notifications: enabled={enabled}, "
-                    f"do_not_disturb={do_not_disturb}, "
-                    f"app_name={app_name}"
+                    f"Set notifications: {', '.join(f'{k}={v}' for k, v in parameters.items())}"
                 ),
                 change_type="audio",
                 script="set_notifications",
-                parameters={
-                    "enabled": enabled,
-                    "do_not_disturb": do_not_disturb,
-                    "app_name": app_name,
-                    "app_settings": app_settings,
-                },
+                parameters=parameters,
             )
             return json.dumps(receipt, indent=2)
 

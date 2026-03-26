@@ -41,16 +41,15 @@ class SessionManagementFeature(Feature):
             """Stage session management settings."""
             import json
 
+            parameters = {k: v for k, v in {"login_mode": login_mode, "auto_save_session": auto_save_session}.items() if v is not None}
+
             receipt = changeset.add(
                 description=(
-                    f"Set session management: login_mode={login_mode}, auto_save_session={auto_save_session}"
+                    f"Set session management: {', '.join(f'{k}={v}' for k, v in parameters.items())}"
                 ),
                 change_type="power",
                 script="set_session_management",
-                parameters={
-                    "login_mode": login_mode,
-                    "auto_save_session": auto_save_session,
-                },
+                parameters=parameters,
             )
             return json.dumps(receipt, indent=2)
 

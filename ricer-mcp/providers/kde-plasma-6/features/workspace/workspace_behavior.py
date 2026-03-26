@@ -41,17 +41,15 @@ class WorkspaceBehaviorFeature(Feature):
             """Stage general workspace behavior settings."""
             import json
 
+            parameters = {k: v for k, v in {"tool_button_style": tool_button_style, "scrollbar_click_behavior": scrollbar_click_behavior}.items() if v is not None}
+
             receipt = changeset.add(
                 description=(
-                    f"Set workspace behavior: tool_button_style={tool_button_style}, "
-                    f"scrollbar_click_behavior={scrollbar_click_behavior}"
+                    f"Set workspace behavior: {', '.join(f'{k}={v}' for k, v in parameters.items())}"
                 ),
                 change_type="workspace",
                 script="set_workspace_behavior",
-                parameters={
-                    "tool_button_style": tool_button_style,
-                    "scrollbar_click_behavior": scrollbar_click_behavior,
-                },
+                parameters=parameters,
             )
             return json.dumps(receipt, indent=2)
 

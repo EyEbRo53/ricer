@@ -42,16 +42,15 @@ class TaskSwitcherFeature(Feature):
             """Stage task switcher settings (Alt+Tab style)."""
             import json
 
+            parameters = {k: v for k, v in {"layout_name": layout_name, "show_desktop": show_desktop}.items() if v is not None}
+
             receipt = changeset.add(
                 description=(
-                    f"Set task switcher: layout_name={layout_name}, show_desktop={show_desktop}"
+                    f"Set task switcher: {', '.join(f'{k}={v}' for k, v in parameters.items())}"
                 ),
                 change_type="workspace",
                 script="set_task_switcher",
-                parameters={
-                    "layout_name": layout_name,
-                    "show_desktop": show_desktop,
-                },
+                parameters=parameters,
             )
             return json.dumps(receipt, indent=2)
 

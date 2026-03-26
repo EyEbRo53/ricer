@@ -61,19 +61,21 @@ class DolphinSettingsFeature(Feature):
             """Stage Dolphin file manager settings."""
             import json
 
+            parameters = {k: v for k, v in {
+                "view_mode": view_mode,
+                "show_hidden_files": show_hidden_files,
+                "sorting": sorting,
+                "sorting_order": sorting_order,
+                "show_folder_previews": show_folder_previews,
+            }.items() if v is not None}
+
             receipt = changeset.add(
                 description=(
-                    f"Set Dolphin settings: view_mode={view_mode}, show_hidden={show_hidden_files}"
+                    f"Set Dolphin settings: {', '.join(f'{k}={v}' for k, v in parameters.items())}"
                 ),
                 change_type="apps",
                 script="set_dolphin_settings",
-                parameters={
-                    "view_mode": view_mode,
-                    "show_hidden_files": show_hidden_files,
-                    "sorting": sorting,
-                    "sorting_order": sorting_order,
-                    "show_folder_previews": show_folder_previews,
-                },
+                parameters=parameters,
             )
             return json.dumps(receipt, indent=2)
 

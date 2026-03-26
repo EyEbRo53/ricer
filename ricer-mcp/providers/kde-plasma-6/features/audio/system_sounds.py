@@ -57,17 +57,15 @@ class SystemSoundsFeature(Feature):
             """Stage system sounds settings."""
             import json
 
+            parameters = {k: v for k, v in {"enabled": enabled, "theme": theme}.items() if v is not None}
+
             receipt = changeset.add(
                 description=(
-                    f"Set system sounds: enabled={enabled}, "
-                    f"theme={theme}"
+                    f"Set system sounds: {', '.join(f'{k}={v}' for k, v in parameters.items())}"
                 ),
                 change_type="audio",
                 script="set_system_sounds",
-                parameters={
-                    "enabled": enabled,
-                    "theme": theme,
-                },
+                parameters=parameters,
             )
             return json.dumps(receipt, indent=2)
 

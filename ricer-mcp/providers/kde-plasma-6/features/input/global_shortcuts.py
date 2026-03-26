@@ -30,17 +30,19 @@ class GlobalShortcutsFeature(Feature):
             """Stage a global shortcut for a specific component and action."""
             import json
 
+            parameters = {
+                "component": component,
+                "action": action,
+                "shortcut": shortcut,
+            }
+
             receipt = changeset.add(
                 description=(
                     f"Set global shortcut for '{component}' -> '{action}' to '{shortcut}'"
                 ),
                 change_type="input",
                 script="set_global_shortcut",
-                parameters={
-                    "component": component,
-                    "action": action,
-                    "shortcut": shortcut,
-                },
+                parameters=parameters,
             )
             return json.dumps(receipt, indent=2)
 

@@ -47,19 +47,15 @@ class ScreenLockingFeature(Feature):
             """Stage screen locking and screensaver settings."""
             import json
 
+            parameters = {k: v for k, v in {"lock_grace": lock_grace, "auto_lock": auto_lock, "timeout": timeout, "theme": theme}.items() if v is not None}
+
             receipt = changeset.add(
                 description=(
-                    f"Set screen locking: lock_grace={lock_grace}, auto_lock={auto_lock}, "
-                    f"timeout={timeout}, theme={theme}"
+                    f"Set screen locking: {', '.join(f'{k}={v}' for k, v in parameters.items())}"
                 ),
                 change_type="power",
                 script="set_screen_locking",
-                parameters={
-                    "lock_grace": lock_grace,
-                    "auto_lock": auto_lock,
-                    "timeout": timeout,
-                    "theme": theme,
-                },
+                parameters=parameters,
             )
             return json.dumps(receipt, indent=2)
 

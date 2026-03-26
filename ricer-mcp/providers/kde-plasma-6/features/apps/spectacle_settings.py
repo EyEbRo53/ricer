@@ -41,16 +41,15 @@ class SpectacleSettingsFeature(Feature):
             """Stage Spectacle screenshot settings."""
             import json
 
+            parameters = {k: v for k, v in {"save_location": save_location, "filename_format": filename_format}.items() if v is not None}
+
             receipt = changeset.add(
                 description=(
-                    f"Set Spectacle settings: save_location={save_location}, format={filename_format}"
+                    f"Set Spectacle settings: {', '.join(f'{k}={v}' for k, v in parameters.items())}"
                 ),
                 change_type="apps",
                 script="set_spectacle_settings",
-                parameters={
-                    "save_location": save_location,
-                    "filename_format": filename_format,
-                },
+                parameters=parameters,
             )
             return json.dumps(receipt, indent=2)
 
